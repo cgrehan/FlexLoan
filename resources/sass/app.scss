@@ -1,0 +1,27 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+//@import '~bootstrap/scss/bootstrap';
+
+//@import "~bootstrap-vue/dist/bootstrap-vue.css";
+@import "~perfect-scrollbar/css/perfect-scrollbar.css";
+//@import "~socicon/css/socicon.css";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import "~line-awesome/dist/line-awesome/css/line-awesome.css";
+@import "./plugins/flaticon/flaticon.css";
+@import "./plugins/flaticon2/flaticon.css";
+@import "./plugins/keenthemes-icons/font/ki.css";
+
+
+//@import "init";
+@import "./style.vue";
+
+@media (min-width: 1400px) {
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1340px !important;
+    }
+}
