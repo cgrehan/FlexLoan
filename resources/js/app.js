@@ -23,6 +23,7 @@ window.ClipboardJS = ClipboardJS;
 import "./core/plugins/perfect-scrollbar";
 import "./core/plugins/inline-svg";
 import "./core/plugins/apexcharts";
+import "./core/plugins/bootstrap-vue";
 import "./core/plugins/metronic";
 import "@mdi/font/css/materialdesignicons.css";
 
