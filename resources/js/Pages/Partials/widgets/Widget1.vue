@@ -4,7 +4,7 @@
     <!--begin::Header-->
     <div class="card-header border-0 bg-danger py-5">
       <h3 class="card-title font-weight-bolder text-white">
-        Sales Stat
+        Loans Stat
       </h3>
       <div class="card-toolbar">
         <Dropdown1></Dropdown1>
@@ -31,7 +31,7 @@
               <inline-svg src="media/svg/icons/Media/Equalizer.svg" />
             </span>
             <a href="#" class="text-warning font-weight-bold font-size-h6">
-              Weekly Sales
+              Weekly Loans
             </a>
           </div>
           <div class="col bg-light-primary px-6 py-8 rounded-xl mb-7">

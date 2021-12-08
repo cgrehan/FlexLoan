@@ -5,8 +5,8 @@
     v-bind:class="headerClasses"
   >
     <!--begin::Logo-->
-    <a href="/">
-      <img alt="Logo" src="/assets/media/logos/flexpay-logo.svg" />
+    <a :href="$route('dashboard.index')">
+      <img alt="Logo" src="/assets/media/logos/flexpay-logo.svg" width="120"/>
     </a>
     <!--end::Logo-->
     <!--begin::Toolbar-->

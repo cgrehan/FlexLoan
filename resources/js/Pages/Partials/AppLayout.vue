@@ -141,6 +141,9 @@ import KTStickyToolbar from "./extras/StickyToolbar.vue";
 import KTScrollTop from "./extras/ScrollTop";
 
 export default {
+    props:{
+        user:{type:Object}
+    },
     name: "Layout",
     components: {
         KTAside,

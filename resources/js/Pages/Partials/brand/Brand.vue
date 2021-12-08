@@ -3,7 +3,7 @@
   <div class="brand flex-column-auto" id="kt_brand" ref="kt_brand">
     <div class="brand-logo">
 
-        <img :src="siteLogo()" alt="Logo" width="200"/>
+        <img :src="siteLogo()" alt="Logo" width="120"/>
 
     </div>
     <div class="brand-tools" v-if="allowMinimize">

@@ -8,7 +8,7 @@
           Recent Activities
         </span>
         <span class="text-muted mt-3 font-weight-bold font-size-sm">
-          890,344 Sales
+          890,344 Loans
         </span>
       </h3>
       <div class="card-toolbar">

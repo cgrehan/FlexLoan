@@ -11,10 +11,10 @@
             href="#"
             class="text-dark-75 text-hover-primary font-weight-bolder font-size-h5"
           >
-            Weekly Sales
+            Weekly Loans
           </a>
           <span class="text-muted font-weight-bold mt-2">
-            Your Weekly Sales Chart
+            Your Weekly Loans Chart
           </span>
         </div>
         <span class="symbol symbol-light-success symbol-45">

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <app-layout>
+        <app-layout :user="user">
             <div>
                 <div class="row">
                     <div class="col-xxl-4">
@@ -55,6 +55,9 @@ import Widget8 from "./widgets/Widget8";
 import Widget9 from "./widgets/Widget9";
 
 export default {
+    props:{
+    user:{Type:Object}
+    },
    components:{
      MixedWidget1,
        Widget2,
@@ -66,6 +69,9 @@ export default {
        Widget8,
        Widget9
    },
+    created() {
+    console.log(this.user)
+     },
     methods: {
         setActiveTab1(event) {
             this.tabIndex = this.setActiveTab(event);
