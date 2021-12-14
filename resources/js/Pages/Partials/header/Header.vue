@@ -11,8 +11,6 @@
         </div>
         <KTTopbar></KTTopbar>
         </div>
-
-
 <!--    <div-->
 <!--        id="kt_header"-->
 <!--        ref="kt_header"-->

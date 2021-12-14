@@ -41,6 +41,7 @@ Route::group(['middleware' => ['auth']],function (){
     Route::resource("interests","InterestsController");
     Route::resource("penality-types","PenalityTypesController");
     Route::resource("penalities","PenalityController");
+    Route::resource("users","UsersController");
 
     Route::get('register','Auth\RegisterController@showRegisterForm')->name('register.user');
     Route::post('register-new','Auth\RegisterController@create')->name('register.user.new');

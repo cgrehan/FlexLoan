@@ -11,7 +11,7 @@
         <span class="svg-icon svg-icon svg-icon-xl">
           <inline-svg
             class="svg-icon"
-            src="media/svg/icons/Navigation/Angle-double-left.svg"
+            src="/media/svg/icons/Navigation/Angle-double-left.svg"
           />
         </span>
       </button>

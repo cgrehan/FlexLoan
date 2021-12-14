@@ -45,6 +45,12 @@
            </inertia-link>
         </li>
 
+        <li aria-haspopup="true" data-menu-toggle="hover" class="menu-item menu-item-active">
+            <inertia-link :href="$route('users.index')" class="menu-link">
+                <i class="menu-icon flaticon-user"></i><span class="menu-text">Users</span>
+            </inertia-link>
+        </li>
+
 
         <li class="menu-section"><h4 class="menu-text">Settings</h4><i class="menu-icon flaticon-more-v2"></i></li>
         <li aria-haspopup="true" data-menu-toggle="hover" class="menu-item">

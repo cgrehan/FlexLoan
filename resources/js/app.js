@@ -33,7 +33,6 @@ import "@mdi/font/css/materialdesignicons.css";
 // Remove this to disable mock API
 //MockService.init();
 
-
 import vuetify from "vuetify";
 
 window.toastr = require('toastr')

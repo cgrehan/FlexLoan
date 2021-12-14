@@ -11,15 +11,15 @@
             <KTAside></KTAside>
 <!--   end side bar -->
 
-         <div id="kt_wrapper" class="d-flex flex-column flex-row-fluid wrapper">
+           <div id="kt_wrapper" class="d-flex flex-column flex-row-fluid wrapper">
 <!--               start header-->
-          <KTHeader></KTHeader>
+           <KTHeader></KTHeader>
 <!--                end header -->
 <!--               start content-->
                <div id="kt_content" class="content d-flex flex-column flex-column-fluid">
 
 
-                   <div class="d-flex flex-column-fluid">
+               <div class="d-flex flex-column-fluid">
                        <div class="container">
                      <slot></slot>
                      </div>
@@ -141,9 +141,6 @@ import KTStickyToolbar from "./extras/StickyToolbar.vue";
 import KTScrollTop from "./extras/ScrollTop";
 
 export default {
-    props:{
-        user:{type:Object}
-    },
     name: "Layout",
     components: {
         KTAside,
@@ -184,7 +181,7 @@ export default {
          * @returns {string}
          */
         loaderLogo() {
-            return process.env.BASE_URL + this.layoutConfig("loader.logo");
+            return "/" + this.layoutConfig("loader.logo");
         },
 
         /**

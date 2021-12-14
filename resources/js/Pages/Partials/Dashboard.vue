@@ -1,6 +1,6 @@
 <template>
     <div>
-        <app-layout :user="user">
+        <app-layout>
             <div>
                 <div class="row">
                     <div class="col-xxl-4">
@@ -55,9 +55,6 @@ import Widget8 from "./widgets/Widget8";
 import Widget9 from "./widgets/Widget9";
 
 export default {
-    props:{
-    user:{Type:Object}
-    },
    components:{
      MixedWidget1,
        Widget2,

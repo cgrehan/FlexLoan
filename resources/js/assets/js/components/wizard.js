@@ -7,13 +7,13 @@ var KTWizard = function(elementId, options) {
     // Main object
     var the = this;
     var init = false;
-
+    
     // Get element object
     var element = KTUtil.getById(elementId);
     var body = KTUtil.getBody();
 
     if (!element) {
-        return;
+       return;
     }
 
     // Default options
