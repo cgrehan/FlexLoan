@@ -384,7 +384,6 @@
                                             <br />
                                             Second Next Of Kin Phone: {{details.second_next_of_kin_phone}} <br />
                                             Second Next Of Kin Relationship: {{details.second_next_of_kin_ralationship}} <br />
-
                                         </div>
                                     </div>
                                 </div>
@@ -459,7 +458,7 @@ export default {
             return this.show = false;
         },
         'user.dob'(){
-            console.log(this.user.dob)
+          console.log(this.user.dob)
         }
     },
     mounted() {

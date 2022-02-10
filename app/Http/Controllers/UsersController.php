@@ -89,7 +89,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-    return  inertia("users/Edit",['user_detail'=>User::with('detail')->find($id)]);
+      return  inertia("users/Edit",['user_detail'=>User::with('detail')->find($id)]);
     }
 
     /**
@@ -134,6 +134,12 @@ class UsersController extends Controller
         return redirect()->route('users.index');
     }
 
+    public function userDetails(Request $request)
+    {
+        info("walla..");
+        info($request->all());
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -142,6 +148,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::destroy($id);
+        return redirect("users.index");
     }
 }

@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::prefix("loan")->group(function (){
+    Route::post("/user-details",[\App\Http\Controllers\UsersController::class,'userDetails']);
+});
