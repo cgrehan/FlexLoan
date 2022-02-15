@@ -15,7 +15,8 @@ class PenalityController extends Controller
      */
     public function index()
     {
-        return inertia("penalities/Index",['penalities'=>Penality::with('type')->get()]);
+
+        return view("penalities/index",['penalities'=>Penality::with('type')->get(),'types'=>PenalityType::all()]);
     }
 
     /**
@@ -36,6 +37,7 @@ class PenalityController extends Controller
      */
     public function store(Request $request)
     {
+
         $request->validate(['name'=>'unique:penalities,name','penality_type_id'=>'unique:penalities,penality_type_id']);
         Penality::create($request->all());
         return redirect()->route('penalities.index');
@@ -72,7 +74,7 @@ class PenalityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate(['name'=>'unique:penalities,name,'.$id,'penality_type_id'=>'unique:penalities,penality_type_id,'.$id]);
+        //$request->validate(['penality_type_id'=>'unique:penalities,penality_type_id,'.$id]);
         Penality::find($id)->update($request->all());
         return redirect()->route('penalities.index');
     }

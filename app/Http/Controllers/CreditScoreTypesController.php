@@ -14,7 +14,7 @@ class CreditScoreTypesController extends Controller
      */
     public function index()
     {
-        return inertia("creditscores/types/Index",['types'=>CreditScoreType::all()]);
+        return view("creditscores/types/index",['types'=>CreditScoreType::all()]);
     }
 
     /**

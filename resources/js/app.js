@@ -1,58 +1,34 @@
-import Vue from 'vue'
-import { createInertiaApp } from '@inertiajs/inertia-vue'
-import { InertiaProgress } from '@inertiajs/progress'
-import { InertiaLink} from "@inertiajs/inertia-vue/src";
-import VueToastr2 from 'vue-toastr-2'
-import 'vue-toastr-2/dist/vue-toastr-2.min.css'
-import '@mdi/font/css/materialdesignicons.css'
-import AppLayout from "./Pages/Partials/AppLayout";
-import store from "./core/services/store";
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
 
-Vue.config.productionTip = false;
-// window.process.env.BASE_URL = '/';
-// Global 3rd party plugins
-import "popper.js";
-import "tooltip.js";
-import PerfectScrollbar from "perfect-scrollbar";
-window.PerfectScrollbar = PerfectScrollbar;
-import ClipboardJS from "clipboard";
-window.ClipboardJS = ClipboardJS;
+require('./bootstrap');
 
-// Vue 3rd party plugins
-// import vuetify from "./core/plugins/vuetify";
-import "./core/plugins/perfect-scrollbar";
-import "./core/plugins/inline-svg";
-import "./core/plugins/apexcharts";
-import "./core/plugins/bootstrap-vue";
-import "./core/plugins/metronic";
-import "@mdi/font/css/materialdesignicons.css";
+window.Vue = require('vue').default;
 
-// API service init
-//ApiService.init();
+/**
+ * The following block of code may be used to automatically register your
+ * Vue components. It will recursively scan this directory for the Vue
+ * components and automatically register them with their "basename".
+ *
+ * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
+ */
 
-// Remove this to disable mock API
-//MockService.init();
+// const files = require.context('./', true, /\.vue$/i)
+// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-import vuetify from "vuetify";
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+ Vue.component('interest-types', require('./Pages/interests/types/Index.vue').default);
+ Vue.component('loan-user', require('./Pages/users/Edit.vue').default);
 
-window.toastr = require('toastr')
+/**
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
 
-Vue.use(VueToastr2)
-Vue.use(vuetify);
-Vue.component('app-layout',AppLayout);
-
-Vue.prototype.$route = route
-Vue.component('inertia-link',InertiaLink);
-InertiaProgress.init();
-
-createInertiaApp({
-    id:'app',
-    resolve: name => require(`./Pages/${name}`),
-    setup({ el, App, props }) {
-        new Vue({
-            store,
-            vuetify:new vuetify(),
-            render: h => h(App, props),
-        }).$mount(el)
-    },
-})
+const app = new Vue({
+    el: '#app'
+});

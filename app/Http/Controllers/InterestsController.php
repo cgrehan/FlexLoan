@@ -15,7 +15,7 @@ class InterestsController extends Controller
      */
     public function index()
     {
-        return inertia("interests/Index",['interests'=>Interest::with('type')->get()]);
+        return view("interests/index",['interests'=>Interest::with('type')->get(),'types'=>InterestType::all()]);
     }
 
     /**

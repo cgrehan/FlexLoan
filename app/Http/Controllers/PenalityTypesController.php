@@ -14,7 +14,7 @@ class PenalityTypesController extends Controller
      */
     public function index()
     {
-        return  inertia("penalities/types/Index",['types'=>PenalityType::all()]);
+        return  view("penalities/types/index",['types'=>PenalityType::all()]);
     }
 
     /**

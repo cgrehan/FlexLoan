@@ -12,11 +12,5 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    // .js([
-    //     '/assets/js/bootstrap.bundle.min.js',
-    //     '/assets/js/perfect-scrollbar.min.js',
-    //     '/assets/js/jquery.mousewheel.min.js',
-    //     '/assets/plugins/custom/prismjs/prismjs.bundle.js',
-    // ],'public/js/bundle.js')
     .vue()
     .sass('resources/sass/app.scss', 'public/css');

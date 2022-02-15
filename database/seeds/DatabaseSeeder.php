@@ -20,5 +20,6 @@ class DatabaseSeeder extends Seeder
          $this->call(LoanSeeder::class);
          $this->call(PenalityTypeSeeder::class);
          $this->call(PenalitySeeder::class);
+         $this->call(RoleSeeder::class);
     }
 }

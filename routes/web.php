@@ -15,19 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('login','Auth\LoginController@login')->name('login.user');
 
 Route::get('/walla',function (){
-
    return view('welcome');
 });
 
 //Login
-
-Route::get('login','LoginController@sign')->name('login')->middleware("guest");
-Route::post('signin-post','LoginController@postLogin')->name('signin.post');
-Route::post('signout-user','LoginController@signoutUser')->name('signout.index');
+//Route::get('login','LoginController@sign')->name('login')->middleware("guest");
+//Route::post('signin-post','LoginController@postLogin')->name('signin.post');
+//Route::post('signout-user','LoginController@signoutUser')->name('signout.index');
 
 Route::group(['middleware' => ['auth']],function (){
     Route::get('', 'DashboardController@index')->name("dashboard.index");

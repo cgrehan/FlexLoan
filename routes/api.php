@@ -22,3 +22,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::prefix("loan")->group(function (){
     Route::post("/user-details",[\App\Http\Controllers\UsersController::class,'userDetails']);
 });
+Route::post("users/update/{id}","UsersController@update");
+Route::get("user-details","UsersController@userDetails");

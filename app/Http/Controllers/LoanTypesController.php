@@ -14,7 +14,7 @@ class LoanTypesController extends Controller
      */
     public function index()
     {
-        return inertia("loans/types/Index",['types'=>LoanType::all()]);
+        return view("loans/types/index",['types'=>LoanType::all()]);
     }
 
     /**

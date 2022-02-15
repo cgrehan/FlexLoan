@@ -1,6 +1,5 @@
 <template>
-    <app-layout>
-        <div class="card card-custom">
+<div class="card card-custom">
             <div class="card-body p-0">
                 <!--begin: Wizard-->
                 <div
@@ -239,7 +238,7 @@
                                     </h4>
                                     <div class="form-group">
                                         <label>
-                                            <input type="checkbox" v-model="details.is_employed">
+                                            <input type="checkbox" v-model="details.is_employed" value="1">
                                             Are you currently employed?
                                         </label>
                                     </div>
@@ -425,19 +424,13 @@
             </div>
             <!--end: Wizard-->
         </div>
-    </app-layout>
-
 </template>
 
 <style lang="scss">
-@import "../../../sass/wizard-1.scss";
+
 </style>
 
 <script>
-import KTUtil from "../../assets/js/components/util";
-import KTWizard from "../../assets/js/components/wizard";
-import Swal from "sweetalert2";
-
 export default {
     name: "Wizard-1",
     props:{
@@ -463,29 +456,6 @@ export default {
     },
     mounted() {
         this.getDetails();
-        // this.$store.dispatch(SET_BREADCRUMB, [
-        //   { title: "Wizard" },
-        //   { title: "Wizard-1" }
-        // ]);
-
-        // Initialize form wizard
-        const wizard = new KTWizard("kt_wizard_v1", {
-            startStep: 1, // initial active step number
-            clickableSteps: true // allow step clicking
-        });
-
-        // Validation before going to next page
-        // wizard.on("beforeNext", function(/*wizardObj*/) {
-        //   // validate the form and use below function to stop the wizard's step
-        //   // wizardObj.stop();
-        // });
-        //
-        // // Change event
-        wizard.on("change", function(/*wizardObj*/) {
-            setTimeout(() => {
-                KTUtil.scrollTop();
-            }, 500);
-        });
     },
     methods: {
         submit(e){
@@ -506,14 +476,24 @@ export default {
 
             if (this.checkNextOfKin() !==true)
                 return this.failMessage(this.checkNextOfKin());
+             console.log(this.user_detail)
+            axios.post('/api/users/update/'+this.user_detail.id,{user:this.user,details:this.details})
+            .then(res => {
+                Swal.fire({
+                    title: "",
+                    text: "Account has been Successfully Created!",
+                    icon: "success",
+                    confirmButtonClass: "btn btn-secondary"
+                });
+            }).catch(e => {
+                console.log(e)
+                alert(e)
+            })
 
-            this.$inertia.patch(route("users.update",this.user_detail.id),{user:this.user,details:this.details})
-            Swal.fire({
-                title: "",
-                text: "Account has been Successfully Created!",
-                icon: "success",
-                confirmButtonClass: "btn btn-secondary"
-            });
+            return  'jjjjj';
+
+
+
         },
         validateSalo(){
             if (this.show){
@@ -604,24 +584,26 @@ export default {
             this.user.id_number = this.user_detail.id_number;
             this.user.dob = this.user_detail.dob;
             this.user.dob = this.user_detail.dob;
-            console.log(this.user.dob)
 
-            this.details.address1 = this.user_detail.detail.address1;
-            this.details.address2 = this.user_detail.detail.address2;
-            this.details.postcode = this.user_detail.detail.postcode;
-            this.details.city = this.user_detail.detail.city;
-            this.details.is_employed = this.user_detail.detail.is_employed;
-            this.details.salary = this.user_detail.detail.salary;
-            this.details.other_income = this.user_detail.detail.other_income;
-            this.details.company_name = this.user_detail.detail.company_name;
-            this.details.company_phone = this.user_detail.detail.company_phone;
-            this.details.employer_name = this.user_detail.detail.employer_name;
-            this.details.first_next_of_kin_name = this.user_detail.detail.first_next_of_kin_name;
-            this.details.first_next_of_kin_phone = this.user_detail.detail.first_next_of_kin_phone;
-            this.details.first_next_of_kin_ralationship = this.user_detail.detail.first_next_of_kin_ralationship;
-            this.details.second_next_of_kin_name = this.user_detail.detail.second_next_of_kin_name;
-            this.details.second_next_of_kin_phone = this.user_detail.detail.second_next_of_kin_phone;
-            this.details.second_next_of_kin_ralationship = this.user_detail.detail.second_next_of_kin_ralationship;
+            if (this.user_detail.detail){
+                this.details.address1 = this.user_detail.detail.address1;
+                this.details.address2 = this.user_detail.detail.address2;
+                this.details.postcode = this.user_detail.detail.postcode;
+                this.details.city = this.user_detail.detail.city;
+                this.details.is_employed = this.user_detail.detail.is_employed;
+                this.details.salary = this.user_detail.detail.salary;
+                this.details.other_income = this.user_detail.detail.other_income;
+                this.details.company_name = this.user_detail.detail.company_name;
+                this.details.company_phone = this.user_detail.detail.company_phone;
+                this.details.employer_name = this.user_detail.detail.employer_name;
+                this.details.first_next_of_kin_name = this.user_detail.detail.first_next_of_kin_name;
+                this.details.first_next_of_kin_phone = this.user_detail.detail.first_next_of_kin_phone;
+                this.details.first_next_of_kin_ralationship = this.user_detail.detail.first_next_of_kin_ralationship;
+                this.details.second_next_of_kin_name = this.user_detail.detail.second_next_of_kin_name;
+                this.details.second_next_of_kin_phone = this.user_detail.detail.second_next_of_kin_phone;
+                this.details.second_next_of_kin_ralationship = this.user_detail.detail.second_next_of_kin_ralationship;
+            }
+
         }
     }
 };

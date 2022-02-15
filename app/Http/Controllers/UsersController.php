@@ -16,7 +16,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return inertia("users/Index",['users'=>User::all()]);
+        return view("users/index",['users'=>User::where("role_id",2)->get()]);
     }
 
     /**
@@ -89,7 +89,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-      return  inertia("users/Edit",['user_detail'=>User::with('detail')->find($id)]);
+      return  view("users/edit",['user'=>User::with('detail')->find($id)]);
     }
 
     /**
@@ -101,7 +101,6 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         $user = $request->get('user');
         $details = $request->get('details');
 
@@ -131,13 +130,12 @@ class UsersController extends Controller
         $inserted_user->detail->credit_score_id = 6;
         $inserted_user->detail->save();
 
-        return redirect()->route('users.index');
+        return response()->json($inserted_user);
     }
 
     public function userDetails(Request $request)
     {
-        info("walla..");
-        info($request->all());
+      info($request->all());
     }
 
     /**

@@ -10,6 +10,6 @@ class DashboardController extends Controller
     public function index()
     {
       //  dd(Auth::id());
-        return inertia("Partials/Dashboard");
+        return view("dashboard/index");
     }
 }

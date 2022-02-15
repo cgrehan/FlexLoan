@@ -14,7 +14,8 @@ class InterestTypesController extends Controller
      */
     public function index()
     {
-        return inertia("interests/types/Index",['types'=>InterestType::all()]);
+
+        return view("interests/types/index",['types'=>InterestType::all()]);
     }
 
     /**
@@ -35,11 +36,12 @@ class InterestTypesController extends Controller
      */
     public function store(Request $request)
     {
+
         $request->validate([
             'name' => ['unique:interest_types,name', 'max:50']]);
 
         InterestType::create($request->all());
-        return redirect()->route('interest-types.index');
+        return redirect()->back();
     }
 
     /**
@@ -61,6 +63,7 @@ class InterestTypesController extends Controller
      */
     public function edit($id)
     {
+        dd('editing...!');
         return inertia('interests/types/Edit',['type'=>InterestType::find($id)]);
     }
 
