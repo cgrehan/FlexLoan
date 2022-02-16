@@ -15,7 +15,17 @@ class LoansController extends Controller
      */
     public function index()
     {
-        return view("loans/index",['loans'=>Loan::all()]);
+        return view("loans/index",['loans'=>Loan::where('status','approved')->get()]);
+    }
+
+    public function rejected()
+    {
+        return view("loans/rejected",['loans'=>Loan::where('status','Rejected')->get()]);
+    }
+
+    public function pending()
+    {
+        return view("loans/pending",['loans'=>Loan::where('status','Pending')->get()]);
     }
 
     /**
@@ -61,6 +71,12 @@ class LoansController extends Controller
         //
     }
 
+    public function updateLoan(Request  $request)
+    {
+        Loan::find($request->id)->update(['status'=>$request->status]);
+        return response($request->all());
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -70,7 +86,7 @@ class LoansController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        info('cool');
     }
 
     /**

@@ -26,6 +26,7 @@ class CreateLoansTable extends Migration
             $table->boolean('has_completed_repayment')->default(0);
             $table->bigInteger('booking_id')->nullable();
             $table->bigInteger('disbursement_id')->nullable();
+            $table->string('status')->default("Pending");
             $table->foreignId("user_id")->constrained()->onUpdate("cascade")->onDelete("cascade");
             $table->foreignId("loan_type_id")->constrained()->onUpdate("cascade")->onDelete("cascade");
             $table->timestamps();

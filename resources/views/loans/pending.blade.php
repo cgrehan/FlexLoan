@@ -7,7 +7,7 @@
             <!--begin::Info-->
             <div class="d-flex align-items-center flex-wrap mr-2">
                 <!--begin::Page Title-->
-                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Approved Loans</h5>
+                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Pending Approval Loans</h5>
                 <!--end::Page Title-->
                 <!--begin::Actions-->
                 <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
@@ -37,6 +37,7 @@
                            <th>Due Date</th>
                            <th>Interest Rate</th>
                            <th>Repayment Amount</th>
+                           <th>Actions</th>
                        </tr>
                        </thead>
                        <tbody>
@@ -47,6 +48,12 @@
                            <td>{{$loan->due_date}}</td>
                            <td>{{$loan->interest_rate}}</td>
                            <td>{{$loan->repayment_amount}}</td>
+                           <td>
+                               @if($loan->status == 'Pending')
+                               <button onclick="approve('Approved','approve',{{$loan->id}})" class="btn btn-success"><i class="fa fa-check"></i>Approve</button>
+                               <button onclick="approve('Rejected','reject',{{$loan->id}})" class="btn btn-warning"><i class="fa fa-ban"></i>Reject</button>
+                               @endif
+                           </td>
                        </tr>
                        @endforeach
                        </tbody>
@@ -61,4 +68,41 @@
         <!--end::Container-->
     </div>
     <!--end::Entry-->
+@endsection
+
+@section("scripts")
+    <script>
+
+
+        function approve(action,text,id){
+            var url = '{{url("loan-update")}}'
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Yes, "+text+" it!"
+            }).then(function(result) {
+                if (result.value) {
+                    $.ajax({
+                        method:"POST",
+                        url:url,
+                        data:{status:action,id:id,"_token": "{{ csrf_token() }}"},
+                        success: function (res){
+                            Swal.fire(
+                                action+"!",
+                                "The loan has been "+ action,
+                                "success"
+                            )
+                            setTimeout(()=>{
+                                window.location.reload();
+                            },1500)
+
+                        }
+                    })
+
+                }
+            });
+        }
+    </script>
 @endsection

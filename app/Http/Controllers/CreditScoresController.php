@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\CreditScore;
 use App\CreditScoreType;
+use App\UserCreditScore;
 use Illuminate\Http\Request;
 
 class CreditScoresController extends Controller
@@ -15,7 +16,8 @@ class CreditScoresController extends Controller
      */
     public function index()
     {
-     return view("creditscores/index",['scores'=>CreditScore::with('type')->get(),'types'=>CreditScoreType::all()]);
+       // dd(UserCreditScore::get()->unique('user_id'));
+     return view("creditscores/index_1",['scores'=>UserCreditScore::latest()->get()->unique('user_id')]);
     }
 
     /**

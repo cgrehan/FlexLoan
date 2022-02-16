@@ -30,7 +30,7 @@ Route::group(['middleware' => ['auth']],function (){
     Route::get('dashboard', 'DashboardController@index')->name("dashboard.index");
 
     Route::resource("loan-types","LoanTypesController");
-    Route::resource("loans","LoansController");
+
     Route::resource("credit-score-types","CreditScoreTypesController");
     Route::resource("credit-scores","CreditScoresController");
     Route::resource("interest-types","InterestTypesController");
@@ -38,6 +38,15 @@ Route::group(['middleware' => ['auth']],function (){
     Route::resource("penality-types","PenalityTypesController");
     Route::resource("penalities","PenalityController");
     Route::resource("users","UsersController");
+    Route::prefix("loans")->group(function (){
+        Route::resource("loans","LoansController");
+       Route::get("approved","LoansController@index")->name("loans.approved");
+        Route::get("pending","LoansController@pending")->name("loans.pending");
+        Route::get("rejected","LoansController@rejected")->name("loans.rejected");
+
+    });
+    Route::post("loan-update","LoansController@updateLoan");
+
 
     Route::get('register','Auth\RegisterController@showRegisterForm')->name('register.user');
     Route::post('register-new','Auth\RegisterController@create')->name('register.user.new');

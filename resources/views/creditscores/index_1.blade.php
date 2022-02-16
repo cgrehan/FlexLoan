@@ -7,11 +7,10 @@
             <!--begin::Info-->
             <div class="d-flex align-items-center flex-wrap mr-2">
                 <!--begin::Page Title-->
-                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Approved Loans</h5>
+                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Credit Scores</h5>
                 <!--end::Page Title-->
                 <!--begin::Actions-->
                 <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-
                 <!--end::Actions-->
             </div>
             <!--end::Info-->
@@ -24,7 +23,6 @@
         <div class="container">
         <div class="row">
        <div class="col-md-12">
-
            <!--begin::Card-->
            <div class="card">
                <div class="card-body">
@@ -33,20 +31,19 @@
                        <thead>
                        <tr>
                            <th>#</th>
-                           <th>Amount</th>
-                           <th>Due Date</th>
-                           <th>Interest Rate</th>
-                           <th>Repayment Amount</th>
+                           <th>Customer</th>
+                           <th>Total Score</th>
+                           <th>Total Score Value</th>
                        </tr>
                        </thead>
                        <tbody>
-                       @foreach($loans as $loan)
+                       @foreach($scores as $score)
                        <tr>
-                           <td>{{$loan->id}}</td>
-                           <td>{{$loan->loan_amount}}</td>
-                           <td>{{$loan->due_date}}</td>
-                           <td>{{$loan->interest_rate}}</td>
-                           <td>{{$loan->repayment_amount}}</td>
+                           <td>{{$score->id}}</td>
+                           <td>{{$score->user->first_name.' '.$score->user->last_name}}</td>
+                           <td>{{$score->total_score}}</td>
+                           <td>{{$score->total_score_value}}</td>
+
                        </tr>
                        @endforeach
                        </tbody>
@@ -61,4 +58,5 @@
         <!--end::Container-->
     </div>
     <!--end::Entry-->
+
 @endsection
