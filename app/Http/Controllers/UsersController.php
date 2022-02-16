@@ -143,7 +143,7 @@ class UsersController extends Controller
        'last_name' => $data['last_name'],
        'phone' => $data['phone_number_1'],
        'role_id' => 2,
-       'dob' => $data['first_name'],
+       'dob' => $data['dob'],
        'password' => Hash::make("password"),
    );
    User::create($user);
