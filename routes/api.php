@@ -23,4 +23,4 @@ Route::prefix("loan")->group(function (){
     Route::post("/user-details",[\App\Http\Controllers\UsersController::class,'userDetails']);
 });
 Route::post("users/update/{id}","UsersController@update");
-Route::get("user-details","UsersController@userDetails");
+Route::post("user-details","UsersController@userDetails");
