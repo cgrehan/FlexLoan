@@ -15,8 +15,12 @@ class CreateUserCreditScoresTable extends Migration
     {
         Schema::create('user_credit_scores', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("user_id")->constrained()->onUpdate("cascade")->onDelete("cascade");
-            $table->foreignId("credit_score_id")->constrained()->onUpdate("cascade")->onDelete("cascade");
+            $table->bigInteger("user_id");
+            $table->float("total_score");
+            $table->float("total_score_value");
+            $table->string("score_type")->nullable();
+            $table->string("score_reason")->nullable();
+            $table->string("score_description")->nullable();
             $table->timestamps();
         });
     }

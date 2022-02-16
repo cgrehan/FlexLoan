@@ -32,7 +32,6 @@ class CreateUserLoanDetailsTable extends Migration
             $table->string('second_next_of_kin_phone')->nullable();
             $table->string('second_next_of_kin_ralationship')->nullable();
             $table->foreignId("user_id")->constrained()->onUpdate("cascade")->onDelete("cascade");
-            $table->foreignId("credit_score_id")->constrained()->onUpdate("cascade")->onDelete("cascade");
             $table->timestamps();
         });
     }

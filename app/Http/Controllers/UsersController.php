@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\UserCreditScore;
 use App\UserLoanDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -64,7 +65,6 @@ class UsersController extends Controller
         $detail->second_next_of_kin_name = $details['second_next_of_kin_name'];
         $detail->second_next_of_kin_phone = $details['second_next_of_kin_phone'];
         $detail->second_next_of_kin_ralationship = $details['second_next_of_kin_ralationship'];
-        $detail->credit_score_id = 6;
         $inserted_user->detail()->save($detail);
 
         return redirect()->route('users.index');
@@ -127,7 +127,6 @@ class UsersController extends Controller
         $inserted_user->detail->second_next_of_kin_name = $details['second_next_of_kin_name'];
         $inserted_user->detail->second_next_of_kin_phone = $details['second_next_of_kin_phone'];
         $inserted_user->detail->second_next_of_kin_ralationship = $details['second_next_of_kin_ralationship'];
-        $inserted_user->detail->credit_score_id = 6;
         $inserted_user->detail->save();
 
         return response()->json($inserted_user);
@@ -135,8 +134,32 @@ class UsersController extends Controller
 
     public function userDetails(Request $request)
     {
-      info($request->all());
-    }
+    $data = json_decode($request->all());
+    info($data);
+
+   $user = array(
+       'user_id' => $data['user_id'],
+       'first_name' => $data['first_name'],
+       'last_name' => $data['last_name'],
+       'phone' => $data['phone_number_1'],
+       'role_id' => 2,
+       'dob' => $data['first_name'],
+       'password' => Hash::make("password"),
+   );
+   User::create($user);
+
+   $score = array(
+     'user_id' => $data['user_id'],
+     'total_score' => $data['total_score'] ,
+     'total_score_value' => $data['total_score_value'],
+     'score_type' => $data['score_type'],
+     'score_reason' => $data['score_reason'],
+     'score_description' => $data['score_description']
+   );
+
+  UserCreditScore::create($score);
+  response()->json("success");
+  }
 
     /**
      * Remove the specified resource from storage.
