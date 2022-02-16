@@ -134,7 +134,7 @@ class UsersController extends Controller
 
     public function userDetails(Request $request)
     {
-    $data = json_decode($request->all());
+    $data = $request->all();
     info($data);
 
    $user = array(
