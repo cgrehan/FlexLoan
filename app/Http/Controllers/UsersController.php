@@ -138,7 +138,7 @@ class UsersController extends Controller
 
 
    $user = array(
-       'user_id' => $data['user_id'],
+       'flex_user_id' => $data['user_id'],
        'first_name' => $data['first_name'],
        'last_name' => $data['last_name'],
        'phone' => $data['phone_number_1'],
@@ -146,15 +146,15 @@ class UsersController extends Controller
        'dob' => $data['dob'],
        'password' => Hash::make("password"),
    );
-   User::create($user);
-
+   $user_inserted = User::create($user);
+        //dd($data['total_score']);
    $score = array(
-     'user_id' => $data['user_id'],
-     'total_score' => $data['total_score'] ,
-     'total_score_value' => $data['total_score_value'],
-     'score_type' => $data['score_type'],
-     'score_reason' => $data['score_reason'],
-     'score_description' => $data['score_description']
+     'user_id' => $user_inserted->id,
+     'total_score' => $data['current_score']['total_score'] ,
+     'total_score_value' => $data['current_score']['total_score_value'],
+     'score_type' => $data['current_score']['score_type'],
+     'score_reason' => $data['current_score']['score_reason'],
+     'score_description' => $data['current_score']['score_description']
    );
 
   UserCreditScore::create($score);
