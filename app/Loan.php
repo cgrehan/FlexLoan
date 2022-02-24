@@ -18,4 +18,9 @@ class Loan extends Model
        self::where('has_completed_repayment',1)->get();
     }
 
+    public function user()
+    {
+     return $this->belongsTo(User::class);
+    }
+
 }

@@ -33,20 +33,28 @@
                        <thead>
                        <tr>
                            <th>#</th>
-                           <th>Amount</th>
-                           <th>Due Date</th>
-                           <th>Interest Rate</th>
+                           <th>Name</th>
+                           <th>Phone</th>
+                           <th>Email</th>
+                           <th>Amount Requested</th>
                            <th>Repayment Amount</th>
+                           <th>Amount Paid</th>
+                           <th>Balance</th>
+                           <th>Disbursement Date</th>
                        </tr>
                        </thead>
                        <tbody>
                        @foreach($loans as $loan)
                        <tr>
                            <td>{{$loan->id}}</td>
+                           <td>{{$loan->user->first_name.' '.$loan->user->last_name}}</td>
+                           <td>{{$loan->user->phone}}</td>
+                           <td>{{$loan->user->email}}</td>
                            <td>{{$loan->loan_amount}}</td>
-                           <td>{{$loan->due_date}}</td>
-                           <td>{{$loan->interest_rate}}</td>
                            <td>{{$loan->repayment_amount}}</td>
+                           <td>{{$loan->amount_paid_todate}}</td>
+                           <td>{{$loan->repayment_amount - $loan->amount_paid_todate}}</td>
+                           <td>{{\Carbon\Carbon::parse($loan->approved_date)->format('d-m-Y')}}</td>
                        </tr>
                        @endforeach
                        </tbody>

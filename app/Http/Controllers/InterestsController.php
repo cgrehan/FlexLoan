@@ -36,10 +36,12 @@ class InterestsController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate(['name' => ['unique:interests,name']]);
-
-        Interest::create($request->all());
-        return redirect()->route("interests.index");
+        set_option("interest_rate",$request->interest_rate);
+        return redirect()->back();
+//        $request->validate(['name' => ['unique:interests,name']]);
+//
+//        Interest::create($request->all());
+//        return redirect()->route("interests.index");
     }
 
     /**

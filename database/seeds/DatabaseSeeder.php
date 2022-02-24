@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
          $this->call(CreditScoreTypesSeeader::class);
-//         $this->call(CreditScoresSeeader::class);
+         $this->call(SettingsSeeder::class);
          $this->call(UserSeeder::class);
          $this->call(LoanTypesSeeader::class);
          $this->call(InterestTypesSeeader::class);

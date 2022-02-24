@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Loan;
 use App\LoanType;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class LoansController extends Controller
@@ -68,12 +69,16 @@ class LoansController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     public function updateLoan(Request  $request)
     {
         Loan::find($request->id)->update(['status'=>$request->status]);
+        if ($request->status =='Approved'){
+            Loan::find($request->id)->update(['loan_status'=>'active','approved_date'=>Carbon::now(),'due_date'=>Carbon::now()->addDays(30)]);
+        }
+
         return response($request->all());
     }
 

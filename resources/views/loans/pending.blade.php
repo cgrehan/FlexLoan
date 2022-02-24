@@ -33,9 +33,10 @@
                        <thead>
                        <tr>
                            <th>#</th>
-                           <th>Amount</th>
-                           <th>Due Date</th>
-                           <th>Interest Rate</th>
+                           <th>Name</th>
+                           <th>Phone</th>
+                           <th>Email</th>
+                           <th>Amount Requested</th>
                            <th>Repayment Amount</th>
                            <th>Actions</th>
                        </tr>
@@ -44,14 +45,15 @@
                        @foreach($loans as $loan)
                        <tr>
                            <td>{{$loan->id}}</td>
+                           <td>{{$loan->user->first_name.' '.$loan->user->last_name}}</td>
+                           <td>{{$loan->user->phone}}</td>
+                           <td>{{$loan->user->email}}</td>
                            <td>{{$loan->loan_amount}}</td>
-                           <td>{{$loan->due_date}}</td>
-                           <td>{{$loan->interest_rate}}</td>
                            <td>{{$loan->repayment_amount}}</td>
-                           <td>
+                           <td class="d-flex">
                                @if($loan->status == 'Pending')
-                               <button onclick="approve('Approved','approve',{{$loan->id}})" class="btn btn-success"><i class="fa fa-check"></i>Approve</button>
-                               <button onclick="approve('Rejected','reject',{{$loan->id}})" class="btn btn-warning"><i class="fa fa-ban"></i>Reject</button>
+                               <button onclick="approve('Approved','approve',{{$loan->id}})" class="btn btn-sm btn-success"><i class="fa fa-check"></i>Approve</button>
+                               <button onclick="approve('Rejected','reject',{{$loan->id}})" class="btn btn-sm btn-warning ml-2"><i class="fa fa-ban"></i>Reject</button>
                                @endif
                            </td>
                        </tr>

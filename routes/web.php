@@ -38,6 +38,7 @@ Route::group(['middleware' => ['auth']],function (){
     Route::resource("penality-types","PenalityTypesController");
     Route::resource("penalities","PenalityController");
     Route::resource("users","UsersController");
+    Route::resource("loan-stages","LoanStagesController");
     Route::prefix("loans")->group(function (){
         Route::resource("loans","LoansController");
        Route::get("approved","LoansController@index")->name("loans.approved");
@@ -46,7 +47,6 @@ Route::group(['middleware' => ['auth']],function (){
 
     });
     Route::post("loan-update","LoansController@updateLoan");
-
 
     Route::get('register','Auth\RegisterController@showRegisterForm')->name('register.user');
     Route::post('register-new','Auth\RegisterController@create')->name('register.user.new');

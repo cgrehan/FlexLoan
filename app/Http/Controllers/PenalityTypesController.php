@@ -24,7 +24,7 @@ class PenalityTypesController extends Controller
      */
     public function create()
     {
-        return inertia("penalities/types/Create");
+        return view("penalities/types/create");
     }
 
     /**
@@ -35,9 +35,8 @@ class PenalityTypesController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate(['name'=>'unique:penality_types,name']);
-        PenalityType::create($request->all());
-        return redirect()->route("penality-types.index");
+        set_option("penality_rate",$request->penality_rate);
+        return redirect()->back();
     }
 
     /**

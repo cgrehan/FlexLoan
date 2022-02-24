@@ -161,7 +161,7 @@
 												</span>
                             </li>
                             <li class="menu-item" aria-haspopup="true">
-                                <a href="{{route("interests.index")}}" class="menu-link">
+                                <a href="{{route("interest-types.create")}}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
@@ -223,14 +223,14 @@
 												</span>
                             </li>
                             <li class="menu-item" aria-haspopup="true">
-                                <a href="{{route("penalities.index")}}" class="menu-link">
+                                <a href="{{route("penality-types.create")}}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
                                     <span class="menu-text">Manage Penalities</span>
                                 </a>
                             </li>
-                            <li class="menu-item" aria-haspopup="true">
+                            <li class="menu-item d-none" aria-haspopup="true">
                                 <a href="{{route("penality-types.index")}}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>

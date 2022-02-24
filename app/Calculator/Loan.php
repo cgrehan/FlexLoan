@@ -17,7 +17,7 @@ class Loan
     // return interest rate within the amount range
     function interestRate($amount_qualified)
     {
-        $rates = \App\Interest::all();
+       $rates = \App\Interest::all();
         foreach ($rates as $rate) {
             if ($amount_qualified >= $rate->range_from && $amount_qualified <= $rate->range_to){
                 return $rate->interest_rate;

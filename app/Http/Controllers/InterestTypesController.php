@@ -25,7 +25,7 @@ class InterestTypesController extends Controller
      */
     public function create()
     {
-        return inertia("interests/types/Create");
+        return view("interests/types/create");
     }
 
     /**
