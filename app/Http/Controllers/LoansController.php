@@ -16,7 +16,7 @@ class LoansController extends Controller
      */
     public function index()
     {
-        return view("loans/index",['loans'=>Loan::where('status','approved')->get()]);
+      return view("loans/index",['loans'=>Loan::where('status','approved')->get()]);
     }
 
     public function rejected()
@@ -27,6 +27,18 @@ class LoansController extends Controller
     public function pending()
     {
         return view("loans/pending",['loans'=>Loan::where('status','Pending')->get()]);
+    }
+    public function completed()
+    {
+        return view("loans/completed",['loans'=>Loan::where('status','Approved')->where('loan_status','Completed')->get()]);
+    }
+  public function active()
+    {
+        return view("loans/active",['loans'=>Loan::where('status','Approved')->where('loan_status','Active')->get()]);
+    }
+  public function overdue()
+    {
+        return view("loans/overdue",['loans'=>Loan::where('status','Approved')->where('loan_status','Overdue')->get()]);
     }
 
     /**
@@ -74,9 +86,9 @@ class LoansController extends Controller
 
     public function updateLoan(Request  $request)
     {
-        Loan::find($request->id)->update(['status'=>$request->status]);
+        Loan::find($request->id)->update(['status'=>ucfirst($request->status)]);
         if ($request->status =='Approved'){
-            Loan::find($request->id)->update(['loan_status'=>'active','approved_date'=>Carbon::now(),'due_date'=>Carbon::now()->addDays(30)]);
+            Loan::find($request->id)->update(['loan_status'=>'Active','approved_date'=>Carbon::now(),'due_date'=>Carbon::now()->addDays(30)]);
         }
 
         return response($request->all());

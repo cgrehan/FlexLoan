@@ -38,12 +38,16 @@ Route::group(['middleware' => ['auth']],function (){
     Route::resource("penality-types","PenalityTypesController");
     Route::resource("penalities","PenalityController");
     Route::resource("users","UsersController");
+    Route::get("users-uncompleted","UsersController@uncompletedProfile")->name("users-uncompleted");
     Route::resource("loan-stages","LoanStagesController");
     Route::prefix("loans")->group(function (){
         Route::resource("loans","LoansController");
-       Route::get("approved","LoansController@index")->name("loans.approved");
+        Route::get("approved","LoansController@index")->name("loans.approved");
         Route::get("pending","LoansController@pending")->name("loans.pending");
         Route::get("rejected","LoansController@rejected")->name("loans.rejected");
+        Route::get("completed","LoansController@completed")->name("loans.completed");
+        Route::get("active","LoansController@active")->name("loans.active");
+        Route::get("overdue","LoansController@overdue")->name("loans.overdue");
 
     });
     Route::post("loan-update","LoansController@updateLoan");

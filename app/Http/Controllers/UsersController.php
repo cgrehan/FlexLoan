@@ -17,7 +17,16 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view("users/index",['users'=>User::where("role_id",2)->get()]);
+
+        return view("users/index",['users'=>User::whereHas('detail')->where("role_id",2)->get()]);
+    }
+
+    public function uncompletedProfile()
+    {
+        $ids = User::whereHas('detail')->where("role_id",2)->pluck('id');
+        $users = User::whereNotIn('id',$ids)->get();
+
+        return view("users/index",['users'=>$users]);
     }
 
     /**
@@ -134,6 +143,8 @@ class UsersController extends Controller
 
     public function userDetails(Request $request)
     {
+        info($request->all());
+     return 'success';
     $data = $request->all();
 
 

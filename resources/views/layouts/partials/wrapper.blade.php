@@ -26,7 +26,7 @@
                 <div class="card card-custom bg-gray-100 card-stretch gutter-b">
                     <!--begin::Header-->
                     <div class="card-header border-0 bg-danger py-5">
-                        <h3 class="card-title font-weight-bolder text-white">Sales Stat</h3>
+                        <h3 class="card-title font-weight-bolder text-white">Loans Stat</h3>
                         <div class="card-toolbar">
                             <div class="dropdown dropdown-inline">
                                 <a href="#" class="btn btn-transparent-white btn-sm font-weight-bolder dropdown-toggle px-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Export</a>

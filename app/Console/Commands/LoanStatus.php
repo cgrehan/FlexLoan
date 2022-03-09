@@ -46,7 +46,7 @@ class LoanStatus extends Command
 
         //Loan overdue
          if ($loanModel->isOverdue()){
-         $loanModel->applyOverdue();
+          $loanModel->applyOverdue();
          }
 
          //Apply Rollover

@@ -15,7 +15,7 @@ class LoanSeeder extends Seeder
         $user2 = \App\User::find(2);
 
         $loan1 = \App\Loan::create(['reason'=>'Emergency','loan_amount'=>5000,'approved_date'=>\Carbon\Carbon::now(),'due_date'=>\Carbon\Carbon::now()->addDays(30),'interest_rate'=>get_option("interest_rate"),
-                   'amount_paid_todate' =>0,'user_id'=>$user1->id,'loan_type_id'=>1,'status'=>'active']);
+                   'amount_paid_todate' =>0,'user_id'=>$user1->id,'loan_type_id'=>1,'loan_status'=>'Active']);
         $model1 = new \App\Calculator\Interest($loan1);
         $loan1->update(['repayment_amount'=>$model1->amountRepaid()]);
 
