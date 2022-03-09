@@ -31,6 +31,16 @@ class CreateUserLoanDetailsTable extends Migration
             $table->string('second_next_of_kin_name')->nullable();
             $table->string('second_next_of_kin_phone')->nullable();
             $table->string('second_next_of_kin_ralationship')->nullable();
+            $table->string('guarantor_name')->nullable();
+            $table->string('guarantor_phone')->nullable();
+            $table->string('guarantor_residence')->nullable();
+            $table->string('building_name')->nullable();
+            $table->string('house_number')->nullable();
+            $table->string('loan_purpose')->nullable();
+            $table->string('income_frequency')->nullable();
+            $table->string('employment_industry')->nullable();
+            $table->string('income_source')->nullable();
+            $table->string('income_range')->nullable();
             $table->foreignId("user_id")->constrained()->onUpdate("cascade")->onDelete("cascade");
             $table->timestamps();
         });

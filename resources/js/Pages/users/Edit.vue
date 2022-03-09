@@ -132,43 +132,61 @@
                                     <h4 class="mb-10 font-weight-bold text-dark">
                                         Enter your Personal Details
                                     </h4>
-                                    <div class="form-group">
-                                        <label>First Name</label>
-                                        <input
-                                            type="text"
-                                            class="form-control form-control-solid form-control-lg"
-                                            v-model="user.first_name"
-                                            placeholder="First Name"
-                                            required
-                                        />
-                                        <span class="form-text text-muted"
-                                        >Please enter your First Name.</span
-                                        >
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label>First Name</label>
+                                            <input
+                                                type="text"
+                                                class="form-control form-control-solid form-control-lg"
+                                                v-model="user.first_name"
+                                                placeholder="First Name"
+                                                required
+                                            />
+                                            <span class="form-text text-muted"
+                                            >Please enter your First Name.</span
+                                            >
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Last Name</label>
+                                            <input
+                                                type="text"
+                                                class="form-control form-control-solid form-control-lg"
+                                                v-model="user.last_name"
+                                                required
+                                            />
+                                            <span class="form-text text-muted"
+                                            >Please enter your Last Name.</span
+                                            >
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Last Name</label>
-                                        <input
-                                            type="text"
-                                            class="form-control form-control-solid form-control-lg"
-                                            v-model="user.last_name"
-                                            required
-                                        />
-                                        <span class="form-text text-muted"
-                                        >Please enter your Last Name.</span
-                                        >
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Phone Numner</label>
-                                        <input
-                                            type="text"
-                                            class="form-control form-control-solid form-control-lg"
-                                            v-model="user.phone"
-                                            required
-                                        />
-                                        <span class="form-text text-muted"
-                                        >Please enter your Phone.</span
-                                        >
-                                    </div>
+
+                                 <div class="row">
+                                     <div class="form-group col-md-6">
+                                         <label>Phone Number</label>
+                                         <input
+                                             type="text"
+                                             class="form-control form-control-solid form-control-lg"
+                                             v-model="user.phone"
+                                             required
+                                         />
+                                         <span class="form-text text-muted"
+                                         >Please enter your Phone Number.</span
+                                         >
+                                     </div>
+                                     <div class="form-group col-md-6">
+                                         <label>Email</label>
+                                         <input
+                                             type="email"
+                                             class="form-control form-control-solid form-control-lg"
+                                             v-model="user.email"
+                                             placeholder="Email"
+                                             required
+                                         />
+                                         <span class="form-text text-muted"
+                                         >Please enter your Email.</span
+                                         >
+                                     </div>
+                                 </div>
                                     <div class="row">
                                         <div class="col-xl-4">
                                             <div class="form-group">
@@ -210,21 +228,30 @@
                                                 >Please enter your ID Number.</span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xl-4">
-                                            <div class="form-group">
-                                                <label>Email</label>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label>Building Name</label>
                                                 <input
-                                                    type="email"
+                                                    type="text"
                                                     class="form-control form-control-solid form-control-lg"
-                                                    v-model="user.email"
-                                                    placeholder="Email"
+                                                    v-model="details.building_name"
+                                                    placeholder="Building Name"
                                                     required
                                                 />
                                                 <span class="form-text text-muted"
-                                                >Please enter your Email.</span
-                                                >
+                                                >Please enter your Building Name</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label>House Number</label>
+                                                <input
+                                                    type="text"
+                                                    class="form-control form-control-solid form-control-lg"
+                                                    v-model="details.house_number"
+                                                    placeholder="House No."
+                                                    required
+                                                />
+                                                <span class="form-text text-muted"
+                                                >Please enter your House No.</span>
                                             </div>
                                         </div>
                                     </div>
@@ -262,6 +289,20 @@
                                         <div class="form-group">
                                             <label>Employer Name</label>
                                             <input type="text" class="form-control form-control-solid form-control-lg" v-model="details.employer_name">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label>Guarantor Name</label>
+                                            <input type="text" class="form-control form-control-solid form-control-lg" v-model="details.guarantor_name" required>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Guarantor Phone</label>
+                                            <input type="text" class="form-control form-control-solid form-control-lg" v-model="details.guarantor_phone" required>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Guarantor Residence</label>
+                                            <input type="text" class="form-control form-control-solid form-control-lg" v-model="details.guarantor_residence" required>
                                         </div>
                                     </div>
                                 </div>
@@ -440,7 +481,7 @@ export default {
         return {
             user:{first_name:'',last_name:'',email:'',gender:'',phone:'',id_number:'',dob:''},
             details:{address1:'',address2:'',postcode:'',city:'',is_employed:1,salary:'',other_income:'',company_name:'',company_phone:'',employer_name:'',first_next_of_kin_name:'',first_next_of_kin_phone:'',first_next_of_kin_ralationship:'',
-                second_next_of_kin_name:'',second_next_of_kin_phone:'',second_next_of_kin_ralationship:''},
+                second_next_of_kin_name:'',second_next_of_kin_phone:'',second_next_of_kin_ralationship:'',house_number:'',building_name:'',guarantor_name:'',guarantor_phone:'',guarantor_residence:''},
             show:true
         }
     },
@@ -461,6 +502,8 @@ export default {
         submit(e){
             if (this.checkAddress() !==true)
                 return this.failMessage(this.checkAddress());
+            if (this.checkGuarantor() !==true)
+                return this.failMessage(this.checkGuarantor());
 
             if (this.checkPersonalDetails() !==true)
                 return this.failMessage(this.checkPersonalDetails());
@@ -518,6 +561,15 @@ export default {
                 return 'Address 1 is required';
             if (this.details.city === '')
                 return 'City is required';
+            return true;
+        },
+        checkGuarantor(){
+            if (this.details.guarantor_name ==='')
+                return 'Guarantor name is required';
+            if (this.details.guarantor_phone === '')
+                return 'Guarantor Phone is required';
+            if (this.details.guarantor_residence === '')
+                return 'Guarantor Residence is required';
             return true;
         },
         checkPersonalDetails(){
@@ -590,6 +642,8 @@ export default {
                 this.details.address2 = this.user_detail.detail.address2;
                 this.details.postcode = this.user_detail.detail.postcode;
                 this.details.city = this.user_detail.detail.city;
+                this.details.building_name = this.user_detail.detail.building_name;
+                this.details.house_number = this.user_detail.detail.house_number;
                 this.details.is_employed = this.user_detail.detail.is_employed;
                 this.details.salary = this.user_detail.detail.salary;
                 this.details.other_income = this.user_detail.detail.other_income;

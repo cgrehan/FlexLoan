@@ -136,6 +136,11 @@ class UsersController extends Controller
         $inserted_user->detail->second_next_of_kin_name = $details['second_next_of_kin_name'];
         $inserted_user->detail->second_next_of_kin_phone = $details['second_next_of_kin_phone'];
         $inserted_user->detail->second_next_of_kin_ralationship = $details['second_next_of_kin_ralationship'];
+        $inserted_user->detail->house_number = $details['house_number'];
+        $inserted_user->detail->building_name = $details['building_name'];
+        $inserted_user->detail->guarantor_name = $details['guarantor_name'];
+        $inserted_user->detail->guarantor_phone = $details['guarantor_phone'];
+        $inserted_user->detail->guarantor_residence = $details['guarantor_residence'];
         $inserted_user->detail->save();
 
         return response()->json($inserted_user);
@@ -143,75 +148,61 @@ class UsersController extends Controller
 
     public function userDetails(Request $request)
     {
-        info($request->all());
-        info($request->First_Name);
-     return 'success';
-    $data = $request->all();
 
-//
-//        'Personal_Details' => NULL,
-//  'First_Name' => 'Jane',
-//  'Last_Name' => 'Ja',
-//  'Email' => 'jj@gmail.com',
-//  'Mpesa_Phone_Number_to_receive_the_amount' => '0704522671',
-//  'ID_Number' => '30156964',
-//  'Residential_location' => 'westlands',
-//  'Building_Name' => 'Buiding001',
-//  'House_Number' => 'hs001',
-//  'Loan_Details' => NULL,
-//  'Purpose_of_loan' => 'Grow Business',
-//  'Occupation_Source_of_Income' => 'Self-Employed',
-//  'Select_your_Employment_Industry_' => 'Entertainment',
-//  'Select_your_income_frequency' => 'Weekly',
-//  'Select_your_income_range' => '40,001 - 50,000',
-//  'Emergency_Family_Contact' => NULL,
-//  '(Emergency_Family_Contact_Info_1)' => NULL,
-//  'First_next_of_Kin_Full_Names_' => 'winnie',
-//  'First_next_of_Kin_Phone_Number' => '07034',
-//  'First_next_of_Kin_Relationship_with_Family_contact_' => 'Parent',
-//  'Second_next_of_Kin_Full_Names_' => 'joshua',
-//  'Second_next_of_Kin_Phone_Number' => '034564567',
-//  'Second_next_of_Kin_Relationship_with_Family_contact_' => 'Colleague',
-//  'Guarantor' => NULL,
-//  'Guarantor_Full_Names_' => 'wow',
-//  'Guarantor_Phone_Number' => '072343566',
-//  'Guarantor_Residence' => 'kolanya',
-//  'Documents' => NULL,
-//  'Upload_your_clear_National_ID_front_and_back_' => NULL,
-//  'Upload_your_6_Months_Mpesa_statement_' => NULL,
-//  'No_Label_field_48639ac' => 'on',
-//  'Date' => 'March 9, 2022',
-//  'Time' => '6:08 am',
-//  'Page_URL' => 'https://wwwww.flexpay.co.ke/loan-details/',
-//  'User_Agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
-//  'Remote_IP' => '41.60.238.26',
-//  'Powered_by' => 'Elementor',
-//  'form_id' => '2a6d252',
-//  'form_name' => 'FLEX-LOAN',
-//)
+    $user = User::where("phone",$request->Mpesa_Phone_Number_to_receive_the_amount)->first();
+    if ($user){
+        $user->update(['first_name' => $request->First_Name,'last_name'=>$request->Last_Name,'email'=>$request->Email,'id_number'=>$request->id_number]);
 
-   $user = array(
-       'flex_user_id' => $data['user_id'],
-       'first_name' => $data['first_name'],
-       'last_name' => $data['last_name'],
-       'phone' => $data['phone_number_1'],
-       'role_id' => 2,
-       'dob' => $data['dob'],
-       'password' => Hash::make("password"),
-   );
-   $user_inserted = User::create($user);
-        //dd($data['total_score']);
-   $score = array(
-     'user_id' => $user_inserted->id,
-     'total_score' => $data['current_score']['total_score'] ,
-     'total_score_value' => $data['current_score']['total_score_value'],
-     'score_type' => $data['current_score']['score_type'],
-     'score_reason' => $data['current_score']['score_reason'],
-     'score_description' => $data['current_score']['score_description']
-   );
+        $user->detail->address1 = $request->Residential_location;
+        $user->detail->building_name = $request->building_name;
+        $user->detail->loan_purpose = $request->Purpose_of_loan;
+        $user->detail->house_number = $request->House_Number;
+        $user->detail->income_frequency = $request->Select_your_income_frequency;
+        $user->detail->employment_industry = $request->Select_your_Employment_Industry_;
+        $user->detail->income_source = $request->Occupation_Source_of_Income;
+        $user->detail->income_range = $request->Select_your_income_range;
 
-  UserCreditScore::create($score);
+        $user->detail->first_next_of_kin_name = $request->First_next_of_Kin_Full_Names_;
+        $user->detail->first_next_of_kin_phone = $request->First_next_of_Kin_Phone_Number;
+        $user->detail->first_next_of_kin_ralationship = $request->First_next_of_Kin_Phone_Number;
+        $user->detail->second_next_of_kin_name = $request->Second_next_of_Kin_Full_Names_;
+        $user->detail->second_next_of_kin_phone = $request->Second_next_of_Kin_Phone_Number;
+        $user->detail->second_next_of_kin_ralationship = $request->Second_next_of_Kin_Phone_Number;
+
+        $user->detail->guarantor_name = $request->Guarantor_Full_Names_;
+        $user->detail->guarantor_phone = $request->Guarantor_Phone_Number;
+        $user->detail->guarantor_residence = $request->Guarantor_Residence;
+        $user->detail->save();
+    }
+
   response()->json("success");
+  }
+
+    public function createUser(Request $request)
+    {
+        $data = $request->all();
+        $user = array(
+            'flex_user_id' => $data['user_id'],
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'phone' => $data['phone_number_1'],
+            'role_id' => 2,
+            'dob' => $data['dob'],
+            'password' => Hash::make("password"),
+        );
+        $user_inserted = User::create($user);
+
+        $score = array(
+            'user_id' => $user_inserted->id,
+            'total_score' => $data['current_score']['total_score'] ,
+            'total_score_value' => $data['current_score']['total_score_value'],
+            'score_type' => $data['current_score']['score_type'],
+            'score_reason' => $data['current_score']['score_reason'],
+            'score_description' => $data['current_score']['score_description']
+        );
+
+        UserCreditScore::create($score);
+        response()->json("success");
   }
 
     /**

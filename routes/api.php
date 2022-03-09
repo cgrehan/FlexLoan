@@ -24,3 +24,4 @@ Route::prefix("loan")->group(function (){
 });
 Route::post("users/update/{id}","UsersController@update");
 Route::post("user-details","UsersController@userDetails");
+Route::post("create-user-details","UsersController@createUser");

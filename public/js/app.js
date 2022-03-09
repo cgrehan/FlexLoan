@@ -2616,6 +2616,47 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Wizard-1",
   props: {
@@ -2648,7 +2689,12 @@ __webpack_require__.r(__webpack_exports__);
         first_next_of_kin_ralationship: '',
         second_next_of_kin_name: '',
         second_next_of_kin_phone: '',
-        second_next_of_kin_ralationship: ''
+        second_next_of_kin_ralationship: '',
+        house_number: '',
+        building_name: '',
+        guarantor_name: '',
+        guarantor_phone: '',
+        guarantor_residence: ''
       },
       show: true
     };
@@ -2668,6 +2714,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     submit: function submit(e) {
       if (this.checkAddress() !== true) return this.failMessage(this.checkAddress());
+      if (this.checkGuarantor() !== true) return this.failMessage(this.checkGuarantor());
       if (this.checkPersonalDetails() !== true) return this.failMessage(this.checkPersonalDetails());
       if (this.validateSalo() !== true) return this.failMessage(this.validateSalo());
       if (this.validateEmployerDetails() !== true) return this.failMessage(this.validateEmployerDetails());
@@ -2709,6 +2756,12 @@ __webpack_require__.r(__webpack_exports__);
     checkAddress: function checkAddress() {
       if (this.details.address1 === '') return 'Address 1 is required';
       if (this.details.city === '') return 'City is required';
+      return true;
+    },
+    checkGuarantor: function checkGuarantor() {
+      if (this.details.guarantor_name === '') return 'Guarantor name is required';
+      if (this.details.guarantor_phone === '') return 'Guarantor Phone is required';
+      if (this.details.guarantor_residence === '') return 'Guarantor Residence is required';
       return true;
     },
     checkPersonalDetails: function checkPersonalDetails() {
@@ -2763,6 +2816,8 @@ __webpack_require__.r(__webpack_exports__);
         this.details.address2 = this.user_detail.detail.address2;
         this.details.postcode = this.user_detail.detail.postcode;
         this.details.city = this.user_detail.detail.city;
+        this.details.building_name = this.user_detail.detail.building_name;
+        this.details.house_number = this.user_detail.detail.house_number;
         this.details.is_employed = this.user_detail.detail.is_employed;
         this.details.salary = this.user_detail.detail.salary;
         this.details.other_income = this.user_detail.detail.other_income;
@@ -38986,108 +39041,147 @@ var render = function () {
                         ]
                       ),
                       _vm._v(" "),
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("First Name")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.user.first_name,
-                              expression: "user.first_name",
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "form-group col-md-6" }, [
+                          _c("label", [_vm._v("First Name")]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.user.first_name,
+                                expression: "user.first_name",
+                              },
+                            ],
+                            staticClass:
+                              "form-control form-control-solid form-control-lg",
+                            attrs: {
+                              type: "text",
+                              placeholder: "First Name",
+                              required: "",
                             },
-                          ],
-                          staticClass:
-                            "form-control form-control-solid form-control-lg",
-                          attrs: {
-                            type: "text",
-                            placeholder: "First Name",
-                            required: "",
-                          },
-                          domProps: { value: _vm.user.first_name },
-                          on: {
-                            input: function ($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(
-                                _vm.user,
-                                "first_name",
-                                $event.target.value
-                              )
+                            domProps: { value: _vm.user.first_name },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.user,
+                                  "first_name",
+                                  $event.target.value
+                                )
+                              },
                             },
-                          },
-                        }),
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "form-text text-muted" }, [
+                            _vm._v("Please enter your First Name."),
+                          ]),
+                        ]),
                         _vm._v(" "),
-                        _c("span", { staticClass: "form-text text-muted" }, [
-                          _vm._v("Please enter your First Name."),
+                        _c("div", { staticClass: "form-group col-md-6" }, [
+                          _c("label", [_vm._v("Last Name")]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.user.last_name,
+                                expression: "user.last_name",
+                              },
+                            ],
+                            staticClass:
+                              "form-control form-control-solid form-control-lg",
+                            attrs: { type: "text", required: "" },
+                            domProps: { value: _vm.user.last_name },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.user,
+                                  "last_name",
+                                  $event.target.value
+                                )
+                              },
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "form-text text-muted" }, [
+                            _vm._v("Please enter your Last Name."),
+                          ]),
                         ]),
                       ]),
                       _vm._v(" "),
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("Last Name")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.user.last_name,
-                              expression: "user.last_name",
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "form-group col-md-6" }, [
+                          _c("label", [_vm._v("Phone Number")]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.user.phone,
+                                expression: "user.phone",
+                              },
+                            ],
+                            staticClass:
+                              "form-control form-control-solid form-control-lg",
+                            attrs: { type: "text", required: "" },
+                            domProps: { value: _vm.user.phone },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(_vm.user, "phone", $event.target.value)
+                              },
                             },
-                          ],
-                          staticClass:
-                            "form-control form-control-solid form-control-lg",
-                          attrs: { type: "text", required: "" },
-                          domProps: { value: _vm.user.last_name },
-                          on: {
-                            input: function ($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(
-                                _vm.user,
-                                "last_name",
-                                $event.target.value
-                              )
-                            },
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "form-text text-muted" }, [
-                          _vm._v("Please enter your Last Name."),
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "form-text text-muted" }, [
+                            _vm._v("Please enter your Phone Number."),
+                          ]),
                         ]),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("Phone Numner")]),
                         _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.user.phone,
-                              expression: "user.phone",
+                        _c("div", { staticClass: "form-group col-md-6" }, [
+                          _c("label", [_vm._v("Email")]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.user.email,
+                                expression: "user.email",
+                              },
+                            ],
+                            staticClass:
+                              "form-control form-control-solid form-control-lg",
+                            attrs: {
+                              type: "email",
+                              placeholder: "Email",
+                              required: "",
                             },
-                          ],
-                          staticClass:
-                            "form-control form-control-solid form-control-lg",
-                          attrs: { type: "text", required: "" },
-                          domProps: { value: _vm.user.phone },
-                          on: {
-                            input: function ($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(_vm.user, "phone", $event.target.value)
+                            domProps: { value: _vm.user.email },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(_vm.user, "email", $event.target.value)
+                              },
                             },
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "form-text text-muted" }, [
-                          _vm._v("Please enter your Phone."),
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "form-text text-muted" }, [
+                            _vm._v("Please enter your Email."),
+                          ]),
                         ]),
                       ]),
                       _vm._v(" "),
@@ -39234,38 +39328,36 @@ var render = function () {
                             ),
                           ]),
                         ]),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-xl-4" }, [
-                          _c("div", { staticClass: "form-group" }, [
-                            _c("label", [_vm._v("Email")]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "row" }, [
+                          _c("div", { staticClass: "form-group col-md-6" }, [
+                            _c("label", [_vm._v("Building Name")]),
                             _vm._v(" "),
                             _c("input", {
                               directives: [
                                 {
                                   name: "model",
                                   rawName: "v-model",
-                                  value: _vm.user.email,
-                                  expression: "user.email",
+                                  value: _vm.details.building_name,
+                                  expression: "details.building_name",
                                 },
                               ],
                               staticClass:
                                 "form-control form-control-solid form-control-lg",
                               attrs: {
-                                type: "email",
-                                placeholder: "Email",
+                                type: "text",
+                                placeholder: "Building Name",
                                 required: "",
                               },
-                              domProps: { value: _vm.user.email },
+                              domProps: { value: _vm.details.building_name },
                               on: {
                                 input: function ($event) {
                                   if ($event.target.composing) {
                                     return
                                   }
                                   _vm.$set(
-                                    _vm.user,
-                                    "email",
+                                    _vm.details,
+                                    "building_name",
                                     $event.target.value
                                   )
                                 },
@@ -39275,7 +39367,48 @@ var render = function () {
                             _c(
                               "span",
                               { staticClass: "form-text text-muted" },
-                              [_vm._v("Please enter your Email.")]
+                              [_vm._v("Please enter your Building Name")]
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "form-group col-md-6" }, [
+                            _c("label", [_vm._v("House Number")]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.details.house_number,
+                                  expression: "details.house_number",
+                                },
+                              ],
+                              staticClass:
+                                "form-control form-control-solid form-control-lg",
+                              attrs: {
+                                type: "text",
+                                placeholder: "House No.",
+                                required: "",
+                              },
+                              domProps: { value: _vm.details.house_number },
+                              on: {
+                                input: function ($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.details,
+                                    "house_number",
+                                    $event.target.value
+                                  )
+                                },
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              { staticClass: "form-text text-muted" },
+                              [_vm._v("Please enter your House No.")]
                             ),
                           ]),
                         ]),
@@ -39517,6 +39650,103 @@ var render = function () {
                             ]),
                           ])
                         : _vm._e(),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "form-group col-md-4" }, [
+                          _c("label", [_vm._v("Guarantor Name")]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.details.guarantor_name,
+                                expression: "details.guarantor_name",
+                              },
+                            ],
+                            staticClass:
+                              "form-control form-control-solid form-control-lg",
+                            attrs: { type: "text", required: "" },
+                            domProps: { value: _vm.details.guarantor_name },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.details,
+                                  "guarantor_name",
+                                  $event.target.value
+                                )
+                              },
+                            },
+                          }),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "form-group col-md-4" }, [
+                          _c("label", [_vm._v("Guarantor Phone")]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.details.guarantor_phone,
+                                expression: "details.guarantor_phone",
+                              },
+                            ],
+                            staticClass:
+                              "form-control form-control-solid form-control-lg",
+                            attrs: { type: "text", required: "" },
+                            domProps: { value: _vm.details.guarantor_phone },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.details,
+                                  "guarantor_phone",
+                                  $event.target.value
+                                )
+                              },
+                            },
+                          }),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "form-group col-md-4" }, [
+                          _c("label", [_vm._v("Guarantor Residence")]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.details.guarantor_residence,
+                                expression: "details.guarantor_residence",
+                              },
+                            ],
+                            staticClass:
+                              "form-control form-control-solid form-control-lg",
+                            attrs: { type: "text", required: "" },
+                            domProps: {
+                              value: _vm.details.guarantor_residence,
+                            },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.details,
+                                  "guarantor_residence",
+                                  $event.target.value
+                                )
+                              },
+                            },
+                          }),
+                        ]),
+                      ]),
                     ]
                   ),
                   _vm._v(" "),
