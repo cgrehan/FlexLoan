@@ -144,9 +144,51 @@ class UsersController extends Controller
     public function userDetails(Request $request)
     {
         info($request->all());
+        info($request->First_Name);
      return 'success';
     $data = $request->all();
 
+//
+//        'Personal_Details' => NULL,
+//  'First_Name' => 'Jane',
+//  'Last_Name' => 'Ja',
+//  'Email' => 'jj@gmail.com',
+//  'Mpesa_Phone_Number_to_receive_the_amount' => '0704522671',
+//  'ID_Number' => '30156964',
+//  'Residential_location' => 'westlands',
+//  'Building_Name' => 'Buiding001',
+//  'House_Number' => 'hs001',
+//  'Loan_Details' => NULL,
+//  'Purpose_of_loan' => 'Grow Business',
+//  'Occupation_Source_of_Income' => 'Self-Employed',
+//  'Select_your_Employment_Industry_' => 'Entertainment',
+//  'Select_your_income_frequency' => 'Weekly',
+//  'Select_your_income_range' => '40,001 - 50,000',
+//  'Emergency_Family_Contact' => NULL,
+//  '(Emergency_Family_Contact_Info_1)' => NULL,
+//  'First_next_of_Kin_Full_Names_' => 'winnie',
+//  'First_next_of_Kin_Phone_Number' => '07034',
+//  'First_next_of_Kin_Relationship_with_Family_contact_' => 'Parent',
+//  'Second_next_of_Kin_Full_Names_' => 'joshua',
+//  'Second_next_of_Kin_Phone_Number' => '034564567',
+//  'Second_next_of_Kin_Relationship_with_Family_contact_' => 'Colleague',
+//  'Guarantor' => NULL,
+//  'Guarantor_Full_Names_' => 'wow',
+//  'Guarantor_Phone_Number' => '072343566',
+//  'Guarantor_Residence' => 'kolanya',
+//  'Documents' => NULL,
+//  'Upload_your_clear_National_ID_front_and_back_' => NULL,
+//  'Upload_your_6_Months_Mpesa_statement_' => NULL,
+//  'No_Label_field_48639ac' => 'on',
+//  'Date' => 'March 9, 2022',
+//  'Time' => '6:08 am',
+//  'Page_URL' => 'https://wwwww.flexpay.co.ke/loan-details/',
+//  'User_Agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+//  'Remote_IP' => '41.60.238.26',
+//  'Powered_by' => 'Elementor',
+//  'form_id' => '2a6d252',
+//  'form_name' => 'FLEX-LOAN',
+//)
 
    $user = array(
        'flex_user_id' => $data['user_id'],
