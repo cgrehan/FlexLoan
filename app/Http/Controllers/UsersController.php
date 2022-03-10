@@ -124,37 +124,38 @@ class UsersController extends Controller
         $inserted_user->detail->is_employed = $details['is_employed'];
         $inserted_user->detail->salary = $details['salary'];
         $inserted_user->detail->company_name = $details['company_name'];
-        $inserted_user->detail->company_phone = $details['company_phone'];
+        $inserted_user->detail->company_phone = $this->formatPhone($details['company_phone']);
         $inserted_user->detail->employer_name = $details['employer_name'];
         $inserted_user->detail->address1 = $details['address1'];
         $inserted_user->detail->address2 = $details['address2'];
         $inserted_user->detail->postcode = $details['postcode'];
         $inserted_user->detail->city = $details['city'];
         $inserted_user->detail->first_next_of_kin_name = $details['first_next_of_kin_name'];
-        $inserted_user->detail->first_next_of_kin_phone = $details['first_next_of_kin_phone'];
+        $inserted_user->detail->first_next_of_kin_phone = $this->formatPhone($details['first_next_of_kin_phone']);
         $inserted_user->detail->first_next_of_kin_ralationship = $details['first_next_of_kin_ralationship'];
         $inserted_user->detail->second_next_of_kin_name = $details['second_next_of_kin_name'];
-        $inserted_user->detail->second_next_of_kin_phone = $details['second_next_of_kin_phone'];
+        $inserted_user->detail->second_next_of_kin_phone = $this->formatPhone($details['second_next_of_kin_phone']);
         $inserted_user->detail->second_next_of_kin_ralationship = $details['second_next_of_kin_ralationship'];
         $inserted_user->detail->house_number = $details['house_number'];
         $inserted_user->detail->building_name = $details['building_name'];
         $inserted_user->detail->guarantor_name = $details['guarantor_name'];
-        $inserted_user->detail->guarantor_phone = $details['guarantor_phone'];
+        $inserted_user->detail->guarantor_phone = $this->formatPhone($details['guarantor_phone']);
         $inserted_user->detail->guarantor_residence = $details['guarantor_residence'];
         $inserted_user->detail->save();
-
         return response()->json($inserted_user);
     }
 
     public function userDetails(Request $request)
     {
 
-    $user = User::where("phone",$request->Mpesa_Phone_Number_to_receive_the_amount)->first();
+    $user = User::where("phone",$this->formatPhone($request->Mpesa_Phone_Number_to_receive_the_amount))->first();
     if ($user){
-        $user->update(['first_name' => $request->First_Name,'last_name'=>$request->Last_Name,'email'=>$request->Email,'id_number'=>$request->id_number]);
 
+        info($request->all());
+        info($request->First_Name.' '.$request->Last_Name);
+        $user->update(['first_name' => $request->First_Name,'last_name'=>$request->Last_Name,'email'=>$request->Email,'id_number'=>$request->ID_Number]);
         $user->detail->address1 = $request->Residential_location;
-        $user->detail->building_name = $request->building_name;
+        $user->detail->building_name = $request->Building_Name;
         $user->detail->loan_purpose = $request->Purpose_of_loan;
         $user->detail->house_number = $request->House_Number;
         $user->detail->income_frequency = $request->Select_your_income_frequency;
@@ -163,14 +164,14 @@ class UsersController extends Controller
         $user->detail->income_range = $request->Select_your_income_range;
 
         $user->detail->first_next_of_kin_name = $request->First_next_of_Kin_Full_Names_;
-        $user->detail->first_next_of_kin_phone = $request->First_next_of_Kin_Phone_Number;
-        $user->detail->first_next_of_kin_ralationship = $request->First_next_of_Kin_Phone_Number;
+        $user->detail->first_next_of_kin_phone = $this->formatPhone($request->First_next_of_Kin_Phone_Number);
+        $user->detail->first_next_of_kin_ralationship = $request->First_next_of_Kin_Relationship_with_Family_contact_;
         $user->detail->second_next_of_kin_name = $request->Second_next_of_Kin_Full_Names_;
-        $user->detail->second_next_of_kin_phone = $request->Second_next_of_Kin_Phone_Number;
-        $user->detail->second_next_of_kin_ralationship = $request->Second_next_of_Kin_Phone_Number;
+        $user->detail->second_next_of_kin_phone = $this->formatPhone($request->Second_next_of_Kin_Phone_Number);
+        $user->detail->second_next_of_kin_ralationship = $request->Second_next_of_Kin_Relationship_with_Family_contact_;
 
         $user->detail->guarantor_name = $request->Guarantor_Full_Names_;
-        $user->detail->guarantor_phone = $request->Guarantor_Phone_Number;
+        $user->detail->guarantor_phone = $this->formatPhone($request->Guarantor_Phone_Number);
         $user->detail->guarantor_residence = $request->Guarantor_Residence;
         $user->detail->save();
     }
@@ -185,7 +186,7 @@ class UsersController extends Controller
             'flex_user_id' => $data['user_id'],
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
-            'phone' => $data['phone_number_1'],
+            'phone' => $this->formatPhone($data['phone_number_1']),
             'role_id' => 2,
             'dob' => $data['dob'],
             'password' => Hash::make("password"),
@@ -200,7 +201,7 @@ class UsersController extends Controller
             'score_reason' => $data['current_score']['score_reason'],
             'score_description' => $data['current_score']['score_description']
         );
-
+        
         UserCreditScore::create($score);
         response()->json("success");
   }
@@ -215,5 +216,10 @@ class UsersController extends Controller
     {
         User::destroy($id);
         return redirect("users.index");
+    }
+
+    public function formatPhone($phone)
+    {
+      return (substr($phone, 0, 1) == 0) ? preg_replace('/0/', '254', $phone, 1) : $phone;
     }
 }

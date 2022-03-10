@@ -331,11 +331,15 @@
                                     </div>
                                     <div class="form-group">
                                         <label>First Next Of Kin Relationship</label>
-                                        <select v-model="details.first_next_of_kin_ralationship" class="form-control form-control-solid form-control-lg" required>
-                                            <option value="Parents">Parents</option>
-                                            <option value="Couple">Couple</option>
-                                            <option value="Relative">Relative</option>
-                                            <option value="Friends">Friends</option>
+                                        <select v-model="details.first_next_of_kin_relationship" class="form-control form-control-solid form-control-lg" required>
+                                            <option value="Parent">Parent</option>
+                                            <option value="Spouse">Spouse</option>
+                                            <option value="Sibling">Sibling</option>
+                                            <option value="Aunt/Uncle">Aunt/Uncle</option>
+                                            <option value="Colleague">Colleague</option>
+                                            <option value="Friend">Friend</option>
+                                            <option value="Business Partner">Business Partner</option>
+                                            <option value="Other">Other</option>
                                         </select>
                                         <span class="form-text text-muted"
                                         >First Next Of Kin Relationship.</span
@@ -354,7 +358,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Second Next Of Kin Relationship</label>
-                                        <select v-model="details.second_next_of_kin_ralationship" class="form-control form-control-solid form-control-lg" required>
+                                        <select v-model="details.second_next_of_kin_relationship" class="form-control form-control-solid form-control-lg" required>
                                             <option value="Parents">Parents</option>
                                             <option value="Couple">Couple</option>
                                             <option value="Relative">Relative</option>
@@ -418,12 +422,12 @@
                                             First Next Of Kin Name: {{details.first_next_of_kin_name}}
                                             <br />
                                             First Next Of Kin Phone: {{details.first_next_of_kin_phone}} <br />
-                                            First Next Of Kin Relationship: {{details.first_next_of_kin_ralationship}} <br />
+                                            First Next Of Kin Relationship: {{details.first_next_of_kin_relationship}} <br />
                                             <br>
                                             Second Next Of Kin Name: {{details.second_next_of_kin_name}}
                                             <br />
                                             Second Next Of Kin Phone: {{details.second_next_of_kin_phone}} <br />
-                                            Second Next Of Kin Relationship: {{details.second_next_of_kin_ralationship}} <br />
+                                            Second Next Of Kin Relationship: {{details.second_next_of_kin_relationship}} <br />
                                         </div>
                                     </div>
                                 </div>
@@ -480,8 +484,8 @@ export default {
     data(){
         return {
             user:{first_name:'',last_name:'',email:'',gender:'',phone:'',id_number:'',dob:''},
-            details:{address1:'',address2:'',postcode:'',city:'',is_employed:1,salary:'',other_income:'',company_name:'',company_phone:'',employer_name:'',first_next_of_kin_name:'',first_next_of_kin_phone:'',first_next_of_kin_ralationship:'',
-                second_next_of_kin_name:'',second_next_of_kin_phone:'',second_next_of_kin_ralationship:'',house_number:'',building_name:'',guarantor_name:'',guarantor_phone:'',guarantor_residence:''},
+            details:{address1:'',address2:'',postcode:'',city:'',is_employed:1,salary:'',other_income:'',company_name:'',company_phone:'',employer_name:'',first_next_of_kin_name:'',first_next_of_kin_phone:'',first_next_of_kin_relationship:'',
+                second_next_of_kin_name:'',second_next_of_kin_phone:'',second_next_of_kin_relationship:'',house_number:'',building_name:'',guarantor_name:'',guarantor_phone:'',guarantor_residence:''},
             show:true
         }
     },
@@ -608,13 +612,13 @@ export default {
                 return 'First Next of Kin name is required.';
             if (this.details.first_next_of_kin_phone ==='')
                 return 'First Next of Kin Phone is required.'
-            if (this.details.first_next_of_kin_ralationship ==='')
+            if (this.details.first_next_of_kin_relationship ==='')
                 return 'First next of Kin relationship is required.'
             if (this.details.second_next_of_kin_name ==='')
                 return 'Second Next of Kin name is required.';
             if (this.details.second_next_of_kin_phone ==='')
                 return 'Second Next of Kin Phone is required';
-            if (this.details.second_next_of_kin_ralationship ==='')
+            if (this.details.second_next_of_kin_relationship ==='')
                 return 'Second next of Kin relationship is required.'
             return true;
         },
@@ -652,10 +656,10 @@ export default {
                 this.details.employer_name = this.user_detail.detail.employer_name;
                 this.details.first_next_of_kin_name = this.user_detail.detail.first_next_of_kin_name;
                 this.details.first_next_of_kin_phone = this.user_detail.detail.first_next_of_kin_phone;
-                this.details.first_next_of_kin_ralationship = this.user_detail.detail.first_next_of_kin_ralationship;
+                this.details.first_next_of_kin_relationship = this.user_detail.detail.first_next_of_kin_relationship;
                 this.details.second_next_of_kin_name = this.user_detail.detail.second_next_of_kin_name;
                 this.details.second_next_of_kin_phone = this.user_detail.detail.second_next_of_kin_phone;
-                this.details.second_next_of_kin_ralationship = this.user_detail.detail.second_next_of_kin_ralationship;
+                this.details.second_next_of_kin_relationship = this.user_detail.detail.second_next_of_kin_relationship;
             }
 
         }

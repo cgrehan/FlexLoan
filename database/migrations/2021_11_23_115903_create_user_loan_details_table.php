@@ -27,10 +27,10 @@ class CreateUserLoanDetailsTable extends Migration
             $table->string('city')->nullable();
             $table->string('first_next_of_kin_name')->nullable();
             $table->string('first_next_of_kin_phone')->nullable();
-            $table->string('first_next_of_kin_ralationship')->nullable();
+            $table->string('first_next_of_kin_relationship')->nullable();
             $table->string('second_next_of_kin_name')->nullable();
             $table->string('second_next_of_kin_phone')->nullable();
-            $table->string('second_next_of_kin_ralationship')->nullable();
+            $table->string('second_next_of_kin_relationship')->nullable();
             $table->string('guarantor_name')->nullable();
             $table->string('guarantor_phone')->nullable();
             $table->string('guarantor_residence')->nullable();
