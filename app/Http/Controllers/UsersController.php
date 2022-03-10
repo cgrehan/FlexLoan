@@ -47,6 +47,7 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
+
         $user = $request->get('user');
         $details = $request->get('details');
 
@@ -110,6 +111,7 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $user = $request->get('user');
         $details = $request->get('details');
 
@@ -154,26 +156,53 @@ class UsersController extends Controller
         info($request->all());
         info($request->First_Name.' '.$request->Last_Name);
         $user->update(['first_name' => $request->First_Name,'last_name'=>$request->Last_Name,'email'=>$request->Email,'id_number'=>$request->ID_Number]);
-        $user->detail->address1 = $request->Residential_location;
-        $user->detail->building_name = $request->Building_Name;
-        $user->detail->loan_purpose = $request->Purpose_of_loan;
-        $user->detail->house_number = $request->House_Number;
-        $user->detail->income_frequency = $request->Select_your_income_frequency;
-        $user->detail->employment_industry = $request->Select_your_Employment_Industry_;
-        $user->detail->income_source = $request->Occupation_Source_of_Income;
-        $user->detail->income_range = $request->Select_your_income_range;
 
-        $user->detail->first_next_of_kin_name = $request->First_next_of_Kin_Full_Names_;
-        $user->detail->first_next_of_kin_phone = $this->formatPhone($request->First_next_of_Kin_Phone_Number);
-        $user->detail->first_next_of_kin_relationship = $request->First_next_of_Kin_Relationship_with_Family_contact_;
-        $user->detail->second_next_of_kin_name = $request->Second_next_of_Kin_Full_Names_;
-        $user->detail->second_next_of_kin_phone = $this->formatPhone($request->Second_next_of_Kin_Phone_Number);
-        $user->detail->second_next_of_kin_relationship = $request->Second_next_of_Kin_Relationship_with_Family_contact_;
+        if (isset($user->detail)){
+            $user->detail->address1 = $request->Residential_location;
+            $user->detail->building_name = $request->Building_Name;
+            $user->detail->loan_purpose = $request->Purpose_of_loan;
+            $user->detail->house_number = $request->House_Number;
+            $user->detail->income_frequency = $request->Select_your_income_frequency;
+            $user->detail->employment_industry = $request->Select_your_Employment_Industry_;
+            $user->detail->income_source = $request->Occupation_Source_of_Income;
+            $user->detail->income_range = $request->Select_your_income_range;
 
-        $user->detail->guarantor_name = $request->Guarantor_Full_Names_;
-        $user->detail->guarantor_phone = $this->formatPhone($request->Guarantor_Phone_Number);
-        $user->detail->guarantor_residence = $request->Guarantor_Residence;
-        $user->detail->save();
+            $user->detail->first_next_of_kin_name = $request->First_next_of_Kin_Full_Names_;
+            $user->detail->first_next_of_kin_phone = $this->formatPhone($request->First_next_of_Kin_Phone_Number);
+            $user->detail->first_next_of_kin_relationship = $request->First_next_of_Kin_Relationship_with_Family_contact_;
+            $user->detail->second_next_of_kin_name = $request->Second_next_of_Kin_Full_Names_;
+            $user->detail->second_next_of_kin_phone = $this->formatPhone($request->Second_next_of_Kin_Phone_Number);
+            $user->detail->second_next_of_kin_relationship = $request->Second_next_of_Kin_Relationship_with_Family_contact_;
+
+            $user->detail->guarantor_name = $request->Guarantor_Full_Names_;
+            $user->detail->guarantor_phone = $this->formatPhone($request->Guarantor_Phone_Number);
+            $user->detail->guarantor_residence = $request->Guarantor_Residence;
+            $user->detail->save();
+        }else{
+            $detail = new UserLoanDetail();
+            $detail->user_id = $user->id;
+            $detail->address1 = $request->Residential_location;
+            $detail->building_name = $request->Building_Name;
+            $detail->loan_purpose = $request->Purpose_of_loan;
+            $detail->house_number = $request->House_Number;
+            $detail->income_frequency = $request->Select_your_income_frequency;
+            $detail->employment_industry = $request->Select_your_Employment_Industry_;
+            $detail->income_source = $request->Occupation_Source_of_Income;
+            $detail->income_range = $request->Select_your_income_range;
+
+            $detail->first_next_of_kin_name = $request->First_next_of_Kin_Full_Names_;
+            $detail->first_next_of_kin_phone = $this->formatPhone($request->First_next_of_Kin_Phone_Number);
+            $detail->first_next_of_kin_relationship = $request->First_next_of_Kin_Relationship_with_Family_contact_;
+            $detail->second_next_of_kin_name = $request->Second_next_of_Kin_Full_Names_;
+            $detail->second_next_of_kin_phone = $this->formatPhone($request->Second_next_of_Kin_Phone_Number);
+            $detail->second_next_of_kin_relationship = $request->Second_next_of_Kin_Relationship_with_Family_contact_;
+
+            $detail->guarantor_name = $request->Guarantor_Full_Names_;
+            $detail->guarantor_phone = $this->formatPhone($request->Guarantor_Phone_Number);
+            $detail->guarantor_residence = $request->Guarantor_Residence;
+            $detail->save();
+        }
+
     }
 
   response()->json("success");

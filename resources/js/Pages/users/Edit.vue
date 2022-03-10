@@ -403,6 +403,7 @@
                                             House Number: {{details.house_number}}  <br />
                                         </div>
                                     </div>
+
                                     <div class="border-bottom mb-5 pb-5">
                                         <div class="font-weight-bold mb-3">
                                             Employment Details:
