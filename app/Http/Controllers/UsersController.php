@@ -70,10 +70,10 @@ class UsersController extends Controller
         $detail->city = $details['city'];
         $detail->first_next_of_kin_name = $details['first_next_of_kin_name'];
         $detail->first_next_of_kin_phone = $details['first_next_of_kin_phone'];
-        $detail->first_next_of_kin_ralationship = $details['first_next_of_kin_ralationship'];
+        $detail->first_next_of_kin_relationship = $details['first_next_of_kin_relationship'];
         $detail->second_next_of_kin_name = $details['second_next_of_kin_name'];
         $detail->second_next_of_kin_phone = $details['second_next_of_kin_phone'];
-        $detail->second_next_of_kin_ralationship = $details['second_next_of_kin_ralationship'];
+        $detail->second_next_of_kin_relationship = $details['second_next_of_kin_relationship'];
         $inserted_user->detail()->save($detail);
 
         return redirect()->route('users.index');
@@ -132,10 +132,10 @@ class UsersController extends Controller
         $inserted_user->detail->city = $details['city'];
         $inserted_user->detail->first_next_of_kin_name = $details['first_next_of_kin_name'];
         $inserted_user->detail->first_next_of_kin_phone = $this->formatPhone($details['first_next_of_kin_phone']);
-        $inserted_user->detail->first_next_of_kin_ralationship = $details['first_next_of_kin_ralationship'];
+        $inserted_user->detail->first_next_of_kin_relationship = $details['first_next_of_kin_relationship'];
         $inserted_user->detail->second_next_of_kin_name = $details['second_next_of_kin_name'];
         $inserted_user->detail->second_next_of_kin_phone = $this->formatPhone($details['second_next_of_kin_phone']);
-        $inserted_user->detail->second_next_of_kin_ralationship = $details['second_next_of_kin_ralationship'];
+        $inserted_user->detail->second_next_of_kin_relationship = $details['second_next_of_kin_relationship'];
         $inserted_user->detail->house_number = $details['house_number'];
         $inserted_user->detail->building_name = $details['building_name'];
         $inserted_user->detail->guarantor_name = $details['guarantor_name'];
@@ -165,10 +165,10 @@ class UsersController extends Controller
 
         $user->detail->first_next_of_kin_name = $request->First_next_of_Kin_Full_Names_;
         $user->detail->first_next_of_kin_phone = $this->formatPhone($request->First_next_of_Kin_Phone_Number);
-        $user->detail->first_next_of_kin_ralationship = $request->First_next_of_Kin_Relationship_with_Family_contact_;
+        $user->detail->first_next_of_kin_relationship = $request->First_next_of_Kin_Relationship_with_Family_contact_;
         $user->detail->second_next_of_kin_name = $request->Second_next_of_Kin_Full_Names_;
         $user->detail->second_next_of_kin_phone = $this->formatPhone($request->Second_next_of_Kin_Phone_Number);
-        $user->detail->second_next_of_kin_ralationship = $request->Second_next_of_Kin_Relationship_with_Family_contact_;
+        $user->detail->second_next_of_kin_relationship = $request->Second_next_of_Kin_Relationship_with_Family_contact_;
 
         $user->detail->guarantor_name = $request->Guarantor_Full_Names_;
         $user->detail->guarantor_phone = $this->formatPhone($request->Guarantor_Phone_Number);
@@ -201,7 +201,7 @@ class UsersController extends Controller
             'score_reason' => $data['current_score']['score_reason'],
             'score_description' => $data['current_score']['score_description']
         );
-        
+
         UserCreditScore::create($score);
         response()->json("success");
   }
