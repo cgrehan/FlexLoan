@@ -2657,6 +2657,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Wizard-1",
   props: {
@@ -2686,10 +2690,10 @@ __webpack_require__.r(__webpack_exports__);
         employer_name: '',
         first_next_of_kin_name: '',
         first_next_of_kin_phone: '',
-        first_next_of_kin_ralationship: '',
+        first_next_of_kin_relationship: '',
         second_next_of_kin_name: '',
         second_next_of_kin_phone: '',
-        second_next_of_kin_ralationship: '',
+        second_next_of_kin_relationship: '',
         house_number: '',
         building_name: '',
         guarantor_name: '',
@@ -2787,10 +2791,10 @@ __webpack_require__.r(__webpack_exports__);
     checkNextOfKin: function checkNextOfKin() {
       if (this.details.first_next_of_kin_name === '') return 'First Next of Kin name is required.';
       if (this.details.first_next_of_kin_phone === '') return 'First Next of Kin Phone is required.';
-      if (this.details.first_next_of_kin_ralationship === '') return 'First next of Kin relationship is required.';
+      if (this.details.first_next_of_kin_relationship === '') return 'First next of Kin relationship is required.';
       if (this.details.second_next_of_kin_name === '') return 'Second Next of Kin name is required.';
       if (this.details.second_next_of_kin_phone === '') return 'Second Next of Kin Phone is required';
-      if (this.details.second_next_of_kin_ralationship === '') return 'Second next of Kin relationship is required.';
+      if (this.details.second_next_of_kin_relationship === '') return 'Second next of Kin relationship is required.';
       return true;
     },
     failMessage: function failMessage(text) {
@@ -2826,10 +2830,10 @@ __webpack_require__.r(__webpack_exports__);
         this.details.employer_name = this.user_detail.detail.employer_name;
         this.details.first_next_of_kin_name = this.user_detail.detail.first_next_of_kin_name;
         this.details.first_next_of_kin_phone = this.user_detail.detail.first_next_of_kin_phone;
-        this.details.first_next_of_kin_ralationship = this.user_detail.detail.first_next_of_kin_ralationship;
+        this.details.first_next_of_kin_relationship = this.user_detail.detail.first_next_of_kin_relationship;
         this.details.second_next_of_kin_name = this.user_detail.detail.second_next_of_kin_name;
         this.details.second_next_of_kin_phone = this.user_detail.detail.second_next_of_kin_phone;
-        this.details.second_next_of_kin_ralationship = this.user_detail.detail.second_next_of_kin_ralationship;
+        this.details.second_next_of_kin_relationship = this.user_detail.detail.second_next_of_kin_relationship;
       }
     }
   }
@@ -39852,9 +39856,9 @@ var render = function () {
                                 name: "model",
                                 rawName: "v-model",
                                 value:
-                                  _vm.details.first_next_of_kin_ralationship,
+                                  _vm.details.first_next_of_kin_relationship,
                                 expression:
-                                  "details.first_next_of_kin_ralationship",
+                                  "details.first_next_of_kin_relationship",
                               },
                             ],
                             staticClass:
@@ -39872,7 +39876,7 @@ var render = function () {
                                   })
                                 _vm.$set(
                                   _vm.details,
-                                  "first_next_of_kin_ralationship",
+                                  "first_next_of_kin_relationship",
                                   $event.target.multiple
                                     ? $$selectedVal
                                     : $$selectedVal[0]
@@ -39881,20 +39885,38 @@ var render = function () {
                             },
                           },
                           [
-                            _c("option", { attrs: { value: "Parents" } }, [
-                              _vm._v("Parents"),
+                            _c("option", { attrs: { value: "Parent" } }, [
+                              _vm._v("Parent"),
                             ]),
                             _vm._v(" "),
-                            _c("option", { attrs: { value: "Couple" } }, [
-                              _vm._v("Couple"),
+                            _c("option", { attrs: { value: "Spouse" } }, [
+                              _vm._v("Spouse"),
                             ]),
                             _vm._v(" "),
-                            _c("option", { attrs: { value: "Relative" } }, [
-                              _vm._v("Relative"),
+                            _c("option", { attrs: { value: "Sibling" } }, [
+                              _vm._v("Sibling"),
                             ]),
                             _vm._v(" "),
-                            _c("option", { attrs: { value: "Friends" } }, [
-                              _vm._v("Friends"),
+                            _c("option", { attrs: { value: "Aunt/Uncle" } }, [
+                              _vm._v("Aunt/Uncle"),
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "Colleague" } }, [
+                              _vm._v("Colleague"),
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "Friend" } }, [
+                              _vm._v("Friend"),
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "option",
+                              { attrs: { value: "Business Partner" } },
+                              [_vm._v("Business Partner")]
+                            ),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "Other" } }, [
+                              _vm._v("Other"),
                             ]),
                           ]
                         ),
@@ -39991,9 +40013,9 @@ var render = function () {
                                 name: "model",
                                 rawName: "v-model",
                                 value:
-                                  _vm.details.second_next_of_kin_ralationship,
+                                  _vm.details.second_next_of_kin_relationship,
                                 expression:
-                                  "details.second_next_of_kin_ralationship",
+                                  "details.second_next_of_kin_relationship",
                               },
                             ],
                             staticClass:
@@ -40011,7 +40033,7 @@ var render = function () {
                                   })
                                 _vm.$set(
                                   _vm.details,
-                                  "second_next_of_kin_ralationship",
+                                  "second_next_of_kin_relationship",
                                   $event.target.multiple
                                     ? $$selectedVal
                                     : $$selectedVal[0]
@@ -40206,7 +40228,7 @@ var render = function () {
                           _vm._v(
                             "\n                                            First Next Of Kin Relationship: " +
                               _vm._s(
-                                _vm.details.first_next_of_kin_ralationship
+                                _vm.details.first_next_of_kin_relationship
                               ) +
                               " "
                           ),
@@ -40228,7 +40250,7 @@ var render = function () {
                           _vm._v(
                             "\n                                            Second Next Of Kin Relationship: " +
                               _vm._s(
-                                _vm.details.second_next_of_kin_ralationship
+                                _vm.details.second_next_of_kin_relationship
                               ) +
                               " "
                           ),
