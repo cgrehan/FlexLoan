@@ -2661,6 +2661,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Wizard-1",
   props: {
@@ -2834,6 +2849,9 @@ __webpack_require__.r(__webpack_exports__);
         this.details.second_next_of_kin_name = this.user_detail.detail.second_next_of_kin_name;
         this.details.second_next_of_kin_phone = this.user_detail.detail.second_next_of_kin_phone;
         this.details.second_next_of_kin_relationship = this.user_detail.detail.second_next_of_kin_relationship;
+        this.details.guarantor_name = this.user_detail.detail.guarantor_name;
+        this.details.guarantor_phone = this.user_detail.detail.guarantor_phone;
+        this.details.guarantor_residence = this.user_detail.detail.guarantor_residence;
       }
     }
   }
@@ -40165,6 +40183,18 @@ var render = function () {
                               "  "
                           ),
                           _c("br"),
+                          _vm._v(
+                            "\n                                            Building Name: " +
+                              _vm._s(_vm.details.building_name) +
+                              "  "
+                          ),
+                          _c("br"),
+                          _vm._v(
+                            "\n                                            House Number: " +
+                              _vm._s(_vm.details.house_number) +
+                              "  "
+                          ),
+                          _c("br"),
                         ]),
                       ]),
                       _vm._v(" "),
@@ -40254,6 +40284,37 @@ var render = function () {
                               ) +
                               " "
                           ),
+                          _c("br"),
+                        ]),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mb-5" }, [
+                        _c("div", { staticClass: "font-weight-bold mb-3" }, [
+                          _vm._v(
+                            "\n                                            Guarantor Details:\n                                        "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "line-height-md" }, [
+                          _vm._v(
+                            "\n                                            Guarantor Name: " +
+                              _vm._s(_vm.details.guarantor_name) +
+                              "\n                                            "
+                          ),
+                          _c("br"),
+                          _vm._v(
+                            "\n                                            Guarantor Phone: " +
+                              _vm._s(_vm.details.guarantor_phone) +
+                              " "
+                          ),
+                          _c("br"),
+                          _vm._v(
+                            "\n                                            Guarantor Residence: " +
+                              _vm._s(_vm.details.guarantor_residence) +
+                              " "
+                          ),
+                          _c("br"),
+                          _vm._v(" "),
                           _c("br"),
                         ]),
                       ]),

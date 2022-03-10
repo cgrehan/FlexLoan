@@ -399,6 +399,8 @@
                                             Gender: {{user.gender}}  <br />
                                             ID Number: {{user.id_number}}  <br />
                                             Email: {{user.email}}  <br />
+                                            Building Name: {{details.building_name}}  <br />
+                                            House Number: {{details.house_number}}  <br />
                                         </div>
                                     </div>
                                     <div class="border-bottom mb-5 pb-5">
@@ -428,6 +430,19 @@
                                             <br />
                                             Second Next Of Kin Phone: {{details.second_next_of_kin_phone}} <br />
                                             Second Next Of Kin Relationship: {{details.second_next_of_kin_relationship}} <br />
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-5">
+                                        <div class="font-weight-bold mb-3">
+                                            Guarantor Details:
+                                        </div>
+                                        <div class="line-height-md">
+                                            Guarantor Name: {{details.guarantor_name}}
+                                            <br />
+                                            Guarantor Phone: {{details.guarantor_phone}} <br />
+                                            Guarantor Residence: {{details.guarantor_residence}} <br />
+                                            <br>
                                         </div>
                                     </div>
                                 </div>
@@ -660,6 +675,9 @@ export default {
                 this.details.second_next_of_kin_name = this.user_detail.detail.second_next_of_kin_name;
                 this.details.second_next_of_kin_phone = this.user_detail.detail.second_next_of_kin_phone;
                 this.details.second_next_of_kin_relationship = this.user_detail.detail.second_next_of_kin_relationship;
+                this.details.guarantor_name = this.user_detail.detail.guarantor_name;
+                this.details.guarantor_phone = this.user_detail.detail.guarantor_phone;
+                this.details.guarantor_residence = this.user_detail.detail.guarantor_residence;
             }
 
         }
