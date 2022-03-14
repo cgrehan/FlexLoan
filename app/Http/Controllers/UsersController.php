@@ -170,7 +170,6 @@ class UsersController extends Controller
             $detail->guarantor_phone = $this->formatPhone($details['guarantor_phone']);
             $detail->guarantor_residence = $details['guarantor_residence'];
             $detail->save();
-            info($detail);
         }
         return response()->json('success');
     }
@@ -235,6 +234,7 @@ class UsersController extends Controller
 
     public function createUser(Request $request)
     {
+        info("creating user____!!!");
         $data = $request->all();
         $user = array(
             'flex_user_id' => $data['user_id'],
