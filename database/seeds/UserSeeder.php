@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
            UserCreditScore::create(['user_id'=>1,'total_score'=>6,'total_score_value'=>5000,'score_type'=>'base_score','score_reason'=>'base_score','score_description'=>'First_loan_to_flexpay_customer']);
 
         $user2 = \App\User::create(['first_name' =>'John','last_name'=>'Doe','email'=>'johndoe@gmail.com','phone'=>'254714536008','dob'=>'1990-11-16','gender'=>'Female','id_number'=>29156964,'password'=>\Illuminate\Support\Facades\Hash::make("password")]);
-         \App\UserLoanDetail::create(['address1'=>'box 44','address2'=>'box 99','city'=>'Kisumu','postcode'=>3000,'is_employed'=>0,'other_income'=>15000,'first_next_of_kin_name'=>'William','first_next_of_kin_phone'=>'254712345674','first_next_of_kin_relationship'=>'Friend','second_next_of_kin_name'=>'Timothy',
+         \App\UserLoanDetail::create(['address1'=>'box 44','address2'=>'box 99','city'=>'Kisumu','postcode'=>3000,'is_employed'=>0,'other_income_earning'=>15000,'first_next_of_kin_name'=>'William','first_next_of_kin_phone'=>'254712345674','first_next_of_kin_relationship'=>'Friend','second_next_of_kin_name'=>'Timothy',
              'second_next_of_kin_phone'=>'254798765600','second_next_of_kin_relationship'=>'Spouse','user_id'=>$user2->id]);
          UserCreditScore::create(['user_id'=>2,'total_score'=>4,'total_score_value'=>5000,'score_type'=>'base_score','score_reason'=>'base_score','score_description'=>'First_loan_to_flexpay_customer']);
         \App\User::create(['first_name' =>'Edith','last_name'=>'Wanyua','email'=>'william@gmail.com','phone'=>'254715027464','dob'=>'1990-11-16','gender'=>'Female','id_number'=>29156444,'password'=>\Illuminate\Support\Facades\Hash::make("password")]);

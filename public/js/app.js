@@ -2677,6 +2677,62 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Wizard-1",
   props: {
@@ -2700,7 +2756,7 @@ __webpack_require__.r(__webpack_exports__);
         city: '',
         is_employed: 1,
         salary: '',
-        other_income: '',
+        other_income_earning: '',
         company_name: '',
         company_phone: '',
         employer_name: '',
@@ -2840,7 +2896,7 @@ __webpack_require__.r(__webpack_exports__);
         this.details.house_number = this.user_detail.detail.house_number;
         this.details.is_employed = this.user_detail.detail.is_employed;
         this.details.salary = this.user_detail.detail.salary;
-        this.details.other_income = this.user_detail.detail.other_income;
+        this.details.other_income_earning = this.user_detail.detail.other_income_earning;
         this.details.company_name = this.user_detail.detail.company_name;
         this.details.company_phone = this.user_detail.detail.company_phone;
         this.details.employer_name = this.user_detail.detail.employer_name;
@@ -38849,11 +38905,381 @@ var render = function () {
           attrs: {
             id: "kt_wizard_v1",
             "data-wizard-state": "step-first",
-            "data-wizard-clickable": "true",
+            "data-wizard-clickable": "false",
           },
         },
         [
-          _vm._m(0),
+          _c("div", { staticClass: "wizard-nav border-bottom" }, [
+            _c("div", { staticClass: "wizard-steps p-8 p-lg-10" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "wizard-step",
+                  attrs: {
+                    "data-wizard-type": "step",
+                    "data-wizard-state": "current",
+                  },
+                },
+                [
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    { staticClass: "svg-icon svg-icon-xl wizard-arrow" },
+                    [
+                      _c(
+                        "svg",
+                        {
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                            width: "24px",
+                            height: "24px",
+                            viewBox: "0 0 24 24",
+                            version: "1.1",
+                          },
+                        },
+                        [
+                          _c(
+                            "g",
+                            {
+                              attrs: {
+                                stroke: "none",
+                                "stroke-width": "1",
+                                fill: "none",
+                                "fill-rule": "evenodd",
+                              },
+                            },
+                            [
+                              _c("polygon", {
+                                attrs: { points: "0 0 24 0 24 24 0 24" },
+                              }),
+                              _vm._v(" "),
+                              _c("rect", {
+                                attrs: {
+                                  fill: "#000000",
+                                  opacity: "0.3",
+                                  transform:
+                                    "translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)",
+                                  x: "11",
+                                  y: "5",
+                                  width: "2",
+                                  height: "14",
+                                  rx: "1",
+                                },
+                              }),
+                              _vm._v(" "),
+                              _c("path", {
+                                attrs: {
+                                  d: "M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z",
+                                  fill: "#000000",
+                                  "fill-rule": "nonzero",
+                                  transform:
+                                    "translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)",
+                                },
+                              }),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "wizard-step",
+                  attrs: { "data-wizard-type": "step" },
+                },
+                [
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    { staticClass: "svg-icon svg-icon-xl wizard-arrow" },
+                    [
+                      _c(
+                        "svg",
+                        {
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                            width: "24px",
+                            height: "24px",
+                            viewBox: "0 0 24 24",
+                            version: "1.1",
+                          },
+                        },
+                        [
+                          _c(
+                            "g",
+                            {
+                              attrs: {
+                                stroke: "none",
+                                "stroke-width": "1",
+                                fill: "none",
+                                "fill-rule": "evenodd",
+                              },
+                            },
+                            [
+                              _c("polygon", {
+                                attrs: { points: "0 0 24 0 24 24 0 24" },
+                              }),
+                              _vm._v(" "),
+                              _c("rect", {
+                                attrs: {
+                                  fill: "#000000",
+                                  opacity: "0.3",
+                                  transform:
+                                    "translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)",
+                                  x: "11",
+                                  y: "5",
+                                  width: "2",
+                                  height: "14",
+                                  rx: "1",
+                                },
+                              }),
+                              _vm._v(" "),
+                              _c("path", {
+                                attrs: {
+                                  d: "M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z",
+                                  fill: "#000000",
+                                  "fill-rule": "nonzero",
+                                  transform:
+                                    "translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)",
+                                },
+                              }),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "wizard-step",
+                  attrs: { "data-wizard-type": "step" },
+                },
+                [
+                  _vm._m(2),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    { staticClass: "svg-icon svg-icon-xl wizard-arrow" },
+                    [
+                      _c(
+                        "svg",
+                        {
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                            width: "24px",
+                            height: "24px",
+                            viewBox: "0 0 24 24",
+                            version: "1.1",
+                          },
+                        },
+                        [
+                          _c(
+                            "g",
+                            {
+                              attrs: {
+                                stroke: "none",
+                                "stroke-width": "1",
+                                fill: "none",
+                                "fill-rule": "evenodd",
+                              },
+                            },
+                            [
+                              _c("polygon", {
+                                attrs: { points: "0 0 24 0 24 24 0 24" },
+                              }),
+                              _vm._v(" "),
+                              _c("rect", {
+                                attrs: {
+                                  fill: "#000000",
+                                  opacity: "0.3",
+                                  transform:
+                                    "translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)",
+                                  x: "11",
+                                  y: "5",
+                                  width: "2",
+                                  height: "14",
+                                  rx: "1",
+                                },
+                              }),
+                              _vm._v(" "),
+                              _c("path", {
+                                attrs: {
+                                  d: "M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z",
+                                  fill: "#000000",
+                                  "fill-rule": "nonzero",
+                                  transform:
+                                    "translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)",
+                                },
+                              }),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "wizard-step",
+                  attrs: { "data-wizard-type": "step" },
+                },
+                [
+                  _vm._m(3),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    { staticClass: "svg-icon svg-icon-xl wizard-arrow" },
+                    [
+                      _c(
+                        "svg",
+                        {
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                            width: "24px",
+                            height: "24px",
+                            viewBox: "0 0 24 24",
+                            version: "1.1",
+                          },
+                        },
+                        [
+                          _c(
+                            "g",
+                            {
+                              attrs: {
+                                stroke: "none",
+                                "stroke-width": "1",
+                                fill: "none",
+                                "fill-rule": "evenodd",
+                              },
+                            },
+                            [
+                              _c("polygon", {
+                                attrs: { points: "0 0 24 0 24 24 0 24" },
+                              }),
+                              _vm._v(" "),
+                              _c("rect", {
+                                attrs: {
+                                  fill: "#000000",
+                                  opacity: "0.3",
+                                  transform:
+                                    "translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)",
+                                  x: "11",
+                                  y: "5",
+                                  width: "2",
+                                  height: "14",
+                                  rx: "1",
+                                },
+                              }),
+                              _vm._v(" "),
+                              _c("path", {
+                                attrs: {
+                                  d: "M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z",
+                                  fill: "#000000",
+                                  "fill-rule": "nonzero",
+                                  transform:
+                                    "translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)",
+                                },
+                              }),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "wizard-step",
+                  attrs: { "data-wizard-type": "step" },
+                },
+                [
+                  _vm._m(4),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    { staticClass: "svg-icon svg-icon-xl wizard-arrow last" },
+                    [
+                      _c(
+                        "svg",
+                        {
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            "xmlns:xlink": "http://www.w3.org/1999/xlink",
+                            width: "24px",
+                            height: "24px",
+                            viewBox: "0 0 24 24",
+                            version: "1.1",
+                          },
+                        },
+                        [
+                          _c(
+                            "g",
+                            {
+                              attrs: {
+                                stroke: "none",
+                                "stroke-width": "1",
+                                fill: "none",
+                                "fill-rule": "evenodd",
+                              },
+                            },
+                            [
+                              _c("polygon", {
+                                attrs: { points: "0 0 24 0 24 24 0 24" },
+                              }),
+                              _vm._v(" "),
+                              _c("rect", {
+                                attrs: {
+                                  fill: "#000000",
+                                  opacity: "0.3",
+                                  transform:
+                                    "translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)",
+                                  x: "11",
+                                  y: "5",
+                                  width: "2",
+                                  height: "14",
+                                  rx: "1",
+                                },
+                              }),
+                              _vm._v(" "),
+                              _c("path", {
+                                attrs: {
+                                  d: "M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z",
+                                  fill: "#000000",
+                                  "fill-rule": "nonzero",
+                                  transform:
+                                    "translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)",
+                                },
+                              }),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]),
+          ]),
           _vm._v(" "),
           _c(
             "div",
@@ -38879,7 +39305,7 @@ var render = function () {
                         { staticClass: "mb-10 font-weight-bold text-dark" },
                         [
                           _vm._v(
-                            "\n                                        Setup Your Current Location\n                                    "
+                            "\n                                Setup Your Current Location\n                            "
                           ),
                         ]
                       ),
@@ -39059,7 +39485,7 @@ var render = function () {
                         { staticClass: "mb-10 font-weight-bold text-dark" },
                         [
                           _vm._v(
-                            "\n                                        Enter your Personal Details\n                                    "
+                            "\n                                Enter your Personal Details\n                            "
                           ),
                         ]
                       ),
@@ -39451,7 +39877,7 @@ var render = function () {
                         { staticClass: "mb-10 font-weight-bold text-dark" },
                         [
                           _vm._v(
-                            "\n                                        Employment Details\n                                    "
+                            "\n                                Employment Details\n                            "
                           ),
                         ]
                       ),
@@ -39505,7 +39931,7 @@ var render = function () {
                             },
                           }),
                           _vm._v(
-                            "\n                                            Are you currently employed?\n                                        "
+                            "\n                                    Are you currently employed?\n                                "
                           ),
                         ]),
                       ]),
@@ -39556,14 +39982,16 @@ var render = function () {
                                   {
                                     name: "model",
                                     rawName: "v-model",
-                                    value: _vm.details.other_income,
-                                    expression: "details.other_income",
+                                    value: _vm.details.other_income_earning,
+                                    expression: "details.other_income_earning",
                                   },
                                 ],
                                 staticClass:
                                   "form-control form-control-solid form-control-lg",
                                 attrs: { type: "number" },
-                                domProps: { value: _vm.details.other_income },
+                                domProps: {
+                                  value: _vm.details.other_income_earning,
+                                },
                                 on: {
                                   input: function ($event) {
                                     if ($event.target.composing) {
@@ -39571,7 +39999,7 @@ var render = function () {
                                     }
                                     _vm.$set(
                                       _vm.details,
-                                      "other_income",
+                                      "other_income_earning",
                                       $event.target.value
                                     )
                                   },
@@ -39673,6 +40101,357 @@ var render = function () {
                             ]),
                           ])
                         : _vm._e(),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "pb-5",
+                      attrs: { "data-wizard-type": "step-content" },
+                    },
+                    [
+                      _c(
+                        "h4",
+                        { staticClass: "mb-10 font-weight-bold text-dark" },
+                        [
+                          _vm._v(
+                            "\n                                Next of Kin Details\n                            "
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "form-group col-md-6" }, [
+                          _c("label", [_vm._v("First Next Of Kin Name")]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.details.first_next_of_kin_name,
+                                expression: "details.first_next_of_kin_name",
+                              },
+                            ],
+                            staticClass:
+                              "form-control form-control-solid form-control-lg",
+                            attrs: { type: "text", required: "" },
+                            domProps: {
+                              value: _vm.details.first_next_of_kin_name,
+                            },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.details,
+                                  "first_next_of_kin_name",
+                                  $event.target.value
+                                )
+                              },
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "form-text text-muted" }, [
+                            _vm._v("Please enter first of kin name."),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "form-group col-md-6" }, [
+                          _c("label", [_vm._v("First Next Of Kin Phone")]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.details.first_next_of_kin_phone,
+                                expression: "details.first_next_of_kin_phone",
+                              },
+                            ],
+                            staticClass:
+                              "form-control form-control-solid form-control-lg",
+                            attrs: { type: "text", required: "" },
+                            domProps: {
+                              value: _vm.details.first_next_of_kin_phone,
+                            },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.details,
+                                  "first_next_of_kin_phone",
+                                  $event.target.value
+                                )
+                              },
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "form-text text-muted" }, [
+                            _vm._v("Please enter first of kin phone."),
+                          ]),
+                        ]),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "form-group col-md-6" }, [
+                          _c("label", [
+                            _vm._v("First Next Of Kin Relationship"),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "select",
+                            {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value:
+                                    _vm.details.first_next_of_kin_relationship,
+                                  expression:
+                                    "details.first_next_of_kin_relationship",
+                                },
+                              ],
+                              staticClass:
+                                "form-control form-control-solid form-control-lg",
+                              attrs: { required: "" },
+                              on: {
+                                change: function ($event) {
+                                  var $$selectedVal = Array.prototype.filter
+                                    .call($event.target.options, function (o) {
+                                      return o.selected
+                                    })
+                                    .map(function (o) {
+                                      var val =
+                                        "_value" in o ? o._value : o.value
+                                      return val
+                                    })
+                                  _vm.$set(
+                                    _vm.details,
+                                    "first_next_of_kin_relationship",
+                                    $event.target.multiple
+                                      ? $$selectedVal
+                                      : $$selectedVal[0]
+                                  )
+                                },
+                              },
+                            },
+                            [
+                              _c("option", { attrs: { value: "Parent" } }, [
+                                _vm._v("Parent"),
+                              ]),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "Spouse" } }, [
+                                _vm._v("Spouse"),
+                              ]),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "Sibling" } }, [
+                                _vm._v("Sibling"),
+                              ]),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "Aunt/Uncle" } }, [
+                                _vm._v("Aunt/Uncle"),
+                              ]),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "Colleague" } }, [
+                                _vm._v("Colleague"),
+                              ]),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "Friend" } }, [
+                                _vm._v("Friend"),
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                { attrs: { value: "Business Partner" } },
+                                [_vm._v("Business Partner")]
+                              ),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "Other" } }, [
+                                _vm._v("Other"),
+                              ]),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "form-text text-muted" }, [
+                            _vm._v("First Next Of Kin Relationship."),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "form-group col-md-6" }, [
+                          _c("label", [_vm._v("Second Next Of Kin Name")]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.details.second_next_of_kin_name,
+                                expression: "details.second_next_of_kin_name",
+                              },
+                            ],
+                            staticClass:
+                              "form-control form-control-solid form-control-lg",
+                            attrs: { type: "text", required: "" },
+                            domProps: {
+                              value: _vm.details.second_next_of_kin_name,
+                            },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.details,
+                                  "second_next_of_kin_name",
+                                  $event.target.value
+                                )
+                              },
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "form-text text-muted" }, [
+                            _vm._v("Second Next Of Kin Name."),
+                          ]),
+                        ]),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "form-group col-md-6" }, [
+                          _c("label", [_vm._v("Second Next Of Kin Phone")]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.details.second_next_of_kin_phone,
+                                expression: "details.second_next_of_kin_phone",
+                              },
+                            ],
+                            staticClass:
+                              "form-control form-control-solid form-control-lg",
+                            attrs: { type: "text", required: "" },
+                            domProps: {
+                              value: _vm.details.second_next_of_kin_phone,
+                            },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.details,
+                                  "second_next_of_kin_phone",
+                                  $event.target.value
+                                )
+                              },
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "form-text text-muted" }, [
+                            _vm._v("Second Next Of Kin Phone."),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "form-group col-md-6" }, [
+                          _c("label", [
+                            _vm._v("Second Next Of Kin Relationship"),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "select",
+                            {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value:
+                                    _vm.details.second_next_of_kin_relationship,
+                                  expression:
+                                    "details.second_next_of_kin_relationship",
+                                },
+                              ],
+                              staticClass:
+                                "form-control form-control-solid form-control-lg",
+                              attrs: { required: "" },
+                              on: {
+                                change: function ($event) {
+                                  var $$selectedVal = Array.prototype.filter
+                                    .call($event.target.options, function (o) {
+                                      return o.selected
+                                    })
+                                    .map(function (o) {
+                                      var val =
+                                        "_value" in o ? o._value : o.value
+                                      return val
+                                    })
+                                  _vm.$set(
+                                    _vm.details,
+                                    "second_next_of_kin_relationship",
+                                    $event.target.multiple
+                                      ? $$selectedVal
+                                      : $$selectedVal[0]
+                                  )
+                                },
+                              },
+                            },
+                            [
+                              _c("option", { attrs: { value: "Parent" } }, [
+                                _vm._v("Parent"),
+                              ]),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "Spouse" } }, [
+                                _vm._v("Spouse"),
+                              ]),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "Sibling" } }, [
+                                _vm._v("Sibling"),
+                              ]),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "Aunt/Uncle" } }, [
+                                _vm._v("Aunt/Uncle"),
+                              ]),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "Colleague" } }, [
+                                _vm._v("Colleague"),
+                              ]),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "Friend" } }, [
+                                _vm._v("Friend"),
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "option",
+                                { attrs: { value: "Business Partner" } },
+                                [_vm._v("Business Partner")]
+                              ),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "Other" } }, [
+                                _vm._v("Other"),
+                              ]),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "form-text text-muted" }, [
+                            _vm._v("Second Next Of Kin Relationship."),
+                          ]),
+                        ]),
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "h4",
+                        { staticClass: "mb-10 font-weight-bold text-dark" },
+                        [
+                          _vm._v(
+                            "\n                                Guarantor Details\n                            "
+                          ),
+                        ]
+                      ),
                       _vm._v(" "),
                       _c("div", { staticClass: "row" }, [
                         _c("div", { staticClass: "form-group col-md-4" }, [
@@ -39785,320 +40564,7 @@ var render = function () {
                         { staticClass: "mb-10 font-weight-bold text-dark" },
                         [
                           _vm._v(
-                            "\n                                        Next of Kin Details\n                                    "
-                          ),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("First Next Of Kin Name")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.details.first_next_of_kin_name,
-                              expression: "details.first_next_of_kin_name",
-                            },
-                          ],
-                          staticClass:
-                            "form-control form-control-solid form-control-lg",
-                          attrs: { type: "text", required: "" },
-                          domProps: {
-                            value: _vm.details.first_next_of_kin_name,
-                          },
-                          on: {
-                            input: function ($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(
-                                _vm.details,
-                                "first_next_of_kin_name",
-                                $event.target.value
-                              )
-                            },
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "form-text text-muted" }, [
-                          _vm._v("Please enter first of kin name."),
-                        ]),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("First Next Of Kin Phone")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.details.first_next_of_kin_phone,
-                              expression: "details.first_next_of_kin_phone",
-                            },
-                          ],
-                          staticClass:
-                            "form-control form-control-solid form-control-lg",
-                          attrs: { type: "text", required: "" },
-                          domProps: {
-                            value: _vm.details.first_next_of_kin_phone,
-                          },
-                          on: {
-                            input: function ($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(
-                                _vm.details,
-                                "first_next_of_kin_phone",
-                                $event.target.value
-                              )
-                            },
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "form-text text-muted" }, [
-                          _vm._v("Please enter first of kin phone."),
-                        ]),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("First Next Of Kin Relationship")]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value:
-                                  _vm.details.first_next_of_kin_relationship,
-                                expression:
-                                  "details.first_next_of_kin_relationship",
-                              },
-                            ],
-                            staticClass:
-                              "form-control form-control-solid form-control-lg",
-                            attrs: { required: "" },
-                            on: {
-                              change: function ($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function (o) {
-                                    return o.selected
-                                  })
-                                  .map(function (o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.$set(
-                                  _vm.details,
-                                  "first_next_of_kin_relationship",
-                                  $event.target.multiple
-                                    ? $$selectedVal
-                                    : $$selectedVal[0]
-                                )
-                              },
-                            },
-                          },
-                          [
-                            _c("option", { attrs: { value: "Parent" } }, [
-                              _vm._v("Parent"),
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "Spouse" } }, [
-                              _vm._v("Spouse"),
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "Sibling" } }, [
-                              _vm._v("Sibling"),
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "Aunt/Uncle" } }, [
-                              _vm._v("Aunt/Uncle"),
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "Colleague" } }, [
-                              _vm._v("Colleague"),
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "Friend" } }, [
-                              _vm._v("Friend"),
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "option",
-                              { attrs: { value: "Business Partner" } },
-                              [_vm._v("Business Partner")]
-                            ),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "Other" } }, [
-                              _vm._v("Other"),
-                            ]),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "form-text text-muted" }, [
-                          _vm._v("First Next Of Kin Relationship."),
-                        ]),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("Second Next Of Kin Name")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.details.second_next_of_kin_name,
-                              expression: "details.second_next_of_kin_name",
-                            },
-                          ],
-                          staticClass:
-                            "form-control form-control-solid form-control-lg",
-                          attrs: { type: "text", required: "" },
-                          domProps: {
-                            value: _vm.details.second_next_of_kin_name,
-                          },
-                          on: {
-                            input: function ($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(
-                                _vm.details,
-                                "second_next_of_kin_name",
-                                $event.target.value
-                              )
-                            },
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "form-text text-muted" }, [
-                          _vm._v("Second Next Of Kin Name."),
-                        ]),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [_vm._v("Second Next Of Kin Phone")]),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.details.second_next_of_kin_phone,
-                              expression: "details.second_next_of_kin_phone",
-                            },
-                          ],
-                          staticClass:
-                            "form-control form-control-solid form-control-lg",
-                          attrs: { type: "text", required: "" },
-                          domProps: {
-                            value: _vm.details.second_next_of_kin_phone,
-                          },
-                          on: {
-                            input: function ($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(
-                                _vm.details,
-                                "second_next_of_kin_phone",
-                                $event.target.value
-                              )
-                            },
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "form-text text-muted" }, [
-                          _vm._v("Second Next Of Kin Phone."),
-                        ]),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "form-group" }, [
-                        _c("label", [
-                          _vm._v("Second Next Of Kin Relationship"),
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value:
-                                  _vm.details.second_next_of_kin_relationship,
-                                expression:
-                                  "details.second_next_of_kin_relationship",
-                              },
-                            ],
-                            staticClass:
-                              "form-control form-control-solid form-control-lg",
-                            attrs: { required: "" },
-                            on: {
-                              change: function ($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function (o) {
-                                    return o.selected
-                                  })
-                                  .map(function (o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.$set(
-                                  _vm.details,
-                                  "second_next_of_kin_relationship",
-                                  $event.target.multiple
-                                    ? $$selectedVal
-                                    : $$selectedVal[0]
-                                )
-                              },
-                            },
-                          },
-                          [
-                            _c("option", { attrs: { value: "Parents" } }, [
-                              _vm._v("Parents"),
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "Couple" } }, [
-                              _vm._v("Couple"),
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "Relative" } }, [
-                              _vm._v("Relative"),
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "Friends" } }, [
-                              _vm._v("Friends"),
-                            ]),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "form-text text-muted" }, [
-                          _vm._v("Second Next Of Kin Relationship."),
-                        ]),
-                      ]),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "pb-5",
-                      attrs: { "data-wizard-type": "step-content" },
-                    },
-                    [
-                      _c(
-                        "h4",
-                        { staticClass: "mb-10 font-weight-bold text-dark" },
-                        [
-                          _vm._v(
-                            "\n                                        Review your Details and Submit\n                                    "
+                            "\n                                Review your Details and Submit\n                            "
                           ),
                         ]
                       ),
@@ -40106,31 +40572,31 @@ var render = function () {
                       _c("div", { staticClass: "border-bottom mb-5 pb-5" }, [
                         _c("div", { staticClass: "font-weight-bold mb-3" }, [
                           _vm._v(
-                            "\n                                            Current Address:\n                                        "
+                            "\n                                    Current Address:\n                                "
                           ),
                         ]),
                         _vm._v(" "),
                         _c("div", { staticClass: "line-height-md" }, [
                           _vm._v(
-                            "\n                                            Address 1: " +
+                            "\n                                    Address 1: " +
                               _vm._s(_vm.details.address1) +
-                              "\n                                            "
+                              "\n                                    "
                           ),
                           _c("br"),
                           _vm._v(
-                            "\n                                            Address 2: " +
+                            "\n                                    Address 2: " +
                               _vm._s(_vm.details.address2) +
                               " "
                           ),
                           _c("br"),
                           _vm._v(
-                            "\n                                            Postcode: " +
+                            "\n                                    Postcode: " +
                               _vm._s(_vm.details.postcode) +
                               " "
                           ),
                           _c("br"),
                           _vm._v(
-                            "\n                                            City: " +
+                            "\n                                    City: " +
                               _vm._s(_vm.details.city) +
                               " "
                           ),
@@ -40141,57 +40607,57 @@ var render = function () {
                       _c("div", { staticClass: "border-bottom mb-5 pb-5" }, [
                         _c("div", { staticClass: "font-weight-bold mb-3" }, [
                           _vm._v(
-                            "\n                                            Personal Details:\n                                        "
+                            "\n                                    Personal Details:\n                                "
                           ),
                         ]),
                         _vm._v(" "),
                         _c("div", { staticClass: "line-height-md" }, [
                           _vm._v(
-                            "\n                                            Name: " +
+                            "\n                                    Name: " +
                               _vm._s(_vm.user.first_name) +
                               " " +
                               _vm._s(_vm.user.last_name) +
-                              "\n                                            "
+                              "\n                                    "
                           ),
                           _c("br"),
                           _vm._v(
-                            "\n                                            Phone: " +
+                            "\n                                    Phone: " +
                               _vm._s(_vm.user.phone) +
-                              "\n                                            "
+                              "\n                                    "
                           ),
                           _c("br"),
                           _vm._v(
-                            "\n                                            Date Of Birth: " +
+                            "\n                                    Date Of Birth: " +
                               _vm._s(_vm.user.dob) +
                               "  "
                           ),
                           _c("br"),
                           _vm._v(
-                            "\n                                            Gender: " +
+                            "\n                                    Gender: " +
                               _vm._s(_vm.user.gender) +
                               "  "
                           ),
                           _c("br"),
                           _vm._v(
-                            "\n                                            ID Number: " +
+                            "\n                                    ID Number: " +
                               _vm._s(_vm.user.id_number) +
                               "  "
                           ),
                           _c("br"),
                           _vm._v(
-                            "\n                                            Email: " +
+                            "\n                                    Email: " +
                               _vm._s(_vm.user.email) +
                               "  "
                           ),
                           _c("br"),
                           _vm._v(
-                            "\n                                            Building Name: " +
+                            "\n                                    Building Name: " +
                               _vm._s(_vm.details.building_name) +
                               "  "
                           ),
                           _c("br"),
                           _vm._v(
-                            "\n                                            House Number: " +
+                            "\n                                    House Number: " +
                               _vm._s(_vm.details.house_number) +
                               "  "
                           ),
@@ -40202,32 +40668,32 @@ var render = function () {
                       _c("div", { staticClass: "border-bottom mb-5 pb-5" }, [
                         _c("div", { staticClass: "font-weight-bold mb-3" }, [
                           _vm._v(
-                            "\n                                            Employment Details:\n                                        "
+                            "\n                                    Employment Details:\n                                "
                           ),
                         ]),
                         _vm._v(" "),
                         _vm.details.is_employed
                           ? _c("div", { staticClass: "line-height-md" }, [
                               _vm._v(
-                                "\n                                            Salary: " +
+                                "\n                                    Salary: " +
                                   _vm._s(_vm.details.salary) +
-                                  "\n                                            "
+                                  "\n                                    "
                               ),
                               _c("br"),
                               _vm._v(
-                                "\n                                            Other Source of Income Earnings: " +
-                                  _vm._s(_vm.details.other_income) +
+                                "\n                                    Other Source of Income Earnings: " +
+                                  _vm._s(_vm.details.other_income_earning) +
                                   " "
                               ),
                               _c("br"),
                               _vm._v(
-                                "\n                                            Company Phone: " +
+                                "\n                                    Company Phone: " +
                                   _vm._s(_vm.details.company_phone) +
                                   " "
                               ),
                               _c("br"),
                               _vm._v(
-                                "\n                                            Employer name: " +
+                                "\n                                    Employer name: " +
                                   _vm._s(_vm.details.employer_name) +
                                   " "
                               ),
@@ -40239,25 +40705,25 @@ var render = function () {
                       _c("div", { staticClass: "mb-5" }, [
                         _c("div", { staticClass: "font-weight-bold mb-3" }, [
                           _vm._v(
-                            "\n                                            Next of Kin Details:\n                                        "
+                            "\n                                    Next of Kin Details:\n                                "
                           ),
                         ]),
                         _vm._v(" "),
                         _c("div", { staticClass: "line-height-md" }, [
                           _vm._v(
-                            "\n                                            First Next Of Kin Name: " +
+                            "\n                                    First Next Of Kin Name: " +
                               _vm._s(_vm.details.first_next_of_kin_name) +
-                              "\n                                            "
+                              "\n                                    "
                           ),
                           _c("br"),
                           _vm._v(
-                            "\n                                            First Next Of Kin Phone: " +
+                            "\n                                    First Next Of Kin Phone: " +
                               _vm._s(_vm.details.first_next_of_kin_phone) +
                               " "
                           ),
                           _c("br"),
                           _vm._v(
-                            "\n                                            First Next Of Kin Relationship: " +
+                            "\n                                    First Next Of Kin Relationship: " +
                               _vm._s(
                                 _vm.details.first_next_of_kin_relationship
                               ) +
@@ -40267,19 +40733,19 @@ var render = function () {
                           _vm._v(" "),
                           _c("br"),
                           _vm._v(
-                            "\n                                            Second Next Of Kin Name: " +
+                            "\n                                    Second Next Of Kin Name: " +
                               _vm._s(_vm.details.second_next_of_kin_name) +
-                              "\n                                            "
+                              "\n                                    "
                           ),
                           _c("br"),
                           _vm._v(
-                            "\n                                            Second Next Of Kin Phone: " +
+                            "\n                                    Second Next Of Kin Phone: " +
                               _vm._s(_vm.details.second_next_of_kin_phone) +
                               " "
                           ),
                           _c("br"),
                           _vm._v(
-                            "\n                                            Second Next Of Kin Relationship: " +
+                            "\n                                    Second Next Of Kin Relationship: " +
                               _vm._s(
                                 _vm.details.second_next_of_kin_relationship
                               ) +
@@ -40292,25 +40758,25 @@ var render = function () {
                       _c("div", { staticClass: "mb-5" }, [
                         _c("div", { staticClass: "font-weight-bold mb-3" }, [
                           _vm._v(
-                            "\n                                            Guarantor Details:\n                                        "
+                            "\n                                    Guarantor Details:\n                                "
                           ),
                         ]),
                         _vm._v(" "),
                         _c("div", { staticClass: "line-height-md" }, [
                           _vm._v(
-                            "\n                                            Guarantor Name: " +
+                            "\n                                    Guarantor Name: " +
                               _vm._s(_vm.details.guarantor_name) +
-                              "\n                                            "
+                              "\n                                    "
                           ),
                           _c("br"),
                           _vm._v(
-                            "\n                                            Guarantor Phone: " +
+                            "\n                                    Guarantor Phone: " +
                               _vm._s(_vm.details.guarantor_phone) +
                               " "
                           ),
                           _c("br"),
                           _vm._v(
-                            "\n                                            Guarantor Residence: " +
+                            "\n                                    Guarantor Residence: " +
                               _vm._s(_vm.details.guarantor_residence) +
                               " "
                           ),
@@ -40329,7 +40795,7 @@ var render = function () {
                         "d-flex justify-content-between border-top pt-10",
                     },
                     [
-                      _vm._m(1),
+                      _vm._m(5),
                       _vm._v(" "),
                       _c("div", [
                         _c(
@@ -40342,7 +40808,7 @@ var render = function () {
                           },
                           [
                             _vm._v(
-                              "\n                                            Submit\n                                        "
+                              "\n                                    Submit\n                                "
                             ),
                           ]
                         ),
@@ -40356,7 +40822,7 @@ var render = function () {
                           },
                           [
                             _vm._v(
-                              "\n                                            Next Step\n                                        "
+                              "\n                                    Next Step\n                                "
                             ),
                           ]
                         ),
@@ -40377,93 +40843,55 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "wizard-nav border-bottom" }, [
-      _c("div", { staticClass: "wizard-steps p-8 p-lg-10" }, [
-        _c(
-          "div",
-          {
-            staticClass: "wizard-step",
-            attrs: {
-              "data-wizard-type": "step",
-              "data-wizard-state": "current",
-            },
-          },
-          [
-            _c("div", { staticClass: "wizard-label" }, [
-              _c("i", { staticClass: "wizard-icon flaticon-bus-stop" }),
-              _vm._v(" "),
-              _c("h3", { staticClass: "wizard-title" }, [
-                _vm._v("1. Setup Location"),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("i", { staticClass: "wizard-arrow flaticon2-next" }),
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "wizard-step", attrs: { "data-wizard-type": "step" } },
-          [
-            _c("div", { staticClass: "wizard-label" }, [
-              _c("i", { staticClass: "wizard-icon flaticon-list" }),
-              _vm._v(" "),
-              _c("h3", { staticClass: "wizard-title" }, [
-                _vm._v("2. Enter Details"),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("i", { staticClass: "wizard-arrow flaticon2-next" }),
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "wizard-step", attrs: { "data-wizard-type": "step" } },
-          [
-            _c("div", { staticClass: "wizard-label" }, [
-              _c("i", { staticClass: "wizard-icon flaticon-responsive" }),
-              _vm._v(" "),
-              _c("h3", { staticClass: "wizard-title" }, [
-                _vm._v("3. Employment Details"),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("i", { staticClass: "wizard-arrow flaticon2-next" }),
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "wizard-step", attrs: { "data-wizard-type": "step" } },
-          [
-            _c("div", { staticClass: "wizard-label" }, [
-              _c("i", { staticClass: "wizard-icon flaticon-user" }),
-              _vm._v(" "),
-              _c("h3", { staticClass: "wizard-title" }, [
-                _vm._v("4. Next Of Kin Details"),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("i", { staticClass: "wizard-arrow flaticon2-next" }),
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "wizard-step", attrs: { "data-wizard-type": "step" } },
-          [
-            _c("div", { staticClass: "wizard-label" }, [
-              _c("i", { staticClass: "wizard-icon flaticon-globe" }),
-              _vm._v(" "),
-              _c("h3", { staticClass: "wizard-title" }, [
-                _vm._v("5. Review and Submit"),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("i", { staticClass: "wizard-arrow last flaticon2-next" }),
-          ]
-        ),
+    return _c("div", { staticClass: "wizard-label" }, [
+      _c("i", { staticClass: "wizard-icon flaticon-bus-stop" }),
+      _vm._v(" "),
+      _c("h3", { staticClass: "wizard-title" }, [_vm._v("1. Setup Location")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "wizard-label" }, [
+      _c("i", { staticClass: "wizard-icon flaticon-list" }),
+      _vm._v(" "),
+      _c("h3", { staticClass: "wizard-title" }, [_vm._v("2. Enter Details")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "wizard-label" }, [
+      _c("i", { staticClass: "wizard-icon flaticon-responsive" }),
+      _vm._v(" "),
+      _c("h3", { staticClass: "wizard-title" }, [
+        _vm._v("3. Employment Details"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "wizard-label" }, [
+      _c("i", { staticClass: "wizard-icon flaticon-truck" }),
+      _vm._v(" "),
+      _c("h3", { staticClass: "wizard-title" }, [
+        _vm._v("4. Next Of Kin Details"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "wizard-label" }, [
+      _c("i", { staticClass: "wizard-icon flaticon-globe" }),
+      _vm._v(" "),
+      _c("h3", { staticClass: "wizard-title" }, [
+        _vm._v("5. Review and Submit"),
       ]),
     ])
   },
@@ -40481,7 +40909,7 @@ var staticRenderFns = [
         },
         [
           _vm._v(
-            "\n                                            Previous\n                                        "
+            "\n                                    Previous\n                                "
           ),
         ]
       ),

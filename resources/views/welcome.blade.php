@@ -17,27 +17,27 @@ License: You must have a valid license purchased only from themeforest(the above
 <!--begin::Head-->
 <head><base href="../../../">
     <meta charset="utf-8" />
-    <title>Metronic | Pagination Options Examples</title>
-    <meta name="description" content="Pagination options datatables examples" />
+    <title>Metronic | Wizard 1</title>
+    <meta name="description" content="Wizard examples" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
-    <!--begin::Page Vendors Styles(used by this page)-->
-    <link href="{{asset("assets/plugins/custom/datatables/datatables.bundle.css?v=7.0.5")}}" rel="stylesheet" type="text/css" />
-    <!--end::Page Vendors Styles-->
+    <!--begin::Page Custom Styles(used by this page)-->
+    <link href="assets/css/pages/wizard/wizard-1.css?v=7.0.5" rel="stylesheet" type="text/css" />
+    <!--end::Page Custom Styles-->
     <!--begin::Global Theme Styles(used by all pages)-->
-    <link href="{{asset("assets/plugins/global/plugins.bundle.css?v=7.0.5")}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset("assets/plugins/custom/prismjs/prismjs.bundle.css?v=7.0.5")}}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset("assets/css/style.bundle.css?v=7.0.5")}}" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/global/plugins.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/custom/prismjs/prismjs.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
-    <link href="{{asset("assets/css/themes/layout/header/base/light.css?v=7.0.5")}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset("assets/css/themes/layout/header/menu/light.css?v=7.0.5")}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset("assets/css/themes/layout/brand/dark.css?v=7.0.5")}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset("assets/css/themes/layout/aside/dark.css?v=7.0.5")}}" rel="stylesheet" type="text/css" />
+    <link href="assets/css/themes/layout/header/base/light.css?v=7.0.5" rel="stylesheet" type="text/css" />
+    <link href="assets/css/themes/layout/header/menu/light.css?v=7.0.5" rel="stylesheet" type="text/css" />
+    <link href="assets/css/themes/layout/brand/dark.css?v=7.0.5" rel="stylesheet" type="text/css" />
+    <link href="assets/css/themes/layout/aside/dark.css?v=7.0.5" rel="stylesheet" type="text/css" />
     <!--end::Layout Themes-->
-    <link rel="shortcut icon" href="{{asset("assets/media/logos/favicon.ico")}}" />
+    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -46,8 +46,8 @@ License: You must have a valid license purchased only from themeforest(the above
 <!--begin::Header Mobile-->
 <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
     <!--begin::Logo-->
-    <a href="#">
-        <img alt="Logo" src="{{asset("assets/media/logos/logo-light.png")}}" />
+    <a href="index.html">
+        <img alt="Logo" src="assets/media/logos/logo-light.png" />
     </a>
     <!--end::Logo-->
     <!--begin::Toolbar-->
@@ -739,7 +739,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </ul>
                             </div>
                         </li>
-                        <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                        <li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
                             <a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Barcode-read.svg-->
@@ -937,7 +937,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                    <li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
                                         <a href="javascript:;" class="menu-link menu-toggle">
                                             <i class="menu-bullet menu-bullet-dot">
                                                 <span></span>
@@ -948,7 +948,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <div class="menu-submenu">
                                             <i class="menu-arrow"></i>
                                             <ul class="menu-subnav">
-                                                <li class="menu-item" aria-haspopup="true">
+                                                <li class="menu-item menu-item-active" aria-haspopup="true">
                                                     <a href="custom/pages/wizard/wizard-1.html" class="menu-link">
                                                         <i class="menu-bullet menu-bullet-dot">
                                                             <span></span>
@@ -1983,7 +1983,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </ul>
                             </div>
                         </li>
-                        <li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
+                        <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                             <a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-horizontal.svg-->
@@ -2007,7 +2007,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<span class="menu-text">Datatables.net</span>
 												</span>
                                     </li>
-                                    <li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
+                                    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                                         <a href="javascript:;" class="menu-link menu-toggle">
                                             <i class="menu-bullet menu-bullet-dot">
                                                 <span></span>
@@ -2042,7 +2042,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <span class="menu-text">Complex Headers</span>
                                                     </a>
                                                 </li>
-                                                <li class="menu-item menu-item-active" aria-haspopup="true">
+                                                <li class="menu-item" aria-haspopup="true">
                                                     <a href="crud/datatables/basic/paginations.html" class="menu-link">
                                                         <i class="menu-bullet menu-bullet-dot">
                                                             <span></span>
@@ -4608,21 +4608,15 @@ License: You must have a valid license purchased only from themeforest(the above
                             <!--begin::Page Heading-->
                             <div class="d-flex align-items-baseline flex-wrap mr-5">
                                 <!--begin::Page Title-->
-                                <h5 class="text-dark font-weight-bold my-1 mr-5">Pagination Options Examples</h5>
+                                <h5 class="text-dark font-weight-bold my-1 mr-5">Wizard 1</h5>
                                 <!--end::Page Title-->
                                 <!--begin::Breadcrumb-->
                                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                                     <li class="breadcrumb-item">
-                                        <a href="" class="text-muted">Crud</a>
+                                        <a href="" class="text-muted">Pages</a>
                                     </li>
                                     <li class="breadcrumb-item">
-                                        <a href="" class="text-muted">Datatables.net</a>
-                                    </li>
-                                    <li class="breadcrumb-item">
-                                        <a href="" class="text-muted">Basic</a>
-                                    </li>
-                                    <li class="breadcrumb-item">
-                                        <a href="" class="text-muted">Pagination Options</a>
+                                        <a href="" class="text-muted">Wizard 1</a>
                                     </li>
                                 </ul>
                                 <!--end::Breadcrumb-->
@@ -4712,790 +4706,880 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="d-flex flex-column-fluid">
                     <!--begin::Container-->
                     <div class="container">
-                        <!--begin::Notice-->
-                        <div class="alert alert-custom alert-white alert-shadow gutter-b" role="alert">
-                            <div class="alert-icon">
-										<span class="svg-icon svg-icon-primary svg-icon-xl">
-											<!--begin::Svg Icon | path:assets/media/svg/icons/Tools/Compass.svg-->
-											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-													<rect x="0" y="0" width="24" height="24" />
-													<path d="M7.07744993,12.3040451 C7.72444571,13.0716094 8.54044565,13.6920474 9.46808594,14.1079953 L5,23 L4.5,18 L7.07744993,12.3040451 Z M14.5865511,14.2597864 C15.5319561,13.9019016 16.375416,13.3366121 17.0614026,12.6194459 L19.5,18 L19,23 L14.5865511,14.2597864 Z M12,3.55271368e-14 C12.8284271,3.53749572e-14 13.5,0.671572875 13.5,1.5 L13.5,4 L10.5,4 L10.5,1.5 C10.5,0.671572875 11.1715729,3.56793164e-14 12,3.55271368e-14 Z" fill="#000000" opacity="0.3" />
-													<path d="M12,10 C13.1045695,10 14,9.1045695 14,8 C14,6.8954305 13.1045695,6 12,6 C10.8954305,6 10,6.8954305 10,8 C10,9.1045695 10.8954305,10 12,10 Z M12,13 C9.23857625,13 7,10.7614237 7,8 C7,5.23857625 9.23857625,3 12,3 C14.7614237,3 17,5.23857625 17,8 C17,10.7614237 14.7614237,13 12,13 Z" fill="#000000" fill-rule="nonzero" />
-												</g>
-											</svg>
-                                            <!--end::Svg Icon-->
-										</span>
-                            </div>
-                            <div class="alert-text">The default page control presented by DataTables (forward and backward buttons with up to 7 page numbers in-between) is fine for most situations.
-                                <br />For more info see
-                                <a class="font-weight-bold" href="https://datatables.net/" target="_blank">the official home</a>of the plugin.</div>
-                        </div>
-                        <!--end::Notice-->
-                        <!--begin::Card-->
                         <div class="card card-custom">
-                            <div class="card-header flex-wrap py-5">
-                                <div class="card-title">
-                                    <h3 class="card-label">Paginations
-                                        <span class="d-block text-muted pt-2 font-size-sm">extended pagination options</span></h3>
-                                </div>
-                                <div class="card-toolbar">
-                                    <!--begin::Dropdown-->
-                                    <div class="dropdown dropdown-inline mr-2">
-                                        <button type="button" class="btn btn-light-primary font-weight-bolder dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<span class="svg-icon svg-icon-md">
-													<!--begin::Svg Icon | path:assets/media/svg/icons/Design/PenAndRuller.svg-->
-													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-														<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-															<rect x="0" y="0" width="24" height="24" />
-															<path d="M3,16 L5,16 C5.55228475,16 6,15.5522847 6,15 C6,14.4477153 5.55228475,14 5,14 L3,14 L3,12 L5,12 C5.55228475,12 6,11.5522847 6,11 C6,10.4477153 5.55228475,10 5,10 L3,10 L3,8 L5,8 C5.55228475,8 6,7.55228475 6,7 C6,6.44771525 5.55228475,6 5,6 L3,6 L3,4 C3,3.44771525 3.44771525,3 4,3 L10,3 C10.5522847,3 11,3.44771525 11,4 L11,19 C11,19.5522847 10.5522847,20 10,20 L4,20 C3.44771525,20 3,19.5522847 3,19 L3,16 Z" fill="#000000" opacity="0.3" />
-															<path d="M16,3 L19,3 C20.1045695,3 21,3.8954305 21,5 L21,15.2485298 C21,15.7329761 20.8241635,16.200956 20.5051534,16.565539 L17.8762883,19.5699562 C17.6944473,19.7777745 17.378566,19.7988332 17.1707477,19.6169922 C17.1540423,19.602375 17.1383289,19.5866616 17.1237117,19.5699562 L14.4948466,16.565539 C14.1758365,16.200956 14,15.7329761 14,15.2485298 L14,5 C14,3.8954305 14.8954305,3 16,3 Z" fill="#000000" />
-														</g>
-													</svg>
+                            <div class="card-body p-0">
+                                <!--begin::Wizard-->
+                                <div class="wizard wizard-1" id="kt_wizard_v1" data-wizard-state="step-first" data-wizard-clickable="false">
+                                    <!--begin::Wizard Nav-->
+                                    <div class="wizard-nav border-bottom">
+                                        <div class="wizard-steps p-8 p-lg-10">
+                                            <!--begin::Wizard Step 1 Nav-->
+                                            <div class="wizard-step" data-wizard-type="step" data-wizard-state="current">
+                                                <div class="wizard-label">
+                                                    <i class="wizard-icon flaticon-bus-stop"></i>
+                                                    <h3 class="wizard-title">1. Setup Location</h3>
+                                                </div>
+                                                <span class="svg-icon svg-icon-xl wizard-arrow">
+															<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
+															<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+																<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																	<polygon points="0 0 24 0 24 24 0 24" />
+																	<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
+																	<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
+																</g>
+															</svg>
                                                     <!--end::Svg Icon-->
-												</span>Export</button>
-                                        <!--begin::Dropdown Menu-->
-                                        <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                                            <!--begin::Navigation-->
-                                            <ul class="navi flex-column navi-hover py-2">
-                                                <li class="navi-header font-weight-bolder text-uppercase font-size-sm text-primary pb-2">Choose an option:</li>
-                                                <li class="navi-item">
-                                                    <a href="#" class="navi-link">
-																<span class="navi-icon">
-																	<i class="la la-print"></i>
-																</span>
-                                                        <span class="navi-text">Print</span>
-                                                    </a>
-                                                </li>
-                                                <li class="navi-item">
-                                                    <a href="#" class="navi-link">
-																<span class="navi-icon">
-																	<i class="la la-copy"></i>
-																</span>
-                                                        <span class="navi-text">Copy</span>
-                                                    </a>
-                                                </li>
-                                                <li class="navi-item">
-                                                    <a href="#" class="navi-link">
-																<span class="navi-icon">
-																	<i class="la la-file-excel-o"></i>
-																</span>
-                                                        <span class="navi-text">Excel</span>
-                                                    </a>
-                                                </li>
-                                                <li class="navi-item">
-                                                    <a href="#" class="navi-link">
-																<span class="navi-icon">
-																	<i class="la la-file-text-o"></i>
-																</span>
-                                                        <span class="navi-text">CSV</span>
-                                                    </a>
-                                                </li>
-                                                <li class="navi-item">
-                                                    <a href="#" class="navi-link">
-																<span class="navi-icon">
-																	<i class="la la-file-pdf-o"></i>
-																</span>
-                                                        <span class="navi-text">PDF</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            <!--end::Navigation-->
+												</span>
+                                            </div>
+                                            <!--end::Wizard Step 1 Nav-->
+                                            <!--begin::Wizard Step 2 Nav-->
+                                            <div class="wizard-step" data-wizard-type="step">
+                                                <div class="wizard-label">
+                                                    <i class="wizard-icon flaticon-list"></i>
+                                                    <h3 class="wizard-title">2. Enter Details</h3>
+                                                </div>
+                                                <span class="svg-icon svg-icon-xl wizard-arrow">
+															<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
+															<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+																<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																	<polygon points="0 0 24 0 24 24 0 24" />
+																	<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
+																	<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
+																</g>
+															</svg>
+                                                    <!--end::Svg Icon-->
+														</span>
+                                            </div>
+                                            <!--end::Wizard Step 2 Nav-->
+                                            <!--begin::Wizard Step 3 Nav-->
+                                            <div class="wizard-step" data-wizard-type="step">
+                                                <div class="wizard-label">
+                                                    <i class="wizard-icon flaticon-responsive"></i>
+                                                    <h3 class="wizard-title">3. Select Services</h3>
+                                                </div>
+                                                <span class="svg-icon svg-icon-xl wizard-arrow">
+															<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
+															<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+																<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																	<polygon points="0 0 24 0 24 24 0 24" />
+																	<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
+																	<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
+																</g>
+															</svg>
+                                                    <!--end::Svg Icon-->
+														</span>
+                                            </div>
+                                            <!--end::Wizard Step 3 Nav-->
+                                            <!--begin::Wizard Step 4 Nav-->
+                                            <div class="wizard-step" data-wizard-type="step">
+                                                <div class="wizard-label">
+                                                    <i class="wizard-icon flaticon-truck"></i>
+                                                    <h3 class="wizard-title">4. Delivery Address</h3>
+                                                </div>
+                                                <span class="svg-icon svg-icon-xl wizard-arrow">
+															<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
+															<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+																<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																	<polygon points="0 0 24 0 24 24 0 24" />
+																	<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
+																	<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
+																</g>
+															</svg>
+                                                    <!--end::Svg Icon-->
+														</span>
+                                            </div>
+                                            <!--end::Wizard Step 4 Nav-->
+                                            <!--begin::Wizard Step 5 Nav-->
+                                            <div class="wizard-step" data-wizard-type="step">
+                                                <div class="wizard-label">
+                                                    <i class="wizard-icon flaticon-globe"></i>
+                                                    <h3 class="wizard-title">5. Review and Submit</h3>
+                                                </div>
+                                                <span class="svg-icon svg-icon-xl wizard-arrow last">
+															<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
+															<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+																<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																	<polygon points="0 0 24 0 24 24 0 24" />
+																	<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
+																	<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
+																</g>
+															</svg>
+                                                    <!--end::Svg Icon-->
+														</span>
+                                            </div>
+                                            <!--end::Wizard Step 5 Nav-->
                                         </div>
-                                        <!--end::Dropdown Menu-->
                                     </div>
-                                    <!--end::Dropdown-->
-                                    <!--begin::Button-->
-                                    <a href="#" class="btn btn-primary font-weight-bolder">
-											<span class="svg-icon svg-icon-md">
-												<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Flatten.svg-->
-												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-														<rect x="0" y="0" width="24" height="24" />
-														<circle fill="#000000" cx="9" cy="15" r="6" />
-														<path d="M8.8012943,7.00241953 C9.83837775,5.20768121 11.7781543,4 14,4 C17.3137085,4 20,6.6862915 20,10 C20,12.2218457 18.7923188,14.1616223 16.9975805,15.1987057 C16.9991904,15.1326658 17,15.0664274 17,15 C17,10.581722 13.418278,7 9,7 C8.93357256,7 8.86733422,7.00080962 8.8012943,7.00241953 Z" fill="#000000" opacity="0.3" />
-													</g>
-												</svg>
-                                                <!--end::Svg Icon-->
-											</span>New Record</a>
-                                    <!--end::Button-->
+                                    <!--end::Wizard Nav-->
+                                    <!--begin::Wizard Body-->
+                                    <div class="row justify-content-center my-10 px-8 my-lg-15 px-lg-10">
+                                        <div class="col-xl-12 col-xxl-7">
+                                            <!--begin::Wizard Form-->
+                                            <form class="form" id="kt_form">
+                                                <!--begin::Wizard Step 1-->
+                                                <div class="pb-5" data-wizard-type="step-content" data-wizard-state="current">
+                                                    <h3 class="mb-10 font-weight-bold text-dark">Setup Your Current Location</h3>
+                                                    <!--begin::Input-->
+                                                    <div class="form-group">
+                                                        <label>Address Line 1</label>
+                                                        <input type="text" class="form-control form-control-solid form-control-lg" name="address1" placeholder="Address Line 1" value="Address Line 1" />
+                                                        <span class="form-text text-muted">Please enter your Address.</span>
+                                                    </div>
+                                                    <!--end::Input-->
+                                                    <!--begin::Input-->
+                                                    <div class="form-group">
+                                                        <label>Address Line 2</label>
+                                                        <input type="text" class="form-control form-control-solid form-control-lg" name="address2" placeholder="Address Line 2" value="Address Line 2" />
+                                                        <span class="form-text text-muted">Please enter your Address.</span>
+                                                    </div>
+                                                    <!--end::Input-->
+                                                    <div class="row">
+                                                        <div class="col-xl-6">
+                                                            <!--begin::Input-->
+                                                            <div class="form-group">
+                                                                <label>Postcode</label>
+                                                                <input type="text" class="form-control form-control-solid form-control-lg" name="postcode" placeholder="Postcode" value="3000" />
+                                                                <span class="form-text text-muted">Please enter your Postcode.</span>
+                                                            </div>
+                                                            <!--end::Input-->
+                                                        </div>
+                                                        <div class="col-xl-6">
+                                                            <!--begin::Input-->
+                                                            <div class="form-group">
+                                                                <label>City</label>
+                                                                <input type="text" class="form-control form-control-solid form-control-lg" name="city" placeholder="City" value="Melbourne" />
+                                                                <span class="form-text text-muted">Please enter your City.</span>
+                                                            </div>
+                                                            <!--end::Input-->
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xl-6">
+                                                            <!--begin::Input-->
+                                                            <div class="form-group">
+                                                                <label>State</label>
+                                                                <input type="text" class="form-control form-control-solid form-control-lg" name="state" placeholder="State" value="VIC" />
+                                                                <span class="form-text text-muted">Please enter your State.</span>
+                                                            </div>
+                                                            <!--end::Input-->
+                                                        </div>
+                                                        <div class="col-xl-6">
+                                                            <!--begin::Select-->
+                                                            <div class="form-group">
+                                                                <label>Country</label>
+                                                                <select name="country" class="form-control form-control-solid form-control-lg">
+                                                                    <option value="">Select</option>
+                                                                    <option value="AF">Afghanistan</option>
+                                                                    <option value="AX">Åland Islands</option>
+                                                                    <option value="AL">Albania</option>
+                                                                    <option value="DZ">Algeria</option>
+                                                                    <option value="AS">American Samoa</option>
+                                                                    <option value="AD">Andorra</option>
+                                                                    <option value="AO">Angola</option>
+                                                                    <option value="AI">Anguilla</option>
+                                                                    <option value="AQ">Antarctica</option>
+                                                                    <option value="AG">Antigua and Barbuda</option>
+                                                                    <option value="AR">Argentina</option>
+                                                                    <option value="AM">Armenia</option>
+                                                                    <option value="AW">Aruba</option>
+                                                                    <option value="AU" selected="selected">Australia</option>
+                                                                    <option value="AT">Austria</option>
+                                                                    <option value="AZ">Azerbaijan</option>
+                                                                    <option value="BS">Bahamas</option>
+                                                                    <option value="BH">Bahrain</option>
+                                                                    <option value="BD">Bangladesh</option>
+                                                                    <option value="BB">Barbados</option>
+                                                                    <option value="BY">Belarus</option>
+                                                                    <option value="BE">Belgium</option>
+                                                                    <option value="BZ">Belize</option>
+                                                                    <option value="BJ">Benin</option>
+                                                                    <option value="BM">Bermuda</option>
+                                                                    <option value="BT">Bhutan</option>
+                                                                    <option value="BO">Bolivia, Plurinational State of</option>
+                                                                    <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                                                    <option value="BA">Bosnia and Herzegovina</option>
+                                                                    <option value="BW">Botswana</option>
+                                                                    <option value="BV">Bouvet Island</option>
+                                                                    <option value="BR">Brazil</option>
+                                                                    <option value="IO">British Indian Ocean Territory</option>
+                                                                    <option value="BN">Brunei Darussalam</option>
+                                                                    <option value="BG">Bulgaria</option>
+                                                                    <option value="BF">Burkina Faso</option>
+                                                                    <option value="BI">Burundi</option>
+                                                                    <option value="KH">Cambodia</option>
+                                                                    <option value="CM">Cameroon</option>
+                                                                    <option value="CA">Canada</option>
+                                                                    <option value="CV">Cape Verde</option>
+                                                                    <option value="KY">Cayman Islands</option>
+                                                                    <option value="CF">Central African Republic</option>
+                                                                    <option value="TD">Chad</option>
+                                                                    <option value="CL">Chile</option>
+                                                                    <option value="CN">China</option>
+                                                                    <option value="CX">Christmas Island</option>
+                                                                    <option value="CC">Cocos (Keeling) Islands</option>
+                                                                    <option value="CO">Colombia</option>
+                                                                    <option value="KM">Comoros</option>
+                                                                    <option value="CG">Congo</option>
+                                                                    <option value="CD">Congo, the Democratic Republic of the</option>
+                                                                    <option value="CK">Cook Islands</option>
+                                                                    <option value="CR">Costa Rica</option>
+                                                                    <option value="CI">Côte d'Ivoire</option>
+                                                                    <option value="HR">Croatia</option>
+                                                                    <option value="CU">Cuba</option>
+                                                                    <option value="CW">Curaçao</option>
+                                                                    <option value="CY">Cyprus</option>
+                                                                    <option value="CZ">Czech Republic</option>
+                                                                    <option value="DK">Denmark</option>
+                                                                    <option value="DJ">Djibouti</option>
+                                                                    <option value="DM">Dominica</option>
+                                                                    <option value="DO">Dominican Republic</option>
+                                                                    <option value="EC">Ecuador</option>
+                                                                    <option value="EG">Egypt</option>
+                                                                    <option value="SV">El Salvador</option>
+                                                                    <option value="GQ">Equatorial Guinea</option>
+                                                                    <option value="ER">Eritrea</option>
+                                                                    <option value="EE">Estonia</option>
+                                                                    <option value="ET">Ethiopia</option>
+                                                                    <option value="FK">Falkland Islands (Malvinas)</option>
+                                                                    <option value="FO">Faroe Islands</option>
+                                                                    <option value="FJ">Fiji</option>
+                                                                    <option value="FI">Finland</option>
+                                                                    <option value="FR">France</option>
+                                                                    <option value="GF">French Guiana</option>
+                                                                    <option value="PF">French Polynesia</option>
+                                                                    <option value="TF">French Southern Territories</option>
+                                                                    <option value="GA">Gabon</option>
+                                                                    <option value="GM">Gambia</option>
+                                                                    <option value="GE">Georgia</option>
+                                                                    <option value="DE">Germany</option>
+                                                                    <option value="GH">Ghana</option>
+                                                                    <option value="GI">Gibraltar</option>
+                                                                    <option value="GR">Greece</option>
+                                                                    <option value="GL">Greenland</option>
+                                                                    <option value="GD">Grenada</option>
+                                                                    <option value="GP">Guadeloupe</option>
+                                                                    <option value="GU">Guam</option>
+                                                                    <option value="GT">Guatemala</option>
+                                                                    <option value="GG">Guernsey</option>
+                                                                    <option value="GN">Guinea</option>
+                                                                    <option value="GW">Guinea-Bissau</option>
+                                                                    <option value="GY">Guyana</option>
+                                                                    <option value="HT">Haiti</option>
+                                                                    <option value="HM">Heard Island and McDonald Islands</option>
+                                                                    <option value="VA">Holy See (Vatican City State)</option>
+                                                                    <option value="HN">Honduras</option>
+                                                                    <option value="HK">Hong Kong</option>
+                                                                    <option value="HU">Hungary</option>
+                                                                    <option value="IS">Iceland</option>
+                                                                    <option value="IN">India</option>
+                                                                    <option value="ID">Indonesia</option>
+                                                                    <option value="IR">Iran, Islamic Republic of</option>
+                                                                    <option value="IQ">Iraq</option>
+                                                                    <option value="IE">Ireland</option>
+                                                                    <option value="IM">Isle of Man</option>
+                                                                    <option value="IL">Israel</option>
+                                                                    <option value="IT">Italy</option>
+                                                                    <option value="JM">Jamaica</option>
+                                                                    <option value="JP">Japan</option>
+                                                                    <option value="JE">Jersey</option>
+                                                                    <option value="JO">Jordan</option>
+                                                                    <option value="KZ">Kazakhstan</option>
+                                                                    <option value="KE">Kenya</option>
+                                                                    <option value="KI">Kiribati</option>
+                                                                    <option value="KP">Korea, Democratic People's Republic of</option>
+                                                                    <option value="KR">Korea, Republic of</option>
+                                                                    <option value="KW">Kuwait</option>
+                                                                    <option value="KG">Kyrgyzstan</option>
+                                                                    <option value="LA">Lao People's Democratic Republic</option>
+                                                                    <option value="LV">Latvia</option>
+                                                                    <option value="LB">Lebanon</option>
+                                                                    <option value="LS">Lesotho</option>
+                                                                    <option value="LR">Liberia</option>
+                                                                    <option value="LY">Libya</option>
+                                                                    <option value="LI">Liechtenstein</option>
+                                                                    <option value="LT">Lithuania</option>
+                                                                    <option value="LU">Luxembourg</option>
+                                                                    <option value="MO">Macao</option>
+                                                                    <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+                                                                    <option value="MG">Madagascar</option>
+                                                                    <option value="MW">Malawi</option>
+                                                                    <option value="MY">Malaysia</option>
+                                                                    <option value="MV">Maldives</option>
+                                                                    <option value="ML">Mali</option>
+                                                                    <option value="MT">Malta</option>
+                                                                    <option value="MH">Marshall Islands</option>
+                                                                    <option value="MQ">Martinique</option>
+                                                                    <option value="MR">Mauritania</option>
+                                                                    <option value="MU">Mauritius</option>
+                                                                    <option value="YT">Mayotte</option>
+                                                                    <option value="MX">Mexico</option>
+                                                                    <option value="FM">Micronesia, Federated States of</option>
+                                                                    <option value="MD">Moldova, Republic of</option>
+                                                                    <option value="MC">Monaco</option>
+                                                                    <option value="MN">Mongolia</option>
+                                                                    <option value="ME">Montenegro</option>
+                                                                    <option value="MS">Montserrat</option>
+                                                                    <option value="MA">Morocco</option>
+                                                                    <option value="MZ">Mozambique</option>
+                                                                    <option value="MM">Myanmar</option>
+                                                                    <option value="NA">Namibia</option>
+                                                                    <option value="NR">Nauru</option>
+                                                                    <option value="NP">Nepal</option>
+                                                                    <option value="NL">Netherlands</option>
+                                                                    <option value="NC">New Caledonia</option>
+                                                                    <option value="NZ">New Zealand</option>
+                                                                    <option value="NI">Nicaragua</option>
+                                                                    <option value="NE">Niger</option>
+                                                                    <option value="NG">Nigeria</option>
+                                                                    <option value="NU">Niue</option>
+                                                                    <option value="NF">Norfolk Island</option>
+                                                                    <option value="MP">Northern Mariana Islands</option>
+                                                                    <option value="NO">Norway</option>
+                                                                    <option value="OM">Oman</option>
+                                                                    <option value="PK">Pakistan</option>
+                                                                    <option value="PW">Palau</option>
+                                                                    <option value="PS">Palestinian Territory, Occupied</option>
+                                                                    <option value="PA">Panama</option>
+                                                                    <option value="PG">Papua New Guinea</option>
+                                                                    <option value="PY">Paraguay</option>
+                                                                    <option value="PE">Peru</option>
+                                                                    <option value="PH">Philippines</option>
+                                                                    <option value="PN">Pitcairn</option>
+                                                                    <option value="PL">Poland</option>
+                                                                    <option value="PT">Portugal</option>
+                                                                    <option value="PR">Puerto Rico</option>
+                                                                    <option value="QA">Qatar</option>
+                                                                    <option value="RE">Réunion</option>
+                                                                    <option value="RO">Romania</option>
+                                                                    <option value="RU">Russian Federation</option>
+                                                                    <option value="RW">Rwanda</option>
+                                                                    <option value="BL">Saint Barthélemy</option>
+                                                                    <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                                                                    <option value="KN">Saint Kitts and Nevis</option>
+                                                                    <option value="LC">Saint Lucia</option>
+                                                                    <option value="MF">Saint Martin (French part)</option>
+                                                                    <option value="PM">Saint Pierre and Miquelon</option>
+                                                                    <option value="VC">Saint Vincent and the Grenadines</option>
+                                                                    <option value="WS">Samoa</option>
+                                                                    <option value="SM">San Marino</option>
+                                                                    <option value="ST">Sao Tome and Principe</option>
+                                                                    <option value="SA">Saudi Arabia</option>
+                                                                    <option value="SN">Senegal</option>
+                                                                    <option value="RS">Serbia</option>
+                                                                    <option value="SC">Seychelles</option>
+                                                                    <option value="SL">Sierra Leone</option>
+                                                                    <option value="SG">Singapore</option>
+                                                                    <option value="SX">Sint Maarten (Dutch part)</option>
+                                                                    <option value="SK">Slovakia</option>
+                                                                    <option value="SI">Slovenia</option>
+                                                                    <option value="SB">Solomon Islands</option>
+                                                                    <option value="SO">Somalia</option>
+                                                                    <option value="ZA">South Africa</option>
+                                                                    <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                                                    <option value="SS">South Sudan</option>
+                                                                    <option value="ES">Spain</option>
+                                                                    <option value="LK">Sri Lanka</option>
+                                                                    <option value="SD">Sudan</option>
+                                                                    <option value="SR">Suriname</option>
+                                                                    <option value="SJ">Svalbard and Jan Mayen</option>
+                                                                    <option value="SZ">Swaziland</option>
+                                                                    <option value="SE">Sweden</option>
+                                                                    <option value="CH">Switzerland</option>
+                                                                    <option value="SY">Syrian Arab Republic</option>
+                                                                    <option value="TW">Taiwan, Province of China</option>
+                                                                    <option value="TJ">Tajikistan</option>
+                                                                    <option value="TZ">Tanzania, United Republic of</option>
+                                                                    <option value="TH">Thailand</option>
+                                                                    <option value="TL">Timor-Leste</option>
+                                                                    <option value="TG">Togo</option>
+                                                                    <option value="TK">Tokelau</option>
+                                                                    <option value="TO">Tonga</option>
+                                                                    <option value="TT">Trinidad and Tobago</option>
+                                                                    <option value="TN">Tunisia</option>
+                                                                    <option value="TR">Turkey</option>
+                                                                    <option value="TM">Turkmenistan</option>
+                                                                    <option value="TC">Turks and Caicos Islands</option>
+                                                                    <option value="TV">Tuvalu</option>
+                                                                    <option value="UG">Uganda</option>
+                                                                    <option value="UA">Ukraine</option>
+                                                                    <option value="AE">United Arab Emirates</option>
+                                                                    <option value="GB">United Kingdom</option>
+                                                                    <option value="US">United States</option>
+                                                                    <option value="UM">United States Minor Outlying Islands</option>
+                                                                    <option value="UY">Uruguay</option>
+                                                                    <option value="UZ">Uzbekistan</option>
+                                                                    <option value="VU">Vanuatu</option>
+                                                                    <option value="VE">Venezuela, Bolivarian Republic of</option>
+                                                                    <option value="VN">Viet Nam</option>
+                                                                    <option value="VG">Virgin Islands, British</option>
+                                                                    <option value="VI">Virgin Islands, U.S.</option>
+                                                                    <option value="WF">Wallis and Futuna</option>
+                                                                    <option value="EH">Western Sahara</option>
+                                                                    <option value="YE">Yemen</option>
+                                                                    <option value="ZM">Zambia</option>
+                                                                    <option value="ZW">Zimbabwe</option>
+                                                                </select>
+                                                            </div>
+                                                            <!--end::Select-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--end::Wizard Step 1-->
+                                                <!--begin::Wizard Step 2-->
+                                                <div class="pb-5" data-wizard-type="step-content">
+                                                    <h4 class="mb-10 font-weight-bold text-dark">Enter the Details of your Delivery</h4>
+                                                    <!--begin::Input-->
+                                                    <div class="form-group">
+                                                        <label>Package Details</label>
+                                                        <input type="text" class="form-control form-control-solid form-control-lg" name="package" placeholder="Package Details" value="Complete Workstation (Monitor, Computer, Keyboard &amp; Mouse)" />
+                                                        <span class="form-text text-muted">Please enter your Pakcage Details.</span>
+                                                    </div>
+                                                    <!--end::Input-->
+                                                    <!--begin::Input-->
+                                                    <div class="form-group">
+                                                        <label>Package Weight in KG</label>
+                                                        <input type="text" class="form-control form-control-solid form-control-lg" name="weight" placeholder="Package Weight" value="25" />
+                                                        <span class="form-text text-muted">Please enter your Package Weight in KG.</span>
+                                                    </div>
+                                                    <!--end::Input-->
+                                                    <div class="row">
+                                                        <div class="col-xl-4">
+                                                            <!--begin::Input-->
+                                                            <div class="form-group">
+                                                                <label>Package Width in CM</label>
+                                                                <input type="text" class="form-control form-control-solid form-control-lg" name="width" placeholder="Package Width" value="110" />
+                                                                <span class="form-text text-muted">Please enter your Package Width in CM.</span>
+                                                            </div>
+                                                            <!--end::Input-->
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <!--begin::Input-->
+                                                            <div class="form-group">
+                                                                <label>Package Height in CM</label>
+                                                                <input type="text" class="form-control form-control-solid form-control-lg" name="height" placeholder="Package Height" value="90" />
+                                                                <span class="form-text text-muted">Please enter your Package Height in CM.</span>
+                                                            </div>
+                                                            <!--end::Input-->
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <!--begin::Input-->
+                                                            <div class="form-group">
+                                                                <label>Package Length in CM</label>
+                                                                <input type="text" class="form-control form-control-solid form-control-lg" name="packagelength" placeholder="Package Length" value="150" />
+                                                                <span class="form-text text-muted">Please enter your Package Length in CM.</span>
+                                                            </div>
+                                                            <!--end::Input-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--end::Wizard Step 2-->
+                                                <!--begin::Wizard Step 3-->
+                                                <div class="pb-5" data-wizard-type="step-content">
+                                                    <h4 class="mb-10 font-weight-bold text-dark">Select your Services</h4>
+                                                    <!--begin::Select-->
+                                                    <div class="form-group">
+                                                        <label>Delivery Type</label>
+                                                        <select name="delivery" class="form-control form-control-solid form-control-lg">
+                                                            <option value="">Select a Service Type Option</option>
+                                                            <option value="overnight" selected="selected">Overnight Delivery (within 48 hours)</option>
+                                                            <option value="express">Express Delivery (within 5 working days)</option>
+                                                            <option value="basic">Basic Delivery (within 5 - 10 working days)</option>
+                                                        </select>
+                                                    </div>
+                                                    <!--end::Select-->
+                                                    <!--begin::Select-->
+                                                    <div class="form-group">
+                                                        <label>Packaging Type</label>
+                                                        <select name="packaging" class="form-control form-control-solid form-control-lg">
+                                                            <option value="">Select a Packaging Type Option</option>
+                                                            <option value="regular" selected="selected">Regular Packaging</option>
+                                                            <option value="oversized">Oversized Packaging</option>
+                                                            <option value="fragile">Fragile Packaging</option>
+                                                            <option value="frozen">Frozen Packaging</option>
+                                                        </select>
+                                                    </div>
+                                                    <!--end::Select-->
+                                                    <!--begin::Select-->
+                                                    <div class="form-group">
+                                                        <label>Preferred Delivery Window</label>
+                                                        <select name="preferreddelivery" class="form-control form-control-solid form-control-lg">
+                                                            <option value="">Select a Preferred Delivery Option</option>
+                                                            <option value="morning" selected="selected">Morning Delivery (8:00AM - 11:00AM)</option>
+                                                            <option value="afternoon">Afternoon Delivery (11:00AM - 3:00PM)</option>
+                                                            <option value="evening">Evening Delivery (3:00PM - 7:00PM)</option>
+                                                        </select>
+                                                    </div>
+                                                    <!--end::Select-->
+                                                </div>
+                                                <!--end::Wizard Step 3-->
+                                                <!--begin::Wizard Step 4-->
+                                                <div class="pb-5" data-wizard-type="step-content">
+                                                    <h4 class="mb-10 font-weight-bold text-dark">Setup Your Delivery Location</h4>
+                                                    <!--begin::Input-->
+                                                    <div class="form-group">
+                                                        <label>Address Line 1</label>
+                                                        <input type="text" class="form-control form-control-solid form-control-lg" name="locaddress1" placeholder="Address Line 1" value="Address Line 1" />
+                                                        <span class="form-text text-muted">Please enter your Address.</span>
+                                                    </div>
+                                                    <!--end::Input-->
+                                                    <!--begin::Input-->
+                                                    <div class="form-group">
+                                                        <label>Address Line 2</label>
+                                                        <input type="text" class="form-control form-control-solid form-control-lg" name="locaddress2" placeholder="Address Line 2" value="Address Line 2" />
+                                                        <span class="form-text text-muted">Please enter your Address.</span>
+                                                    </div>
+                                                    <!--end::Input-->
+                                                    <div class="row">
+                                                        <div class="col-xl-6">
+                                                            <!--begin::Input-->
+                                                            <div class="form-group">
+                                                                <label>Postcode</label>
+                                                                <input type="text" class="form-control form-control-solid form-control-lg" name="locpostcode" placeholder="Postcode" value="3072" />
+                                                                <span class="form-text text-muted">Please enter your Postcode.</span>
+                                                            </div>
+                                                            <!--end::Input-->
+                                                        </div>
+                                                        <div class="col-xl-6">
+                                                            <!--begin::Input-->
+                                                            <div class="form-group">
+                                                                <label>City</label>
+                                                                <input type="text" class="form-control form-control-solid form-control-lg" name="loccity" placeholder="City" value="Preston" />
+                                                                <span class="form-text text-muted">Please enter your City.</span>
+                                                            </div>
+                                                            <!--end::Input-->
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xl-6">
+                                                            <!--begin::Input-->
+                                                            <div class="form-group">
+                                                                <label>State</label>
+                                                                <input type="text" class="form-control form-control-solid form-control-lg" name="locstate" placeholder="State" value="VIC" />
+                                                                <span class="form-text text-muted">Please enter your State.</span>
+                                                            </div>
+                                                            <!--end::Input-->
+                                                        </div>
+                                                        <div class="col-xl-6">
+                                                            <!--begin::Select-->
+                                                            <div class="form-group">
+                                                                <label>Country</label>
+                                                                <select name="loccountry" class="form-control form-control-solid form-control-lg">
+                                                                    <option value="">Select</option>
+                                                                    <option value="AF">Afghanistan</option>
+                                                                    <option value="AX">Åland Islands</option>
+                                                                    <option value="AL">Albania</option>
+                                                                    <option value="DZ">Algeria</option>
+                                                                    <option value="AS">American Samoa</option>
+                                                                    <option value="AD">Andorra</option>
+                                                                    <option value="AO">Angola</option>
+                                                                    <option value="AI">Anguilla</option>
+                                                                    <option value="AQ">Antarctica</option>
+                                                                    <option value="AG">Antigua and Barbuda</option>
+                                                                    <option value="AR">Argentina</option>
+                                                                    <option value="AM">Armenia</option>
+                                                                    <option value="AW">Aruba</option>
+                                                                    <option value="AU" selected="selected">Australia</option>
+                                                                    <option value="AT">Austria</option>
+                                                                    <option value="AZ">Azerbaijan</option>
+                                                                    <option value="BS">Bahamas</option>
+                                                                    <option value="BH">Bahrain</option>
+                                                                    <option value="BD">Bangladesh</option>
+                                                                    <option value="BB">Barbados</option>
+                                                                    <option value="BY">Belarus</option>
+                                                                    <option value="BE">Belgium</option>
+                                                                    <option value="BZ">Belize</option>
+                                                                    <option value="BJ">Benin</option>
+                                                                    <option value="BM">Bermuda</option>
+                                                                    <option value="BT">Bhutan</option>
+                                                                    <option value="BO">Bolivia, Plurinational State of</option>
+                                                                    <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                                                    <option value="BA">Bosnia and Herzegovina</option>
+                                                                    <option value="BW">Botswana</option>
+                                                                    <option value="BV">Bouvet Island</option>
+                                                                    <option value="BR">Brazil</option>
+                                                                    <option value="IO">British Indian Ocean Territory</option>
+                                                                    <option value="BN">Brunei Darussalam</option>
+                                                                    <option value="BG">Bulgaria</option>
+                                                                    <option value="BF">Burkina Faso</option>
+                                                                    <option value="BI">Burundi</option>
+                                                                    <option value="KH">Cambodia</option>
+                                                                    <option value="CM">Cameroon</option>
+                                                                    <option value="CA">Canada</option>
+                                                                    <option value="CV">Cape Verde</option>
+                                                                    <option value="KY">Cayman Islands</option>
+                                                                    <option value="CF">Central African Republic</option>
+                                                                    <option value="TD">Chad</option>
+                                                                    <option value="CL">Chile</option>
+                                                                    <option value="CN">China</option>
+                                                                    <option value="CX">Christmas Island</option>
+                                                                    <option value="CC">Cocos (Keeling) Islands</option>
+                                                                    <option value="CO">Colombia</option>
+                                                                    <option value="KM">Comoros</option>
+                                                                    <option value="CG">Congo</option>
+                                                                    <option value="CD">Congo, the Democratic Republic of the</option>
+                                                                    <option value="CK">Cook Islands</option>
+                                                                    <option value="CR">Costa Rica</option>
+                                                                    <option value="CI">Côte d'Ivoire</option>
+                                                                    <option value="HR">Croatia</option>
+                                                                    <option value="CU">Cuba</option>
+                                                                    <option value="CW">Curaçao</option>
+                                                                    <option value="CY">Cyprus</option>
+                                                                    <option value="CZ">Czech Republic</option>
+                                                                    <option value="DK">Denmark</option>
+                                                                    <option value="DJ">Djibouti</option>
+                                                                    <option value="DM">Dominica</option>
+                                                                    <option value="DO">Dominican Republic</option>
+                                                                    <option value="EC">Ecuador</option>
+                                                                    <option value="EG">Egypt</option>
+                                                                    <option value="SV">El Salvador</option>
+                                                                    <option value="GQ">Equatorial Guinea</option>
+                                                                    <option value="ER">Eritrea</option>
+                                                                    <option value="EE">Estonia</option>
+                                                                    <option value="ET">Ethiopia</option>
+                                                                    <option value="FK">Falkland Islands (Malvinas)</option>
+                                                                    <option value="FO">Faroe Islands</option>
+                                                                    <option value="FJ">Fiji</option>
+                                                                    <option value="FI">Finland</option>
+                                                                    <option value="FR">France</option>
+                                                                    <option value="GF">French Guiana</option>
+                                                                    <option value="PF">French Polynesia</option>
+                                                                    <option value="TF">French Southern Territories</option>
+                                                                    <option value="GA">Gabon</option>
+                                                                    <option value="GM">Gambia</option>
+                                                                    <option value="GE">Georgia</option>
+                                                                    <option value="DE">Germany</option>
+                                                                    <option value="GH">Ghana</option>
+                                                                    <option value="GI">Gibraltar</option>
+                                                                    <option value="GR">Greece</option>
+                                                                    <option value="GL">Greenland</option>
+                                                                    <option value="GD">Grenada</option>
+                                                                    <option value="GP">Guadeloupe</option>
+                                                                    <option value="GU">Guam</option>
+                                                                    <option value="GT">Guatemala</option>
+                                                                    <option value="GG">Guernsey</option>
+                                                                    <option value="GN">Guinea</option>
+                                                                    <option value="GW">Guinea-Bissau</option>
+                                                                    <option value="GY">Guyana</option>
+                                                                    <option value="HT">Haiti</option>
+                                                                    <option value="HM">Heard Island and McDonald Islands</option>
+                                                                    <option value="VA">Holy See (Vatican City State)</option>
+                                                                    <option value="HN">Honduras</option>
+                                                                    <option value="HK">Hong Kong</option>
+                                                                    <option value="HU">Hungary</option>
+                                                                    <option value="IS">Iceland</option>
+                                                                    <option value="IN">India</option>
+                                                                    <option value="ID">Indonesia</option>
+                                                                    <option value="IR">Iran, Islamic Republic of</option>
+                                                                    <option value="IQ">Iraq</option>
+                                                                    <option value="IE">Ireland</option>
+                                                                    <option value="IM">Isle of Man</option>
+                                                                    <option value="IL">Israel</option>
+                                                                    <option value="IT">Italy</option>
+                                                                    <option value="JM">Jamaica</option>
+                                                                    <option value="JP">Japan</option>
+                                                                    <option value="JE">Jersey</option>
+                                                                    <option value="JO">Jordan</option>
+                                                                    <option value="KZ">Kazakhstan</option>
+                                                                    <option value="KE">Kenya</option>
+                                                                    <option value="KI">Kiribati</option>
+                                                                    <option value="KP">Korea, Democratic People's Republic of</option>
+                                                                    <option value="KR">Korea, Republic of</option>
+                                                                    <option value="KW">Kuwait</option>
+                                                                    <option value="KG">Kyrgyzstan</option>
+                                                                    <option value="LA">Lao People's Democratic Republic</option>
+                                                                    <option value="LV">Latvia</option>
+                                                                    <option value="LB">Lebanon</option>
+                                                                    <option value="LS">Lesotho</option>
+                                                                    <option value="LR">Liberia</option>
+                                                                    <option value="LY">Libya</option>
+                                                                    <option value="LI">Liechtenstein</option>
+                                                                    <option value="LT">Lithuania</option>
+                                                                    <option value="LU">Luxembourg</option>
+                                                                    <option value="MO">Macao</option>
+                                                                    <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+                                                                    <option value="MG">Madagascar</option>
+                                                                    <option value="MW">Malawi</option>
+                                                                    <option value="MY">Malaysia</option>
+                                                                    <option value="MV">Maldives</option>
+                                                                    <option value="ML">Mali</option>
+                                                                    <option value="MT">Malta</option>
+                                                                    <option value="MH">Marshall Islands</option>
+                                                                    <option value="MQ">Martinique</option>
+                                                                    <option value="MR">Mauritania</option>
+                                                                    <option value="MU">Mauritius</option>
+                                                                    <option value="YT">Mayotte</option>
+                                                                    <option value="MX">Mexico</option>
+                                                                    <option value="FM">Micronesia, Federated States of</option>
+                                                                    <option value="MD">Moldova, Republic of</option>
+                                                                    <option value="MC">Monaco</option>
+                                                                    <option value="MN">Mongolia</option>
+                                                                    <option value="ME">Montenegro</option>
+                                                                    <option value="MS">Montserrat</option>
+                                                                    <option value="MA">Morocco</option>
+                                                                    <option value="MZ">Mozambique</option>
+                                                                    <option value="MM">Myanmar</option>
+                                                                    <option value="NA">Namibia</option>
+                                                                    <option value="NR">Nauru</option>
+                                                                    <option value="NP">Nepal</option>
+                                                                    <option value="NL">Netherlands</option>
+                                                                    <option value="NC">New Caledonia</option>
+                                                                    <option value="NZ">New Zealand</option>
+                                                                    <option value="NI">Nicaragua</option>
+                                                                    <option value="NE">Niger</option>
+                                                                    <option value="NG">Nigeria</option>
+                                                                    <option value="NU">Niue</option>
+                                                                    <option value="NF">Norfolk Island</option>
+                                                                    <option value="MP">Northern Mariana Islands</option>
+                                                                    <option value="NO">Norway</option>
+                                                                    <option value="OM">Oman</option>
+                                                                    <option value="PK">Pakistan</option>
+                                                                    <option value="PW">Palau</option>
+                                                                    <option value="PS">Palestinian Territory, Occupied</option>
+                                                                    <option value="PA">Panama</option>
+                                                                    <option value="PG">Papua New Guinea</option>
+                                                                    <option value="PY">Paraguay</option>
+                                                                    <option value="PE">Peru</option>
+                                                                    <option value="PH">Philippines</option>
+                                                                    <option value="PN">Pitcairn</option>
+                                                                    <option value="PL">Poland</option>
+                                                                    <option value="PT">Portugal</option>
+                                                                    <option value="PR">Puerto Rico</option>
+                                                                    <option value="QA">Qatar</option>
+                                                                    <option value="RE">Réunion</option>
+                                                                    <option value="RO">Romania</option>
+                                                                    <option value="RU">Russian Federation</option>
+                                                                    <option value="RW">Rwanda</option>
+                                                                    <option value="BL">Saint Barthélemy</option>
+                                                                    <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                                                                    <option value="KN">Saint Kitts and Nevis</option>
+                                                                    <option value="LC">Saint Lucia</option>
+                                                                    <option value="MF">Saint Martin (French part)</option>
+                                                                    <option value="PM">Saint Pierre and Miquelon</option>
+                                                                    <option value="VC">Saint Vincent and the Grenadines</option>
+                                                                    <option value="WS">Samoa</option>
+                                                                    <option value="SM">San Marino</option>
+                                                                    <option value="ST">Sao Tome and Principe</option>
+                                                                    <option value="SA">Saudi Arabia</option>
+                                                                    <option value="SN">Senegal</option>
+                                                                    <option value="RS">Serbia</option>
+                                                                    <option value="SC">Seychelles</option>
+                                                                    <option value="SL">Sierra Leone</option>
+                                                                    <option value="SG">Singapore</option>
+                                                                    <option value="SX">Sint Maarten (Dutch part)</option>
+                                                                    <option value="SK">Slovakia</option>
+                                                                    <option value="SI">Slovenia</option>
+                                                                    <option value="SB">Solomon Islands</option>
+                                                                    <option value="SO">Somalia</option>
+                                                                    <option value="ZA">South Africa</option>
+                                                                    <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                                                    <option value="SS">South Sudan</option>
+                                                                    <option value="ES">Spain</option>
+                                                                    <option value="LK">Sri Lanka</option>
+                                                                    <option value="SD">Sudan</option>
+                                                                    <option value="SR">Suriname</option>
+                                                                    <option value="SJ">Svalbard and Jan Mayen</option>
+                                                                    <option value="SZ">Swaziland</option>
+                                                                    <option value="SE">Sweden</option>
+                                                                    <option value="CH">Switzerland</option>
+                                                                    <option value="SY">Syrian Arab Republic</option>
+                                                                    <option value="TW">Taiwan, Province of China</option>
+                                                                    <option value="TJ">Tajikistan</option>
+                                                                    <option value="TZ">Tanzania, United Republic of</option>
+                                                                    <option value="TH">Thailand</option>
+                                                                    <option value="TL">Timor-Leste</option>
+                                                                    <option value="TG">Togo</option>
+                                                                    <option value="TK">Tokelau</option>
+                                                                    <option value="TO">Tonga</option>
+                                                                    <option value="TT">Trinidad and Tobago</option>
+                                                                    <option value="TN">Tunisia</option>
+                                                                    <option value="TR">Turkey</option>
+                                                                    <option value="TM">Turkmenistan</option>
+                                                                    <option value="TC">Turks and Caicos Islands</option>
+                                                                    <option value="TV">Tuvalu</option>
+                                                                    <option value="UG">Uganda</option>
+                                                                    <option value="UA">Ukraine</option>
+                                                                    <option value="AE">United Arab Emirates</option>
+                                                                    <option value="GB">United Kingdom</option>
+                                                                    <option value="US">United States</option>
+                                                                    <option value="UM">United States Minor Outlying Islands</option>
+                                                                    <option value="UY">Uruguay</option>
+                                                                    <option value="UZ">Uzbekistan</option>
+                                                                    <option value="VU">Vanuatu</option>
+                                                                    <option value="VE">Venezuela, Bolivarian Republic of</option>
+                                                                    <option value="VN">Viet Nam</option>
+                                                                    <option value="VG">Virgin Islands, British</option>
+                                                                    <option value="VI">Virgin Islands, U.S.</option>
+                                                                    <option value="WF">Wallis and Futuna</option>
+                                                                    <option value="EH">Western Sahara</option>
+                                                                    <option value="YE">Yemen</option>
+                                                                    <option value="ZM">Zambia</option>
+                                                                    <option value="ZW">Zimbabwe</option>
+                                                                </select>
+                                                            </div>
+                                                            <!--end::Select-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--end::Wizard Step 4-->
+                                                <!--begin::Wizard Step 5-->
+                                                <div class="pb-5" data-wizard-type="step-content">
+                                                    <!--begin::Section-->
+                                                    <h4 class="mb-10 font-weight-bold text-dark">Review your Details and Submit</h4>
+                                                    <h6 class="font-weight-bolder mb-3">Current Address:</h6>
+                                                    <div class="text-dark-50 line-height-lg">
+                                                        <div>Address Line 1</div>
+                                                        <div>Address Line 2</div>
+                                                        <div>Melbourne 3000, VIC, Australia</div>
+                                                    </div>
+                                                    <div class="separator separator-dashed my-5"></div>
+                                                    <!--end::Section-->
+                                                    <!--begin::Section-->
+                                                    <h6 class="font-weight-bolder mb-3">Delivery Details:</h6>
+                                                    <div class="text-dark-50 line-height-lg">
+                                                        <div>Package: Complete Workstation (Monitor, Computer, Keyboard &amp; Mouse)</div>
+                                                        <div>Weight: 25kg</div>
+                                                        <div>Dimensions: 110cm (w) x 90cm (h) x 150cm (L)</div>
+                                                    </div>
+                                                    <div class="separator separator-dashed my-5"></div>
+                                                    <!--end::Section-->
+                                                    <!--begin::Section-->
+                                                    <h6 class="font-weight-bolder mb-3">Delivery Service Type:</h6>
+                                                    <div class="text-dark-50 line-height-lg">
+                                                        <div>Overnight Delivery with Regular Packaging</div>
+                                                        <div>Preferred Morning (8:00AM - 11:00AM) Delivery</div>
+                                                    </div>
+                                                    <div class="separator separator-dashed my-5"></div>
+                                                    <!--end::Section-->
+                                                    <!--begin::Section-->
+                                                    <h6 class="font-weight-bolder mb-3">Delivery Address:</h6>
+                                                    <div class="text-dark-50 line-height-lg">
+                                                        <div>Address Line 1</div>
+                                                        <div>Address Line 2</div>
+                                                        <div>Preston 3072, VIC, Australia</div>
+                                                    </div>
+                                                    <!--end::Section-->
+                                                </div>
+                                                <!--end::Wizard Step 5-->
+                                                <!--begin::Wizard Actions-->
+                                                <div class="d-flex justify-content-between border-top mt-5 pt-10">
+                                                    <div class="mr-2">
+                                                        <button type="button" class="btn btn-light-primary font-weight-bold text-uppercase px-9 py-4" data-wizard-type="action-prev">Previous</button>
+                                                    </div>
+                                                    <div>
+                                                        <button type="button" class="btn btn-success font-weight-bold text-uppercase px-9 py-4" data-wizard-type="action-submit">Submit</button>
+                                                        <button type="button" class="btn btn-primary font-weight-bold text-uppercase px-9 py-4" data-wizard-type="action-next">Next</button>
+                                                    </div>
+                                                </div>
+                                                <!--end::Wizard Actions-->
+                                            </form>
+                                            <!--end::Wizard Form-->
+                                        </div>
+                                    </div>
+                                    <!--end::Wizard Body-->
                                 </div>
                             </div>
-                            <div class="card-body">
-                                <!--begin: Datatable-->
-                                <table class="table table-separate table-head-custom table-checkable" id="kt_datatable">
-                                    <thead>
-                                    <tr>
-                                        <th>Record ID</th>
-                                        <th>Order ID</th>
-                                        <th>Country</th>
-                                        <th>Ship City</th>
-                                        <th>Ship Address</th>
-                                        <th>Company Agent</th>
-                                        <th>Company Name</th>
-                                        <th>Ship Date</th>
-                                        <th>Status</th>
-                                        <th>Type</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>64616-103</td>
-                                        <td>Brazil</td>
-                                        <td>São Félix do Xingu</td>
-                                        <td>698 Oriole Pass</td>
-                                        <td>Hayes Boule</td>
-                                        <td>Casper-Kerluke</td>
-                                        <td>10/15/2017</td>
-                                        <td>5</td>
-                                        <td>1</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>54868-3377</td>
-                                        <td>Vietnam</td>
-                                        <td>Bình Minh</td>
-                                        <td>8998 Delaware Court</td>
-                                        <td>Humbert Bresnen</td>
-                                        <td>Hodkiewicz and Sons</td>
-                                        <td>4/24/2016</td>
-                                        <td>2</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>0998-0355</td>
-                                        <td>Philippines</td>
-                                        <td>Palagao Norte</td>
-                                        <td>91796 Sutteridge Road</td>
-                                        <td>Jareb Labro</td>
-                                        <td>Kuhlman Inc</td>
-                                        <td>7/11/2017</td>
-                                        <td>6</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>55154-6876</td>
-                                        <td>China</td>
-                                        <td>Jiannan</td>
-                                        <td>8 Muir Drive</td>
-                                        <td>Krishnah Tosspell</td>
-                                        <td>Prosacco-Kessler</td>
-                                        <td>2/5/2016</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>49349-069</td>
-                                        <td>United States</td>
-                                        <td>Shawnee Mission</td>
-                                        <td>782 Mallory Lane</td>
-                                        <td>Dale Kernan</td>
-                                        <td>Bernier and Sons</td>
-                                        <td>7/23/2017</td>
-                                        <td>5</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>53499-0393</td>
-                                        <td>Ukraine</td>
-                                        <td>Kozel’shchyna</td>
-                                        <td>02 Briar Crest Parkway</td>
-                                        <td>Halley Bentham</td>
-                                        <td>Schoen-Metz</td>
-                                        <td>2/21/2016</td>
-                                        <td>1</td>
-                                        <td>3</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td>43074-105</td>
-                                        <td>Philippines</td>
-                                        <td>De la Paz</td>
-                                        <td>643 Mayer Road</td>
-                                        <td>Burgess Penddreth</td>
-                                        <td>DuBuque, Stanton and Stanton</td>
-                                        <td>10/25/2016</td>
-                                        <td>5</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td>76328-333</td>
-                                        <td>Portugal</td>
-                                        <td>Sobreira</td>
-                                        <td>6715 Dakota Parkway</td>
-                                        <td>Cob Sedwick</td>
-                                        <td>Homenick-Nolan</td>
-                                        <td>2/18/2016</td>
-                                        <td>3</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>9</td>
-                                        <td>21130-054</td>
-                                        <td>France</td>
-                                        <td>Roissy Charles-de-Gaulle</td>
-                                        <td>4942 Darwin Hill</td>
-                                        <td>Tabby Callaghan</td>
-                                        <td>Daugherty-Considine</td>
-                                        <td>3/26/2016</td>
-                                        <td>2</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>10</td>
-                                        <td>68788-9890</td>
-                                        <td>Dominican Republic</td>
-                                        <td>Cristóbal</td>
-                                        <td>854 Dapin Terrace</td>
-                                        <td>Broddy Jarry</td>
-                                        <td>Walter Group</td>
-                                        <td>8/10/2016</td>
-                                        <td>1</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>11</td>
-                                        <td>68428-740</td>
-                                        <td>Morocco</td>
-                                        <td>Tidili Mesfioua</td>
-                                        <td>67 Talisman Drive</td>
-                                        <td>Marjorie McGougan</td>
-                                        <td>Littel and Sons</td>
-                                        <td>2/8/2016</td>
-                                        <td>6</td>
-                                        <td>1</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>12</td>
-                                        <td>43269-779</td>
-                                        <td>Yemen</td>
-                                        <td>Az Zāhir</td>
-                                        <td>5583 Walton Hill</td>
-                                        <td>Edsel Sprigging</td>
-                                        <td>Kulas, Huels and Strosin</td>
-                                        <td>11/13/2017</td>
-                                        <td>6</td>
-                                        <td>3</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>13</td>
-                                        <td>0573-0174</td>
-                                        <td>Armenia</td>
-                                        <td>Doghs</td>
-                                        <td>7024 Eagan Court</td>
-                                        <td>Jess Gouldeby</td>
-                                        <td>Moen Group</td>
-                                        <td>9/10/2017</td>
-                                        <td>5</td>
-                                        <td>1</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>14</td>
-                                        <td>67868-117</td>
-                                        <td>Indonesia</td>
-                                        <td>Pakemitan</td>
-                                        <td>141 Spaight Avenue</td>
-                                        <td>Marys Matzl</td>
-                                        <td>Emard-Gerhold</td>
-                                        <td>3/5/2016</td>
-                                        <td>2</td>
-                                        <td>3</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>15</td>
-                                        <td>0641-6114</td>
-                                        <td>Kazakhstan</td>
-                                        <td>Shu</td>
-                                        <td>601 Chinook Street</td>
-                                        <td>Gabrila Franscioni</td>
-                                        <td>Gusikowski LLC</td>
-                                        <td>6/21/2016</td>
-                                        <td>4</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>16</td>
-                                        <td>63629-4970</td>
-                                        <td>Thailand</td>
-                                        <td>Chang Klang</td>
-                                        <td>7109 Ilene Place</td>
-                                        <td>Cozmo Booker</td>
-                                        <td>Dickinson-Klein</td>
-                                        <td>2/29/2016</td>
-                                        <td>1</td>
-                                        <td>3</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>17</td>
-                                        <td>59528-4456</td>
-                                        <td>Canada</td>
-                                        <td>Melfort</td>
-                                        <td>141 Aberg Pass</td>
-                                        <td>Arlie Larking</td>
-                                        <td>Rosenbaum Group</td>
-                                        <td>7/7/2017</td>
-                                        <td>4</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>18</td>
-                                        <td>0054-0080</td>
-                                        <td>Iceland</td>
-                                        <td>Sandgerði</td>
-                                        <td>4 Derek Alley</td>
-                                        <td>Yorker Scogings</td>
-                                        <td>Gorczany LLC</td>
-                                        <td>7/6/2017</td>
-                                        <td>2</td>
-                                        <td>3</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>19</td>
-                                        <td>28475-810</td>
-                                        <td>Indonesia</td>
-                                        <td>Keleng</td>
-                                        <td>49 Swallow Court</td>
-                                        <td>Dominick Muscott</td>
-                                        <td>Swaniawski-Sipes</td>
-                                        <td>5/15/2016</td>
-                                        <td>2</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>20</td>
-                                        <td>53645-1070</td>
-                                        <td>Russia</td>
-                                        <td>Tugulym</td>
-                                        <td>611 Hintze Place</td>
-                                        <td>Laurette Kynforth</td>
-                                        <td>Torp-Satterfield</td>
-                                        <td>10/18/2017</td>
-                                        <td>1</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>21</td>
-                                        <td>66869-137</td>
-                                        <td>Indonesia</td>
-                                        <td>Binangun</td>
-                                        <td>535 Delladonna Trail</td>
-                                        <td>Beryl Lycett</td>
-                                        <td>Schoen Inc</td>
-                                        <td>6/28/2017</td>
-                                        <td>3</td>
-                                        <td>3</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>22</td>
-                                        <td>0069-0181</td>
-                                        <td>Czech Republic</td>
-                                        <td>Tlumačov</td>
-                                        <td>8 Hauk Street</td>
-                                        <td>Carny Boggas</td>
-                                        <td>Kuphal LLC</td>
-                                        <td>6/24/2016</td>
-                                        <td>2</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>23</td>
-                                        <td>50580-449</td>
-                                        <td>United States</td>
-                                        <td>Saint Augustine</td>
-                                        <td>9050 High Crossing Pass</td>
-                                        <td>Dyana Axelby</td>
-                                        <td>Runolfsdottir-Hayes</td>
-                                        <td>3/16/2017</td>
-                                        <td>2</td>
-                                        <td>1</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>24</td>
-                                        <td>55714-2247</td>
-                                        <td>Netherlands</td>
-                                        <td>Nijmegen</td>
-                                        <td>2 Laurel Avenue</td>
-                                        <td>Orelle Duffy</td>
-                                        <td>Roberts and Sons</td>
-                                        <td>4/5/2016</td>
-                                        <td>5</td>
-                                        <td>3</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>25</td>
-                                        <td>48951-1208</td>
-                                        <td>Russia</td>
-                                        <td>Ryazhsk</td>
-                                        <td>131 Lerdahl Park</td>
-                                        <td>Taylor Kinder</td>
-                                        <td>Terry-Howell</td>
-                                        <td>4/19/2017</td>
-                                        <td>3</td>
-                                        <td>1</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>26</td>
-                                        <td>30142-179</td>
-                                        <td>Russia</td>
-                                        <td>Kazan</td>
-                                        <td>7 Erie Pass</td>
-                                        <td>Emanuele Aylesbury</td>
-                                        <td>Torp LLC</td>
-                                        <td>7/6/2017</td>
-                                        <td>3</td>
-                                        <td>1</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>27</td>
-                                        <td>49349-025</td>
-                                        <td>Thailand</td>
-                                        <td>Bang Racham</td>
-                                        <td>98943 Schiller Pass</td>
-                                        <td>Dorie Gibke</td>
-                                        <td>Tremblay and Sons</td>
-                                        <td>7/17/2017</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>28</td>
-                                        <td>55154-4989</td>
-                                        <td>Russia</td>
-                                        <td>Solnechnyy</td>
-                                        <td>485 Mockingbird Road</td>
-                                        <td>Melisandra Harragin</td>
-                                        <td>Turner-Cartwright</td>
-                                        <td>12/3/2016</td>
-                                        <td>5</td>
-                                        <td>3</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>29</td>
-                                        <td>13537-426</td>
-                                        <td>Lebanon</td>
-                                        <td>Marjayoûn</td>
-                                        <td>9141 Cascade Street</td>
-                                        <td>Berenice Lampett</td>
-                                        <td>Johnston-Fritsch</td>
-                                        <td>12/27/2017</td>
-                                        <td>2</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>30</td>
-                                        <td>52565-009</td>
-                                        <td>Jamaica</td>
-                                        <td>Manchioneal</td>
-                                        <td>88503 Shopko Center</td>
-                                        <td>Tammie McMurthy</td>
-                                        <td>Sipes, Conn and Stiedemann</td>
-                                        <td>10/11/2017</td>
-                                        <td>2</td>
-                                        <td>3</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>31</td>
-                                        <td>0264-5535</td>
-                                        <td>United Kingdom</td>
-                                        <td>Glasgow</td>
-                                        <td>6 Lakeland Center</td>
-                                        <td>Dinnie Joyes</td>
-                                        <td>Keebler Group</td>
-                                        <td>6/5/2016</td>
-                                        <td>5</td>
-                                        <td>1</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>32</td>
-                                        <td>15370-110</td>
-                                        <td>China</td>
-                                        <td>Caijiang</td>
-                                        <td>2 Mariners Cove Way</td>
-                                        <td>Kerianne Axelbey</td>
-                                        <td>Wolff, Sporer and Bechtelar</td>
-                                        <td>2/20/2016</td>
-                                        <td>6</td>
-                                        <td>1</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>33</td>
-                                        <td>67046-271</td>
-                                        <td>China</td>
-                                        <td>Sanhe</td>
-                                        <td>537 Graceland Park</td>
-                                        <td>Kiley MacTerlagh</td>
-                                        <td>Hauck Inc</td>
-                                        <td>6/9/2017</td>
-                                        <td>2</td>
-                                        <td>3</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>34</td>
-                                        <td>49288-0356</td>
-                                        <td>Indonesia</td>
-                                        <td>Rupe</td>
-                                        <td>88 Blackbird Alley</td>
-                                        <td>Trula Shuttle</td>
-                                        <td>Will-Morissette</td>
-                                        <td>2/28/2016</td>
-                                        <td>5</td>
-                                        <td>1</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>35</td>
-                                        <td>41163-332</td>
-                                        <td>Poland</td>
-                                        <td>Borowno</td>
-                                        <td>72 Iowa Drive</td>
-                                        <td>Hollis Brislen</td>
-                                        <td>Lowe, Jaskolski and Gulgowski</td>
-                                        <td>7/7/2016</td>
-                                        <td>4</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>36</td>
-                                        <td>68428-088</td>
-                                        <td>Greece</td>
-                                        <td>Néa Péramos</td>
-                                        <td>76 Haas Alley</td>
-                                        <td>Marsh Battin</td>
-                                        <td>Fay LLC</td>
-                                        <td>6/3/2017</td>
-                                        <td>6</td>
-                                        <td>1</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>37</td>
-                                        <td>52686-288</td>
-                                        <td>Chile</td>
-                                        <td>San Carlos</td>
-                                        <td>6915 Mifflin Terrace</td>
-                                        <td>Patrizio Pinnion</td>
-                                        <td>Haag-Stokes</td>
-                                        <td>10/7/2016</td>
-                                        <td>2</td>
-                                        <td>3</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>38</td>
-                                        <td>68084-534</td>
-                                        <td>Ukraine</td>
-                                        <td>Ukrainka</td>
-                                        <td>77 Charing Cross Trail</td>
-                                        <td>Ilario Daouse</td>
-                                        <td>Nitzsche, Davis and Romaguera</td>
-                                        <td>4/10/2016</td>
-                                        <td>3</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>39</td>
-                                        <td>60681-2104</td>
-                                        <td>China</td>
-                                        <td>Shangdu</td>
-                                        <td>61653 Welch Trail</td>
-                                        <td>Blisse Coleborn</td>
-                                        <td>Bailey, Windler and Marquardt</td>
-                                        <td>5/15/2017</td>
-                                        <td>6</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>40</td>
-                                        <td>63402-193</td>
-                                        <td>China</td>
-                                        <td>Xibin</td>
-                                        <td>9 Duke Point</td>
-                                        <td>Augustin Jouannisson</td>
-                                        <td>Witting, Reilly and Morar</td>
-                                        <td>7/3/2016</td>
-                                        <td>3</td>
-                                        <td>3</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>41</td>
-                                        <td>0078-0614</td>
-                                        <td>Russia</td>
-                                        <td>Skolkovo</td>
-                                        <td>5 Bay Center</td>
-                                        <td>Kaleena Jennison</td>
-                                        <td>Johnston Inc</td>
-                                        <td>11/26/2016</td>
-                                        <td>5</td>
-                                        <td>3</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>42</td>
-                                        <td>60660-7787</td>
-                                        <td>Dominican Republic</td>
-                                        <td>Pimentel</td>
-                                        <td>5 Northwestern Drive</td>
-                                        <td>Mariel Petronis</td>
-                                        <td>Mitchell, Bashirian and Schroeder</td>
-                                        <td>1/28/2016</td>
-                                        <td>5</td>
-                                        <td>3</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>43</td>
-                                        <td>51079-345</td>
-                                        <td>Malaysia</td>
-                                        <td>Kuala Lumpur</td>
-                                        <td>11 Melvin Hill</td>
-                                        <td>Adamo Scroggie</td>
-                                        <td>Cartwright Group</td>
-                                        <td>6/9/2016</td>
-                                        <td>4</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>44</td>
-                                        <td>29033-021</td>
-                                        <td>Portugal</td>
-                                        <td>Serzedelo</td>
-                                        <td>380 Wayridge Street</td>
-                                        <td>Lewiss Kilmartin</td>
-                                        <td>Stroman-Orn</td>
-                                        <td>5/9/2017</td>
-                                        <td>3</td>
-                                        <td>3</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>45</td>
-                                        <td>12830-816</td>
-                                        <td>France</td>
-                                        <td>Fos-sur-Mer</td>
-                                        <td>9924 Mariners Cove Circle</td>
-                                        <td>Claretta Sachno</td>
-                                        <td>Zemlak-Cruickshank</td>
-                                        <td>9/4/2016</td>
-                                        <td>4</td>
-                                        <td>1</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>46</td>
-                                        <td>0781-5555</td>
-                                        <td>Indonesia</td>
-                                        <td>Kotaagung</td>
-                                        <td>9 Calypso Road</td>
-                                        <td>Bryn Van Castele</td>
-                                        <td>Beier-Mante</td>
-                                        <td>3/17/2017</td>
-                                        <td>5</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>47</td>
-                                        <td>0378-7004</td>
-                                        <td>Sweden</td>
-                                        <td>Karlstad</td>
-                                        <td>12000 Burrows Street</td>
-                                        <td>Tades Gatch</td>
-                                        <td>Klocko, Koelpin and Nikolaus</td>
-                                        <td>7/10/2016</td>
-                                        <td>5</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>48</td>
-                                        <td>49483-052</td>
-                                        <td>Indonesia</td>
-                                        <td>Kebonjaya</td>
-                                        <td>2 Oakridge Crossing</td>
-                                        <td>Reinold Jolland</td>
-                                        <td>Zieme-Funk</td>
-                                        <td>5/24/2016</td>
-                                        <td>4</td>
-                                        <td>2</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>49</td>
-                                        <td>10812-357</td>
-                                        <td>Serbia</td>
-                                        <td>Ruma</td>
-                                        <td>7 Wayridge Plaza</td>
-                                        <td>Ky Brainsby</td>
-                                        <td>Towne Inc</td>
-                                        <td>11/1/2016</td>
-                                        <td>2</td>
-                                        <td>3</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>50</td>
-                                        <td>49349-222</td>
-                                        <td>China</td>
-                                        <td>Zhulan</td>
-                                        <td>55385 Stoughton Trail</td>
-                                        <td>Sheryl Giddings</td>
-                                        <td>Grimes, Ryan and Larkin</td>
-                                        <td>9/15/2017</td>
-                                        <td>3</td>
-                                        <td>1</td>
-                                        <td nowrap="nowrap"></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <!--end: Datatable-->
-                            </div>
+                            <!--end::Wizard-->
                         </div>
-                        <!--end::Card-->
                     </div>
                     <!--end::Container-->
                 </div>
@@ -7094,15 +7178,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#3699FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
 <!--end::Global Config-->
 <!--begin::Global Theme Bundle(used by all pages)-->
-<script src="{{asset("assets/plugins/global/plugins.bundle.js?v=7.0.5")}}"></script>
-<script src="{{asset("assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5")}}"></script>
-<script src="{{asset("assets/js/scripts.bundle.js?v=7.0.5")}}"></script>
+<script src="assets/plugins/global/plugins.bundle.js?v=7.0.5"></script>
+<script src="assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5"></script>
+<script src="assets/js/scripts.bundle.js?v=7.0.5"></script>
 <!--end::Global Theme Bundle-->
-<!--begin::Page Vendors(used by this page)-->
-<script src="{{asset("assets/plugins/custom/datatables/datatables.bundle.js?v=7.0.5")}}"></script>
-<!--end::Page Vendors-->
 <!--begin::Page Scripts(used by this page)-->
-<script src="{{asset("assets/js/pages/crud/datatables/basic/paginations.js?v=7.0.5")}}"></script>
+<script src="assets/js/pages/custom/wizard/wizard-1.js?v=7.0.5"></script>
 <!--end::Page Scripts-->
 </body>
 <!--end::Body-->

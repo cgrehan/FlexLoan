@@ -17,7 +17,7 @@ class CreateUserLoanDetailsTable extends Migration
             $table->id();
             $table->boolean('is_employed')->default(0);
             $table->string('salary')->nullable();
-            $table->string('other_income')->nullable();
+            $table->string('other_income_earning')->nullable();
             $table->string('company_name')->nullable();
             $table->string('company_phone')->nullable();
             $table->string('employer_name')->nullable();

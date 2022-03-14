@@ -122,29 +122,57 @@ class UsersController extends Controller
 
         $inserted_user = User::find($id);
         $inserted_user->update($user);
-
-        $inserted_user->detail->is_employed = $details['is_employed'];
-        $inserted_user->detail->salary = $details['salary'];
-        $inserted_user->detail->company_name = $details['company_name'];
-        $inserted_user->detail->company_phone = $this->formatPhone($details['company_phone']);
-        $inserted_user->detail->employer_name = $details['employer_name'];
-        $inserted_user->detail->address1 = $details['address1'];
-        $inserted_user->detail->address2 = $details['address2'];
-        $inserted_user->detail->postcode = $details['postcode'];
-        $inserted_user->detail->city = $details['city'];
-        $inserted_user->detail->first_next_of_kin_name = $details['first_next_of_kin_name'];
-        $inserted_user->detail->first_next_of_kin_phone = $this->formatPhone($details['first_next_of_kin_phone']);
-        $inserted_user->detail->first_next_of_kin_relationship = $details['first_next_of_kin_relationship'];
-        $inserted_user->detail->second_next_of_kin_name = $details['second_next_of_kin_name'];
-        $inserted_user->detail->second_next_of_kin_phone = $this->formatPhone($details['second_next_of_kin_phone']);
-        $inserted_user->detail->second_next_of_kin_relationship = $details['second_next_of_kin_relationship'];
-        $inserted_user->detail->house_number = $details['house_number'];
-        $inserted_user->detail->building_name = $details['building_name'];
-        $inserted_user->detail->guarantor_name = $details['guarantor_name'];
-        $inserted_user->detail->guarantor_phone = $this->formatPhone($details['guarantor_phone']);
-        $inserted_user->detail->guarantor_residence = $details['guarantor_residence'];
-        $inserted_user->detail->save();
-        return response()->json($inserted_user);
+        if (isset($user->detail)) {
+            $inserted_user->detail->is_employed = $details['is_employed'];
+            $inserted_user->detail->salary = $details['salary'];
+            $inserted_user->detail->other_income_earning = $details['other_income_earning'];
+            $inserted_user->detail->company_name = $details['company_name'];
+            $inserted_user->detail->company_phone = $this->formatPhone($details['company_phone']);
+            $inserted_user->detail->employer_name = $details['employer_name'];
+            $inserted_user->detail->address1 = $details['address1'];
+            $inserted_user->detail->address2 = $details['address2'];
+            $inserted_user->detail->postcode = $details['postcode'];
+            $inserted_user->detail->city = $details['city'];
+            $inserted_user->detail->first_next_of_kin_name = $details['first_next_of_kin_name'];
+            $inserted_user->detail->first_next_of_kin_phone = $this->formatPhone($details['first_next_of_kin_phone']);
+            $inserted_user->detail->first_next_of_kin_relationship = $details['first_next_of_kin_relationship'];
+            $inserted_user->detail->second_next_of_kin_name = $details['second_next_of_kin_name'];
+            $inserted_user->detail->second_next_of_kin_phone = $this->formatPhone($details['second_next_of_kin_phone']);
+            $inserted_user->detail->second_next_of_kin_relationship = $details['second_next_of_kin_relationship'];
+            $inserted_user->detail->house_number = $details['house_number'];
+            $inserted_user->detail->building_name = $details['building_name'];
+            $inserted_user->detail->guarantor_name = $details['guarantor_name'];
+            $inserted_user->detail->guarantor_phone = $this->formatPhone($details['guarantor_phone']);
+            $inserted_user->detail->guarantor_residence = $details['guarantor_residence'];
+            $inserted_user->detail->save();
+        }else {
+            $detail = new UserLoanDetail();
+            $detail->user_id = $id;
+            $detail->is_employed = $details['is_employed'];
+            $detail->salary = $details['salary'];
+            $detail->other_income_earning = $details['other_income_earning'];
+            $detail->company_name = $details['company_name'];
+            $detail->company_phone = $this->formatPhone($details['company_phone']);
+            $detail->employer_name = $details['employer_name'];
+            $detail->address1 = $details['address1'];
+            $detail->address2 = $details['address2'];
+            $detail->postcode = $details['postcode'];
+            $detail->city = $details['city'];
+            $detail->first_next_of_kin_name = $details['first_next_of_kin_name'];
+            $detail->first_next_of_kin_phone = $this->formatPhone($details['first_next_of_kin_phone']);
+            $detail->first_next_of_kin_relationship = $details['first_next_of_kin_relationship'];
+            $detail->second_next_of_kin_name = $details['second_next_of_kin_name'];
+            $detail->second_next_of_kin_phone = $this->formatPhone($details['second_next_of_kin_phone']);
+            $detail->second_next_of_kin_relationship = $details['second_next_of_kin_relationship'];
+            $detail->house_number = $details['house_number'];
+            $detail->building_name = $details['building_name'];
+            $detail->guarantor_name = $details['guarantor_name'];
+            $detail->guarantor_phone = $this->formatPhone($details['guarantor_phone']);
+            $detail->guarantor_residence = $details['guarantor_residence'];
+            $detail->save();
+            info($detail);
+        }
+        return response()->json('success');
     }
 
     public function userDetails(Request $request)
@@ -152,9 +180,6 @@ class UsersController extends Controller
 
     $user = User::where("phone",$this->formatPhone($request->Mpesa_Phone_Number_to_receive_the_amount))->first();
     if ($user){
-
-        info($request->all());
-        info($request->First_Name.' '.$request->Last_Name);
         $user->update(['first_name' => $request->First_Name,'last_name'=>$request->Last_Name,'email'=>$request->Email,'id_number'=>$request->ID_Number]);
 
         if (isset($user->detail)){
