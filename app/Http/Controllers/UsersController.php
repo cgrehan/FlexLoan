@@ -24,7 +24,7 @@ class UsersController extends Controller
     public function uncompletedProfile()
     {
         $ids = User::whereHas('detail')->where("role_id",2)->pluck('id');
-        $users = User::whereNotIn('id',$ids)->get();
+        $users = User::whereNotIn('id',$ids)->where("role_id",2)->get();
 
         return view("users/index",['users'=>$users]);
     }
@@ -231,10 +231,8 @@ class UsersController extends Controller
 
   response()->json("success");
   }
-
     public function createUser(Request $request)
     {
-        info("creating user____!!!");
         $data = $request->all();
         $user = array(
             'flex_user_id' => $data['user_id'],
